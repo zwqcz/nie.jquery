@@ -1,0 +1,849 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+ 
+
+
+<title>《大唐无双2》官方网站-网易第一战斗网游-女神林志玲倾情代言</title>
+<meta name="keywords" content="大唐无双2,大唐无双2官网,网易第一战斗网游,血性,林志玲" />
+<meta name="description" content="网易第一战斗网游《大唐无双2》，林志玲倾情代言，声色演绎全新悬疑剧情。画面感官、战斗体验、剧情玩法全面升级。独创“对抗式升级模式“、“战斗式社区体系”，随心所欲想战就战！你的血性还在吗？" />
+ <meta name="author" content="网易，NetEase Inc." />
+<meta name="copyright" content="网易，NetEase Inc." />
+<meta name="pmid" content="272514" />
+<meta name="editor" content="wuyun" />
+<meta name="designer" content="yoyo" />
+<meta name="front-end technicist" content="SX_T" />
+
+  <link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/comm/js/nie/util/urs/bigUrs.case1.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/css/base.css" media="all" />
+  <!--[if IE 6]><script>try{document.execCommand("BackgroundImageCache", false, true);}catch(e){}</script><![endif]-->
+  <script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>  
+  <script charset="gb2312">
+   var tcflashlist = [
+{name:"最真实震撼的战斗感官",des:"真物理引擎，踏水留痕，剑扫碎石，极致战斗体验。",
+minflv:"http://v.nie.netease.com/dtws2/2013/0516/video1.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2013/0516/video1.mp4"
+},
+{name:"最随心所欲的玩法对抗",des:"对抗升级一体化，零门槛战斗，多维战斗想战就战。",
+minflv:"http://v.nie.netease.com/dtws2/2013/0516/video2.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2013/0516/video2.mp4"
+},
+{name:"最随性热血的社区交互",des:"战斗式社区，放胆树敌拉帮结派，从不缺对手和战友。",
+minflv:"http://v.nie.netease.com/dtws2/2013/0516/video3.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2013/0516/video3.mp4"
+},
+{name:"最欲罢不能的世界剧情",des:"林志玲配音出演全新主线，演绎多面娇娃，剧情悬念迭起。",
+minflv:"http://v.nie.netease.com/dtws2/2013/0516/video4.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2013/0516/video4.mp4"
+},
+{name:"少林",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2012/1115/job_1.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2012/1115/job_1_1.mp4"
+},
+{name:"寒冰",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2012/1115/job_3.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2012/1115/job_3_1.mp4"
+},
+{name:"蜀山",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2012/1115/job_2.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2012/1115/job_2_1.mp4"
+},
+{name:"天煞",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2012/1115/job_4.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2012/1115/job_4_1.mp4"
+},
+{name:"侠隐",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2012/1115/job_5.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2012/1115/job_5_1.mp4"
+},
+{name:"无名",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2012/1115/job_6.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2012/1115/job_6_1.mp4"
+},
+{name:"百花医",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2012/1115/job_7.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2012/1115/job_7_1.mp4"
+},
+{name:"百花蛊",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2012/1115/job_8.flv",
+minmp4:"http://v.nie.netease.com/dtws2/2012/1115/job_8_1.mp4"
+},
+{name:"丁磊林志玲献唱主题曲",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2013/0516/video7.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2013/0516/video7.mp4"
+},
+{name:"林志玲最性感古装大片",des:"",
+minflv:"http://v.nie.netease.com/dtws2/2013/0516/video6.f4v",
+minmp4:"http://v.nie.netease.com/dtws2/2013/0516/video6.mp4"
+},
+{name:"林志玲配音",des:"全新剧情配音",
+minflv:"http://v.nie.netease.com/dtws2/2013/0516/video5.flv",
+minmp4:"http://v.nie.netease.com/dtws2/2013/0516/video5.mp4"
+}
+]
+
+var video1_img=[
+'http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/jt2.jpg',
+'http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/jt2.jpg',
+'http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/jt.jpg'
+
+];
+
+var video1_url=[
+'http://v.nie.netease.com/dtws2/2013/0516/video7m.f4v',
+'http://v.nie.netease.com/dtws2/2013/0516/video6m.f4v',
+'http://v.nie.netease.com/dtws2/2013/0516/smallv1.f4v' 
+
+];
+
+var video1_title=[
+'http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/sptitledl.jpg',
+'http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/sptitle2.jpg',
+'http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/sptitle.jpg'
+
+];
+
+var spnum;
+var opendvlist = function (o){
+	var num =o
+	$("#tcflash-1-mar ul").empty()
+	for(var i=0;i<tcflashlist.length;i++){
+		$("#tcflash-1-mar ul").append("<li><img src='"+tcflashlist[i]["simg"]+"'>"+tcflashlist[i]["name"]+"</li>")
+	}
+	$("#tcflash-1-mar ul").css({"width":($("#tcflash-1-mar li").eq(0).outerWidth()*$("#tcflash-1-mar li").length)})
+	
+	var tcflashlistul = $("#tcflash-1-mar ul")
+	var tcflashlistli = tcflashlistul.find("li")
+	var nums = tcflashlistli.length
+	var scrollnumnow
+	var scrolltoleft = function(o){
+		if(o<4){
+			scrollnumnow =0
+		}
+		/*else if(o > nums-4){
+			scrollnumnow =nums-4
+		}*/
+		else{
+			scrollnumnow =o-3
+		}
+		tcflashlistul.stop().animate({left:-tcflashlistli.width()*scrollnumnow})
+	}
+	
+	var changev = function(o){
+		var name = tcflashlist[o]["name"]
+		var des = tcflashlist[o]["des"]
+		var simg = tcflashlist[o]["simg"]
+		var minimg = tcflashlist[o]["minimg"]
+		var minflv = tcflashlist[o]["minflv"]
+		var minmp4 = tcflashlist[o]["minmp4"]
+		var maximg = tcflashlist[o]["maximg"]
+		var maxflv = tcflashlist[o]["maxflv"]
+		var maxmp4 = tcflashlist[o]["maxmp4"]
+		
+		
+		$("#tcflash-1-title").text(name)
+		$("#tcflash-1-des").text(des)
+		var tcvtab = function(i){
+			if (i==0){
+				$("#tcflash-1").empty().append("<div></div>")
+				nie.util.video("#tcflash-1 div",{
+					movieUrl:minflv,
+					mp4_movieUrl:minmp4,
+					width:600,
+					height:340,
+					bufferTime:5,
+					loopTimes:-1,
+					volume:0.3,
+					startImg:minimg,
+					autoPlay:true
+				});
+			}
+			else {
+				nie.util.video("#tcflash-1",{
+					movieUrl:maxflv,
+					mp4_movieUrl:maxmp4,
+					width:760,
+					height:430,
+					bufferTime:5,
+					loopTimes:-1,
+					volume:0.3,
+					startImg:maximg,
+					autoPlay:true
+				});
+			}
+			$("#tcflash-1-tab li").removeClass("current")
+			$("#tcflash-1-tab li").eq(i).addClass("current")
+		}
+		tcvtab(0)
+		$("#tcflash-1-tab li").each(function(i){
+			$(this).click(function(){
+				tcvtab(i)
+			}) 
+		})
+		scrolltoleft(o)
+		tcflashlistli.removeClass("current")
+		tcflashlistli.eq(o).addClass("current")
+		num = o
+	}
+	changev(num)
+	
+	tcflashlistli.each(function(i){
+		$(this).click(function(){
+			if(i != num){
+				changev(i)
+			}
+		})
+	})
+	$("#tcflash-1-mar-left").click(function(){
+		if(num != 0){
+			num =num-1
+			changev(num)
+		}		
+	})
+	$("#tcflash-1-mar-right").click(function(){
+		if(num != tcflashlistli.length-1){
+			num =num+1
+			changev(num)
+		}		
+	})
+	
+	var obj = $("#tc-1")
+	$(".bg").css({"height":$(document).height()}).show()
+	obj.fadeIn().css({"top":($(window).height()-obj.height())/2+$(window).scrollTop(),"left":($(window).width()-obj.outerWidth())/2+$(window).scrollLeft()})
+}
+
+var closedvlist = function (o){
+	var obj = $(o)
+	obj.hide()
+	$(".bg").hide()
+	$("#tcflash-1").empty()
+}
+
+
+
+var opendv = function (){
+opendvlist(spnum+12);
+}
+
+
+var closedv = function (o){
+	var obj = $(o)
+	obj.hide()
+	$(".bg").hide()
+	$("#tcflash-0").empty()
+}
+
+function opends(o){
+	$(".bg").css({"height":$(document).height()}).show()
+	$(o).show().css({"top":($(window).height()-$(o).height())/2+$(window).scrollTop(),"left":($(window).width()-$(o).outerWidth())/2+$(window).scrollLeft()})
+	var urlArray=(location.href).split('.com/');
+	var shouldCount=false;
+	if(urlArray.length<2) shouldCount=true;
+	else if(urlArray[1]=='boot.html'||urlArray[1]=='') shouldCount=true;
+	if(o=='#tc-4'&&shouldCount)
+	{
+		$.ajax({
+		    url: "http://gs.163.com:10001/app/jsonp/incr_access_num",
+		    data: {
+		        
+		        product_id: 2,
+		        mode: 0,
+		        sign: "K9eZVB+AWQ1hA5IL+BwCpgQVox8="
+		    },
+		    type: "GET",
+		    dataType: "jsonp",
+		    success: function(data) {
+		    },
+		    cache: false
+		});
+	}
+}
+
+function closeds(o){
+	$(o).hide()
+	$(".bg").hide()	
+}
+
+
+$(function(){	   
+	 marlrgo=function(mar,marleft,marright,autoplay){
+        var num = 0;
+        var slideul = mar+" ul";
+        var slideli = mar+" ul li";
+        var slidelilength = $(slideli).length;
+        var slideliwidth = $(slideli).eq(0).width();
+
+        $(slideul).css({"width":(slideliwidth*slidelilength)})
+        if(slideliwidth*slidelilength-$(mar).width()>=slideliwidth){
+            $(marleft).click(function(){
+                if(num==0){
+                    num=1
+                    $(slideli).last().prependTo(slideul)
+                    $(slideul).css({"left":-slideliwidth}).animate({"left":0},function(){num=0})
+                }
+            })
+            $(marright).click(function(){
+                if(num==0){
+                    num=1
+                    $(slideul).animate({"left":-slideliwidth},function(){$(slideli).eq(0).appendTo(slideul);$(slideul).css({"left":0});num=0})
+                }
+            })
+            function play(){
+                var st=setInterval(function(){
+                    if(num==0){
+                        num=1
+                        $(slideul).animate({"left":-slideliwidth},function(){$(slideli).eq(0).appendTo(slideul);$(slideul).css({"left":0});num=0})
+                    }
+                },5000);
+            }
+            play();
+
+        }
+    }
+    var picScroll=marlrgo(".imglist_w",".aleft",".aright",true);
+	
+	
+	
+	nie.use(["nie.util.bigUrs_noCaptcha","nie.util.video","ui.Switch","ui.tab","util.bjTime","ui.scrollview","ui.lightBox","ui.marquee2"], function(){
+		var bigUrs = nie.util.bigUrs.create();
+		bigUrs.init();
+		$.tab("#switch_nav span","#con > div");	
+		$.tab("#spnav a","#mini-video > div",{fn:function(i){
+			if(spnum != i){
+			$('#mini-video-player').flash({
+				swf:'http://res.nie.netease.com/comm/swf/video_btn_final.swf?volume=0&width=256&height=138&clickAndPause=0&flv='+video1_url[i],
+			    height:138,
+				width:256,
+				allowScriptAccess:'always',
+				allowFullScreen:'true',
+				bgcolor:"#000000",
+			   noFlashTips:"<img src="+video1_img[i]+" style='cursor:pointer;' onclick=\"opendv(0);\">"});
+			$("#sptitle img").attr("src",video1_title[i]);
+			$("#mini-video-player").attr("onclick","opendvlist("+(i+12)+")");
+
+			}
+			spnum = i;
+		}
+		});
+		//$.Switch("#switch #switch_nav span","#switch #con > div");
+		if($("#mt ul li").length > 1){
+	$.marquee2("#mt","top");
+	}
+	    if($("#yuyue ul li").length > 10){
+	$.marquee2("#yuyue","top");
+	}
+	
+		/*
+		$.scrollview('#showimg',{
+			screen:'.imglist_w',
+			next:'.aright',
+			prev:'.aleft',
+			content:'.imglist',
+			autoplay:false});
+			
+			*/
+		$.scrollview('#yxjt',{
+			screen:'.imglist_w2',
+			next:'.aright2',
+			prev:'.aleft2',
+			content:'.imglist2',
+			autoplay:false});
+		$('#yxjt .imglist2 a').lightBox();
+		var nownum;
+		$.tab("#nav a","#vicon > div");
+
+		function tcs(){
+			$.tab("#tctab-0 > li","#tctabcon-0 > .con");
+			
+			function showDate(o){
+				var nowdate = new Date(o.dateObj)
+				var dates = new Date("10/5/2012 11:00:00")	
+				if(dates.getTime() > nowdate.getTime()){
+					$(".dTclc").css("height",125)
+				}
+			}
+			$.bjTime.getDate(showDate);
+		}
+		setTimeout(tcs,0)
+	})
+
+	if($(".bg").length==0){
+		$("body").append('<div class="bg"></div>')
+	}
+		$('#close').click(function() {
+			$('#resmask').hide();
+			$('#res1').hide();
+			});
+		$('.close2').click(function() {
+			$('#resmask').hide();
+			$('#res2').hide();
+			$('#res3').hide();
+			$('#res4').hide();
+			$('#res5').hide();
+			$('#res6').hide();
+			});
+			
+	//book reshow
+	var action=location.hash;
+		action=action.split('#')[1];
+	if(action=="book"){
+		showRes('1',861,608);
+	}
+	
+})
+
+	   function showRes(num,x,y) {
+			var sh=$(document).scrollTop(); 
+			var w = $(document).width();
+			var h = $(document).height();
+			var hh=$(window).height()-y;
+			var rw = (w-x)/2;
+			var rh = hh/2+sh;
+			$('#resmask').css({width:w,height:h}).show();
+			$('#res'+num).css({left:rw,top:rh}).show();
+			}
+			</script>  
+  <script>
+  $(function(){
+	 //nie.util.stats运行时执行点击统计
+	nie.config.stats.clickStats=true; 
+
+  });
+  </script>
+</head>
+<body>
+<div id="resmask"></div>
+<div id='res1'>
+  <div id="rescon1">
+   <div class="scrollBar" style="margin:0 0 0 0;">
+            <div class="scrollView">
+                <ul class="clr">
+                    <li><img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/yy1.jpg" width="600" height="464" alt="pic1" /><span>进入游戏，选择预约服务器后点击“确认”，在登录页面输入账号和密码，点击“确定”后进入创建角色页面；</span></li>
+                    <li><img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/yy2.jpg" width="600" height="464" alt="pic2" /><span>点击“创建新角色”，会提示输入手机号码预约，输入手机后点击“确定”，即可进入下一步；</span></li>
+                    <li><img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/yy3.jpg" width="600" height="464" alt="pic3" /><span>点击“创建新角色”，选择自己喜欢的职业和人物，输入角色姓名和验证码，点击“确认”即预约成功。</span></li>
+                </ul>
+            </div>
+            <div class="scrollPages">
+            	<a href='javascript:void(0);' id="btn1" rel="1" title="第一步，选服务器 登录"><i>第一步，选服务器 登录</i></a>
+            	<a href='javascript:void(0);' id="btn2" rel="2" title="第二步，输入手机号码 预约"><i>第二步，输入手机号码 预约</i></a>
+            	<a href='javascript:void(0);' id="btn3" rel="3" title="第三步，创建角色成功"><i>第三步，创建角色成功</i></a>
+            </div>
+            <a href="#" id="scrollPrev" class="scrollPrev" style="background-position:0 0;width:80px;height:140px;"></a>
+            <a href="#" id="scrollNext" class="scrollNext" style="background-position:0 0;width:80px;height:140px;""></a>
+     </div>       
+    <div id="close"> </div>
+  </div>
+</div>
+  
+ <div id='res2'>
+  <div id="rescon2">
+  <div id="restitle">特权一:在线就能得现金 最高提现2000元</div>
+  <p>每晚20点志玲MM亲临成都、长安、洛阳三大主城，全程随机撒宝箱。跟随志玲MM，拾取宝箱，即可随机开取得现金，最高可获得2000元现金，并可立即提现。</p>
+    <div id="close2" class="close2"> </div>
+  </div>
+  </div>
+  
+   <div id='res3'>
+  <div id="rescon2">
+  <div id="restitle">特权二:预约优先排队 优选角色名</div>
+  <p>预约用户可在开服时，优先排队进入游戏，提前选择心仪角色名。</p>
+    <div id="close3" class="close2"> </div>
+  </div>
+  </div>
+  
+   <div id='res4'>
+  <div id="rescon2">
+  <div id="restitle">特权三:预约额外有奖 拿女神签名豪礼</div>
+  <p>预约用户在截止6月14日11点前等级达到35级，即可赢取Iphone5、Ipad mini，林志玲亲笔签名笔记本、抱枕、U盘等豪礼。</p>
+    <div id="close3" class="close2"> </div>
+  </div>
+  </div>
+  
+   <div id='res5'>
+  <div id="rescon2">
+  <div id="restitle">特权四:10大开服狂欢活动 惊喜不断</div>
+  <p>开服期间活动不断：给力公测庆典buff、惊喜宝箱，志玲女神陪你下副本，还有网易彩票红包赢千万大奖等。</p>
+    <div id="close3" class="close2"> </div>
+  </div>
+  </div>
+  
+   <div id='res6'>
+  <div id="rescon2">
+  <div id="restitle">特权五:预约专属礼包 独享稀有道具</div>
+  <p>预约用户可独享预约大礼包，珍稀门派时装，全能药水、经验珠、庆贺烟花等，助你快速升级，赢在起跑线。</p>
+    <div id="close3" class="close2"> </div>
+  </div>
+  </div>
+<!-- 视频弹窗-->
+<div class="dTc" id="tc-1" >
+   <a class="aClose" onclick="closedvlist(&#39;#tc-1&#39;)">关闭</a>
+    <div class="dTcflashbg">
+        <h3 class="h3Tcflash" id="tcflash-1-title"></h3>
+       <div class="dTcflash clear" id="tcflash-1"></div>
+        <div class="dTcflashdes" id="tcflash-1-des"></div>
+    </div>
+</div>
+
+<div id="NIE-topBar"></div>
+<!-- 页面外套 Start -->
+<div id="wrap">
+  <div id="wrap-bg1">
+    <div id="wrap-bg2">
+      <div id="wrap-bg3">      
+        <h1>大唐无双2——网易第一战斗游戏</h1>
+        <h2>6月8日公测，新服预约现已开放</h2>
+      	<!-- 主体 Start -->
+        <div id="main">
+        
+          <!-- 页眉 Start -->
+          <div id="header">
+          <div id="logo"> <a href="http://dtws2.163.com/index.html" title="返回官网" target="_blank"></a> </div>
+           <div id="home"> <a href="http://dtws2.163.com/index.html" title="返回官网" target="_blank"></a> </div>
+            <!--<div id="num">5月24日12点预约开启</div>-->
+			<div id="num">已有 <span class="co">  </span> 位玩家预约新服</div>
+           <div id="mini-video">
+		   <div class="mini-con" >
+           <div id="mini-video-player" onclick="opendvlist(12)" ></div>
+		   <div id="sptitle"><img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/sptitledl.jpg"></div>
+		   </div>
+		   <div id="spnav">
+		   <ul>
+		   <li><a  href="javascript:void(0)" ></a></li>
+		   <li><a  href="javascript:void(0)" ></a></li>
+		   <li><a  href="javascript:void(0)" ></a></li>
+		   </ul>
+		   </div>
+		   </div>
+          </div>
+          <!-- 页眉 End -->
+          
+          <!-- 中心 Start -->
+          <div id="center">
+          <div id="qul">
+          <!-- Start 大通行证.快速注册 -->
+              <p class="NIE-quickReg-loading">注册网易通行证加载中,请稍后.</p>
+              <form class="NIE-quickReg" method="post" onsubmit="return false;" style="display:none;" action="#">
+                <p class="qrNoEmail"><a class="createEmailBtn" target="_blank">还没有邮箱？</a></p>
+                <dl>
+                  <dt class="qr-username">常用邮件地址：</dt>
+                  <dd class="qr-username">
+                    <ul>
+                      <li class="qrCon">
+                        <input class="qrUserInp qrInpTxt" type="text" name="username" autocomplete="off" tabindex="1" />
+                        <!-- 邮箱地址.错误提示 -->
+                        <input rel="username" class="qrUserInp qrError qrHide" readonly="readonly" tabindex="1" />
+                        <div class="suggestDomain">
+                          <ul>
+                            <!--域名提示建议-->
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="qrChk"><!-- 邮箱地址.提示 --></li>
+                    </ul>
+                  </dd>
+                  <dt class="qr-password">设置密码：</dt>
+                  <dd class="qr-password">
+                    <ul>
+                      <li class="qrCon">
+                        <input class="qrPWInp qrInpTxt" type="password" name="password" tabindex="2" />
+                        <!-- 设置密码.错误提示 -->
+                        <input rel="password" class="qrPWInp qrError qrHide" readonly="readonly" tabindex="2" />
+                      </li>
+                      <li class="qrChk"><!-- 设置密码.提示 --></li>
+                    </ul>
+                  </dd>
+                  <dt class="qr-repassword">确认密码：</dt>
+                  <dd class="qr-repassword">
+                    <ul>
+                      <li class="qrCon">
+                        <input class="qrRePWInp qrInpTxt" type="password" name="repassword" tabindex="3" />
+                        <!-- 确认密码.错误提示 -->
+                        <input rel="repassword" class="qrRePWInp qrError qrHide" readonly="readonly" tabindex="3" />
+                      </li>
+                      <li class="qrChk"><!-- 确认密码.提示 --></li>
+                    </ul>
+                  </dd>                 
+                  <dt class="qr-agree">
+                    <input id="qr-agreeInp" name="agree" type="checkbox" checked="checked" />
+                  </dt>
+                  <dd class="qr-agree">
+                    <input type="hidden" name="promark" value="common" />
+                    <label for="qr-agreeInp"> 我同意
+                      "<a href="http://reg.163.com/agreement.shtml" target="_blank">服务条款</a>"和<br />
+                      "<a href="http://reg.163.com/agreement_game.shtml" target="_blank">隐私保护和个人信息利用政策</a>" </label>
+                  </dd>
+                  <dd class="qr-submit">
+                    <label for="mss" id="zc"></label>
+                    <input class="qrSubmitInp" type="submit" value="完成注册" tabindex="5" id="mss"/>
+                  </dd>
+                </dl>
+              </form>
+              <!-- End 大通行证.快速注册 --> 
+
+          </div>
+          
+          <div id="video">
+          <div id="nav">
+            <ul>
+                <li class="nav1"><a id="" href="javascript:void(0)" >战斗感官</a></li>
+			    <li class="nav2"><a id="" href="javascript:void(0)" >玩法对抗</a></li>
+				<li class="nav3"><a id="" href="javascript:void(0)" >社区交互</a></li>
+				<li class="nav4"><a id="" href="javascript:void(0)">世界剧情</a></li>
+            </ul>
+          </div>
+          <div id="vicon" >
+          <div id="t1" class="default">
+          <div id="title">真物理引擎，踏水留痕，剑扫碎石，极致战斗体验</div>
+          <div class="pic1"> </div>
+          <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/md1.jpg" class="img1"onclick="opendvlist(0)">
+          <p class="p1">游戏内真实拍摄</p>
+          </div>
+          <div id="t2" class="default">
+          <div id="title">对抗升级一体化，零门槛战斗，多维战斗想战就战</div>
+          <div class="pic2"> </div>
+          <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/md3.jpg" class="img2"onclick="opendvlist(1)">
+          <p class="p2">游戏内真实拍摄</p>
+          </div>
+          <div id="t3" class="default">
+          <div id="title">战斗式社区，放胆树敌拉帮结派，从不缺对手和战友</div>
+         <div class="pic2"> </div>
+          <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/md2.jpg" class="img2"onclick="opendvlist(2)">
+          <p class="p2">游戏内真实拍摄</p>
+          </div>
+          <div id="t4" class="default">
+          <div id="title">林志玲配音出演全新主线，演绎多面娇娃，剧情悬念迭起</div>
+          <div class="pic1"> </div>
+          <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/md4.jpg" class="img1" onclick="opendvlist(3)">
+          <p class="p1">游戏内真实拍摄</p>
+          </div>
+          </div>
+          </div>
+          
+          <div id="showimg">
+          <div class="imglist_w">
+                    <ul class="imglist" style="width: 2940px;">
+                      <li><a >
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/libao1.jpg" onclick="showRes('2',544,230)"></a></li>
+                      <li><a >
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/libao2.jpg" onclick="showRes('3',544,230)"></a></li>
+                      <li><a >
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/libao3.jpg" onclick="showRes('4',544,230)"></a></li>
+                      <li><a >
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/libao4.jpg" onclick="showRes('5',544,230)"></a></li>
+                      <li><a >
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/libao5.jpg" onclick="showRes('6',544,230)"></a></li>
+                    </ul>
+                  </div>
+                    
+          <a class="aleft"></a>
+          <a class="aright"></a>
+          </div>
+
+          <div id="switch">
+          <div id="con">
+          <div class="conAll default" id="sl">
+          <ul class="role-info role-info1">
+				<li>门　　派<span class="cspan">：少林</span></li>
+				<li>攻击类型<span class="cspan">：近战</span></li>
+				<li>职业定位<span class="cspan">：重甲，防御性战士</span></li>
+			</ul>
+            <img src="http://res.nie.netease.com/dtws2/zt/12/1113_newbie/images/video.jpg" class="img1" onclick="opendvlist(4)" />
+          <a href="http://dtws2.163.com/show/role/" target="_blank" class="zs zs1">门派展示</a>
+          </div>
+          <div class="conAll default" id="hb">
+       	  <ul class="role-info role-info2">
+				<li>门　　派<span class="cspan">：寒冰</span></li>
+				<li>攻击类型<span class="cspan">：近战</span></li>
+				<li>职业定位<span class="cspan">：轻甲,刺客型</span></li>
+			</ul>
+            <img src="http://res.nie.netease.com/dtws2/zt/12/1113_newbie/images/video_hanbing.jpg" class="img2" onclick="opendvlist(5)" />
+           <a href="http://dtws2.163.com/show/role/" target="_blank" class="zs zs2">门派展示</a>
+          </div>
+          <div class="conAll default" id="ss">
+          <ul class="role-info role-info3">
+				<li>门　　派<span class="cspan">：蜀山</span></li>
+				<li>攻击类型<span class="cspan">：近战</span></li>
+				<li>职业定位<span class="cspan">：轻甲，均衡型</span></li>
+			</ul>
+            <img src="http://res.nie.netease.com/dtws2/zt/12/1113_newbie/images/video_shushan.jpg" class="img3" onclick="opendvlist(6)" />
+           <a href="http://dtws2.163.com/show/role/" target="_blank" class="zs zs3">门派展示</a>
+          </div>
+          <div class="conAll default" id="ts">
+          <ul class="role-info role-info4">
+				<li>门　　派<span class="cspan">：天煞</span></li>
+				<li>攻击类型<span class="cspan">：近战</span></li>
+				<li>职业定位<span class="cspan">：重甲，攻击型战士</span></li>
+			</ul>
+            <img src="http://res.nie.netease.com/dtws2/zt/12/1113_newbie/images/video_tiansha.jpg" class="img4" onclick="opendvlist(7)" />
+           <a href="http://dtws2.163.com/show/role/" target="_blank" class="zs zs4">门派展示</a>
+          </div>
+          <div class="conAll default" id="xy">
+          <ul class="role-info role-info5">
+				<li>门　　派<span class="cspan">：侠隐</span></li>
+				<li>攻击类型<span class="cspan">：法术</span></li>
+				<li>职业定位<span class="cspan">：布衣，法师型</span></li>
+			</ul>
+            <img src="http://res.nie.netease.com/dtws2/zt/12/1113_newbie/images/video_xiayin.jpg" class="img5" onclick="opendvlist(8)" />
+           <a href="http://dtws2.163.com/show/role/" target="_blank" class="zs zs5">门派展示</a>
+          </div>
+          <div class="conAll default" id="wm">
+          <ul class="role-info role-info6">
+				<li>门　　派<span class="cspan">：无名</span></li>
+				<li>攻击类型<span class="cspan">：远程</span></li>
+				<li>职业定位<span class="cspan">：轻甲，弓手型</span></li>
+			</ul>
+            <img src="http://res.nie.netease.com/dtws2/zt/12/1113_newbie/images/video_wuming.jpg" class="img6" onclick="opendvlist(9)" />
+           <a href="http://dtws2.163.com/show/role/" target="_blank" class="zs zs6">门派展示</a>
+          </div>
+          <div class="conAll default" id="bhy">
+          <ul class="role-info role-info7">
+				<li>门　　派<span class="cspan">：百花医</span></li>
+				<li>攻击类型<span class="cspan">：法术</span></li>
+				<li>职业定位<span class="cspan">：布衣，辅助型</span></li>
+			</ul>
+            <img src="http://res.nie.netease.com/dtws2/zt/12/1113_newbie/images/video_baihua.jpg" class="img7" onclick="opendvlist(10)" />
+           <a href="http://dtws2.163.com/show/role/" target="_blank" class="zs zs7">门派展示</a>
+          </div>
+          <div class="conAll default" id="bhg">
+          <ul class="role-info role-info8">
+				<li>门　　派<span class="cspan">：百花蛊</span></li>
+				<li>攻击类型<span class="cspan">：法术</span></li>
+				<li>职业定位<span class="cspan">：布衣，均衡型，群攻</span></li>
+           
+			</ul>
+            <img src="http://res.nie.netease.com/dtws2/zt/12/1113_newbie/images/video_baihua.jpg" class="img8" onclick="opendvlist(11)" />
+           <a href="http://dtws2.163.com/show/role/" target="_blank" class="zs zs8">门派展示</a>
+          </div>
+          </div>
+          <div id="switch_nav">
+			<span id="switch_nav_1" class=""><i class="icon"></i><i class="title">少林</i></span>
+			<span id="switch_nav_2" class=""><i class="icon"></i><i class="title">寒冰</i></span>
+			<span id="switch_nav_3" class=""><i class="icon"></i><i class="title">蜀山</i></span>
+			<span id="switch_nav_4" class=""><i class="icon"></i><i class="title">天煞</i></span>
+			<span id="switch_nav_5" class=""><i class="icon"></i><i class="title">侠隐</i></span>
+			<span id="switch_nav_6" class=""><i class="icon"></i><i class="title">无名</i></span>
+			<span id="switch_nav_7" class=""><i class="icon"></i><i class="title">百花医</i></span>
+			<span id="switch_nav_8" class=""><i class="icon"></i><i class="title">百花蛊</i></span>
+		</div>
+          </div>
+          
+          <div id="yxjt">
+          <div class="imglist_w2">
+                    <ul class="imglist2" style="width: 2940px;">
+                      <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/01.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/01s.jpg"></a></li>
+                      <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/02.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/02s.jpg"></a></li>
+                      <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/03.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/03s.jpg"></a></li>
+                       <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/04.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/04s.jpg"></a></li>
+                       <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/05.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/05s.jpg"></a></li>
+                       <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/07.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/07s.jpg"></a></li>
+                       <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/08.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/08s.jpg"></a></li>
+                       <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/09.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/09s.jpg"></a></li>
+                       <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/10.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/10s.jpg"></a></li>
+                       <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/11.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/11s.jpg"></a></li>
+                       <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/12.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/12s.jpg"></a></li>
+                      <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/13.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/13s.jpg"></a></li>
+                      <li><a href="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/14.jpg">
+                      <img src="http://res.nie.netease.com/dtws2/qt/13/0523_fab/images/14s.jpg"></a></li>
+                    </ul>
+                  </div>
+                    
+          <a class="aleft2"></a>
+          <a class="aright2"></a>
+          </div>
+          
+          <div id="down"><a href="http://dt2.gdl.netease.com/dtws2-1.3.279.exe" target="_blank" title="官方下载"></a></div>
+          <div id="down2"><a href="http://dt2.gdl.netease.com/dtws2-mini-1.3.279.exe" target="_blank" title="极速下载"></a></div>
+          <div id="yyzy"><a href="javascript:showRes('1',861,608)"  title="指引预约"></a></div>
+          
+          <div id="yuyuetxt">登陆游戏，在预约专区创建角色，即可成功预约</div>
+          
+          <div id="mt">
+          <ul  >
+			<li>[17173]主编黄中：无论你是单挑高手、混战狂人还是部署专家，来《大唐无双2》总能找到适合你的血性新战场！祝福《大唐无双2》公测成功，共创佳绩！</li>
+			<li>[多玩游戏网]主编骆永有：《大唐无双2》网易第一战斗网游，女神林志玲声色加盟，随心所欲想战就战，大赞！</li> 
+			<li>[新浪游戏]副总经理杨振: 值网易第一战斗网游《大唐无双2》开测之际，谨代表新浪游戏频道向网易游戏表示最真挚的祝福和最热烈的祝贺，祝愿《大唐无双2》火爆开测，取辉煌成绩！</li> 
+			<li>[腾讯游戏频道]：腾讯游戏频道预祝《大唐无双2》测试成功，期待网易第一战斗网游《大唐无双2》引领PK玩法全面革新！</li>
+			<li>[叶子猪]CEO胡义兵: 《大唐无双2》本次公测画面感官、战斗体验、剧情玩法全面升级，在此预祝公测大卖，取得优异成绩！</li>
+			<li>[游久网]总编张亿博: 《大唐无双2》独创“对抗式升级模式“、“战斗式社区体系”，让对抗的痛快与社区的丰富完美融合，碉堡了!</li> 
+			<li>[太平洋游戏网]主编甘浩：《大唐无双2》画面感官、战斗体验、社区交互及剧情玩法上全面革新，带来前所未有的完善游戏感受！预祝《大唐无双2》再创PK武侠游戏新高！</li> 
+			<li>[178游戏网]主编曾峰：《大唐无双2》激发你永不服输的战斗欲望，唤醒你潜藏心底的血性。祝火爆开测赢万千玩家欢心，树2.5D武侠网游新标杆！</li>
+            <li>[TGBUS]网游主编高飞：最随心所欲的玩法对抗，最随性热血的社区交互，《大唐无双2》火爆公测，不容错过！</li>
+			<li>[52PK]副主编杨廷松 ：恭贺网易第一战斗网游《大唐无双2》6月8日公测开创武侠网络游戏新篇章！武侠网游盛事，网易大唐无双！</li>		
+		</ul>
+          </div>
+          
+          <div id="yuyue">
+          <ul class="">
+		<li>红尘客栈-预约 <span class='state-7'>已约满</span></li>
+<li>武林至尊-预约 <span class='state-7'>已约满</span></li>
+<li>万众齐心-预约 <span class='state-4'>繁忙</span></li>
+<li>刀锋偏冷-预约 <span class='state-4'>繁忙</span></li>
+<li>在水一方-预约 <span class='state-1'>爆满</span></li>
+<li>七侠五义-预约 <span class='state-7'>已约满</span></li>
+<li>雁过留芳-预约 <span class='state-3'>良好</span></li>
+<li>驰骋神州-预约 <span class='state-3'>良好</span></li>
+<li>龙战八方-预约 <span class='state-1'>爆满</span></li>
+<li>龙行天下-预约 <span class='state-7'>已约满</span></li>
+
+		  </ul>
+          </div>
+          </div>
+          <!-- 中心 End -->
+          
+          <!-- 页脚 Start -->
+          <div id="footer">
+          
+          	<!-- NIE 底部版权 Start -->
+            <div id="NIE-copyRight">
+            </div>
+            <!-- NIE 底部版权 End -->
+            
+          </div>
+          <!-- 页脚 End -->
+          
+        </div>        
+        <!-- 主体 End -->
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 页面外套 End -->
+<script charset="gb2312" src="http://res.nie.netease.com/dtws2/qt/12/1031_show/js/scroll.js"></script>
+<script charset="gb2312" type="text/javascript">
+$(function(){
+	$(".scrollBar").scrollBar(1,"",5000);
+	for(var i=0;i<$("#switch a").length;i++){
+		nums = i+1
+		$("#switchnav").append("<a>"+ nums +"</a>")
+	}
+	
+})
+</script>
+
+<script type="text/javascript">
+$.get("http://dt2-appoint.webapp.163.com/appoint_count",function(data){$(".co").html(data.info);},"jsonp")
+</script>
+
+<!-- AdForward I-Point:无双2引导页FAB Begin --> 
+<script language="JavaScript"> function rand(num) {   return Math.floor(Math.random()*num)+1;}document.write("<iframe  src=\"http://allyes.nie.163.com/main/adftrack?db=afanie&point=1085&cache="+rand(9999999)+"&pre="+escape(document.referrer)+"\" width=\"0\" height=\"0\" frameborder=\"0\"><\/iframe>"); </script> 
+<!-- AdForward I-Point:无双2引导页FAB End --> 
+</body>
+</html>

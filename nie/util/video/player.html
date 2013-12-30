@@ -1,0 +1,868 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>《斩魂》官方网站 - 网易3D.大型闯关格斗 颠覆你感官 - 今日不删档开放内测</title>
+<meta name="keywords" content="斩魂,斩魂官网,斩魂官方网站,3D格斗,横版游戏，斩魂开放测试" />
+<meta name="description" content="《斩魂》为网易耗时3年倾情开发的3D大型闯关格斗网游，以隋唐历史结合上古神话的幻想题材为背景。凭借国内首款3D格斗引擎，《斩魂》在横版领域实现了1080p高分辨率3D写实画面和全面升级的3D化格斗操作系统。独有的东方式原创格斗技能和帮战塔防等七类创新玩法，更为横版玩家带来颠覆性的游戏体验。今日不删档开放内测。" />
+<meta name="author" content="网易，NetEase Inc." />
+<meta name="copyright" content="网易，NetEase Inc." />
+<meta name="pmid" content="271914" />
+<meta name="editor" content="CC" />
+<meta name="designer" content="QQ" />
+<meta name="front-end technicist" content="jony" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/comm/js/nie/util/urs/bigUrs.case1.css" media="all" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/css/index.css" />
+<script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>  
+<script>
+//nie.util.stats运行时执行点击统计
+nie.config.stats.clickStats=true;
+</script>
+<script charset="gb2312">
+nie.util.videoData=nie.util.videoData||[];
+nie.util.video=nie.util.video||function(k,c){this.fatDom=$(k);if(this.fatDom.length>0){var e=nie.util.videoData.length,a={width:["100%",1],height:["100%",1],wmode:["direct",0],bgcolor:["000000",0],movieUrl:[null,1],videoWidth:[null,1],videoHeight:[null,1],volume:[0.8,1],autoPlay:[!1,1],startImg:[null,1],loopTimes:[0,1],maskImg:[null,1],bufferTime:[5,1],videoIndex:[e,1]},h={videoWidth:"width",videoHeight:"height"},j={},f=navigator.userAgent,i=/i(Phone|Pad)/i.test(f),f=/Android/i.test(f),i=i||f,d;nie.util.videoData.push({cb_valName:function(){}});
+typeof c.playComplete_callBack=="function"&&(nie.util.videoData[e].playComplete_callBack=c.playComplete_callBack);for(var b in a)typeof c[b]!="undefined"&&(a[b][0]=c[b]);for(b in h)a[b][0]==null&&(a[b][0]=a[h[b]][0]);for(b in a)a[b][1]==1&&(j[b]=a[b][0]);var g=(i||!$.flash.available)&&c.mp4_movieUrl;if(g){e=["video","source"];b=0;for(h=e.length;b<h;b++)document.createElement(e[b]);a=$("<video>",{controls:!0,autoplay:a.autoPlay[0],poster:a.startImg[0],src:c.mp4_movieUrl,loop:a.loopTimes!=0}).attr({width:a.width[0],
+height:a.height[0]});f&&a.click(function(){this.play()});$("<source>",{src:c.mp4_movieUrl,type:"video/mp4"}).appendTo(a);this.fatDom.empty().append(a);d=a[0]}else this.fatDom.flash({width:a.width[0],height:a.height[0],swf:"http://res.nie.netease.com/comm/js/nie/util/player.test.swf?"+new Date().getTime(),allowFullScreen:!0,allowscriptaccess:"always",wmode:a.wmode[0],bgcolor:a.bgcolor[0],hasVersion:10.2,flashvars:j}),nie.util.videoData[e].flashObj=this;this.destroy=function(){this.stop();this.fatDom.empty()};this.change=function(a){g?
+d.src=a:this.fatDom.flash(function(){this.change(a)})};this.stop=function(){g?(d.pause(),$.browser.mozilla?d.mozSrcObject=null:d.src=$.browser.opera?null:""):this.fatDom.flash(function(){this.stopVideo()})};this.pause=function(){g?d.pause():this.fatDom.flash(function(){this.pauseVideo()})};this.play=function(){g?d.play():this.fatDom.flash(function(){this.playVideo()})}}};
+(function(i,j,m){var g="object",d=true,l='<div><h4>ò3??DèòaD?°?Adobe Flash Player.</h4><p><a onclick="new Image().src=\'http://webdog.nie.163.com/email?promark=zsqnk\';" href="http://www.adobe.com/go/getflashplayer" target="_blank"><img width="112" height="33" alt="??è?D?°?Flash" src="http://res.nie.netease.com/comm/js/util/swfobject/get_flash_player.gif"></a></p></div>';function n(p,o){var e=(p[0]||0)-(o[0]||0);return e>0||(!e&&p.length>0&&n(p.slice(1),o.slice(1)))}function f(p){if(typeof p!=g){return p}var e=[],q="";for(var o in p){if(typeof p[o]==g){q=f(p[o])}else{q=[o,(d)?encodeURI(p[o]):p[o]].join("=")}e.push(q)}return e.join("&")}function h(p){var e="";for(var o in p){if(p[o]){switch(o){case"type":if(i.browser.msie){e+=" classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'"}break;case"data":if(!i.browser.msie){e+=" "+o+'="'+p[o]+'"'}break;default:e+=" "+o+'="'+p[o]+'"';break}}}return e}function c(p){var e=[];for(var o in p){e.push(['<param name="',o,'" value="',f(p[o]),'" />'].join(""))}return e.join("")}try{var b=m.description||(function(){return(new m("ShockwaveFlash.ShockwaveFlash")).GetVariable("$version")}())}catch(k){b="Unavailable"}var a=b.match(/\d+/g)||[0];i[j]={available:a[0]>0,activeX:m&&!m.name,version:{original:b,array:a,string:a.join("."),major:parseInt(a[0],10)||0,minor:parseInt(a[1],10)||0,release:parseInt(a[2],10)||0},hasVersion:function(e){var o=(/string|number/.test(typeof e))?e.toString().split("."):(/object/.test(typeof e))?[e.major,e.minor]:e||[0,0];return n(a,o)},encodeParams:true,expressInstall:"http://res.nie.netease.com/comm/js/util/expressInstall.swf",expressInstallIsActive:false,create:function(p){var e=this,o;if(typeof p.noFlashTips!="undefined"){o=p.noFlashTips;delete p.noFlashTips}else{o=l}if(!p.swf||e.expressInstallIsActive){return o}if(!e.hasVersion(p.hasVersion||1)){e.expressInstallIsActive=true;if(typeof p.hasVersionFail=="function"){if(!p.hasVersionFail.apply(p)){return o}}p={swf:p.expressInstall||e.expressInstall,height:137,width:214,flashvars:{MMredirectURL:location.href,MMplayerType:(e.activeX)?"ActiveX":"PlugIn",MMdoctitle:document.title.slice(0,47)+" - Flash Player Installation"}}}attrs={data:p.swf,type:"application/x-shockwave-flash",id:p.id||"flash_"+Math.floor(Math.random()*999999999),width:p.width||320,height:p.height||180,style:p.style||""};d=typeof p.useEncode!=="undefined"?p.useEncode:e.encodeParams;p.movie=p.swf;p.wmode=p.wmode||"opaque";delete p.fallback;delete p.hasVersion;delete p.hasVersionFail;delete p.height;delete p.id;delete p.swf;delete p.useEncode;delete p.width;return"<object "+h(attrs)+">"+c(p)+'<param name="quality" value="high" />'+o+"</object>"}};i.fn[j]=function(e){var o=this.find(g).andSelf().filter(g);if(/string|object/.test(typeof e)){this.each(function(){var q=i(this),p;e=(typeof e==g)?e:{swf:e};e.fallback=this;p=i[j].create(e);q.empty().html(p)});if(!i.flash.available){new Image().src="http://webdog.nie.163.com/email?promark=h3rc7"}}if(typeof e=="function"){o.each(function(){var p=this,q="jsInteractionTimeoutMs";p[q]=p[q]||0;if(p[q]<660){if(p.clientWidth||p.clientHeight){e.call(p)}else{setTimeout(function(){i(p)[j](e)},p[q]+66)}}})}return o}}(jQuery,"flash",navigator.plugins["Shockwave Flash"]||window.ActiveXObject));$.extend({Switch:function(e){var f=function(b){a.index=b;a.conDoms&&k(b,a.conDoms);a.imgDoms&&n(b,a.imgDoms);a.btnDoms&&k(b,a.btnDoms)},k=function(b,d){$.each(d,function(){$.each(this,function(c){c!=b?$(this).removeClass(a["class"]):$(this).addClass(a["class"])})})},n=function(b,d){$.each(d,function(){$.each(this,function(c){c!=b?$(this).css("zIndex",1).stop(!0,!0).fadeOut():($(this).css("zIndex",2).stop(!0,!0).fadeIn(),a.callBack(c))})})},h=function(){a.index=a.index+1>=a.totalDom?0:a.index+1;g=
+setTimeout(function(){f(a.index);h()},a.time)},l=function(a){$.each(a,function(){$.each(this,function(a){$(this).hover(function(){clearTimeout(g);f(a)},function(){h()})})})},a={btnDoms:null,imgDoms:null,conDoms:null,"class":"current",time:5E3,index:0,totalDom:0,btnTime:180,callBack:function(){}},i,g;if(typeof e!="object"){var m=arguments,j=function(a){return m[a]?[$(m[a])]:null};a.btnDoms=j(0);a.imgDoms=j(1);a.conDoms=j(2)}else $.each(a,function(b){a[b]=e&&e[b]?e[b]:a[b]});a.totalDom=function(){if(a.imgDoms!=
+null)return $(a.imgDoms[0]).length;else if(a.btnDoms!=null)return $(a.btnDoms[0]).length;else if(a.conDoms!=null)return $(a.conDoms[0]).length}();a.imgDoms&&l(a.imgDoms);a.btnDoms&&$.each(a.btnDoms,function(){$.each(this,function(b){var d=$(this);(function(){var c=!1;d.hover(function(){c=!0;clearTimeout(i);i=setTimeout(function(){c&&(clearTimeout(g),f(b))},a.btnTime)},function(){c=!1;clearTimeout(i);clearTimeout(g);h()})})()})});a.conDoms&&l(a.conDoms);f(a.index);h()}});
+$.include("http://res.nie.netease.com/comm/js/ui/lightBox/base.css");
+(function(b){b.fn.lightBox=function(a){function n(){var c=a.controlBar==="bottom"?'<div id="jquery-overlay"></div><div id="jquery-lightbox"><div id="lightbox-container-image-box"><div id="lightbox-container-image"><img id="lightbox-image"><div style="" id="lightbox-nav"><a href="#" id="lightbox-nav-btnPrev"></a><a href="#" id="lightbox-nav-btnNext"></a></div><div id="lightbox-loading"><a href="#" id="lightbox-loading-link"></a></div></div></div><div id="lightbox-container-image-data-box"><div id="lightbox-container-image-data"><div id="lightbox-image-details"><span id="lightbox-image-details-caption"></span><span id="lightbox-image-details-currentNumber"></span></div><div id="lightbox-secNav"><a href="#" id="lightbox-secNav-btnClose"></a></div></div></div></div>':'<div id="jquery-overlay"></div><div id="jquery-lightbox"><div id="lightbox-container-image-data-box"><div id="lightbox-container-image-data"><div id="lightbox-image-details"><span id="lightbox-image-details-caption"></span><span id="lightbox-image-details-currentNumber"></span></div><div id="lightbox-secNav"><a href="#" id="lightbox-secNav-btnClose"></a></div></div></div><div id="lightbox-container-image-box"><div id="lightbox-container-image"><img id="lightbox-image"><div style="" id="lightbox-nav"><a href="#" id="lightbox-nav-btnPrev"></a><a href="#" id="lightbox-nav-btnNext"></a></div><div id="lightbox-loading"><a href="#" id="lightbox-loading-link"></a></div></div></div></div>';
+b("body").append(c);c=g();b("#jquery-overlay").css({backgroundColor:a.overlayBgColor,opacity:a.overlayOpacity,width:c[0],height:c[1]}).fadeIn();var f=i();b("#jquery-lightbox").css({top:f[1]+c[3]/10,left:f[0]}).show();b("#jquery-overlay,#jquery-lightbox").click(function(){j()});b("#lightbox-loading-link,#lightbox-secNav-btnClose").click(function(){j();return!1});b(window).resize(function(){var a=g();b("#jquery-overlay").css({width:a[0],height:a[1]});var c=i();b("#jquery-lightbox").css({top:c[1]+a[3]/
+10,left:c[0]})})}function k(){b("#lightbox-loading").show();a.fixedNavigation?b("#lightbox-image,#lightbox-image-details-currentNumber").hide():b("#lightbox-image,#lightbox-nav,#lightbox-nav-btnPrev,#lightbox-nav-btnNext,#lightbox-image-details-currentNumber").hide();b("#lightbox-container-image-data-box").css("opacity",0);var c=new Image;c.onload=function(){b("#lightbox-image").attr("src",a.imageArray[a.activeImage][0]);o(c.width,c.height);c.onload=function(){};var f=g(),d=i(),e=Math.max(b("#lightbox-image").height(),
+c.height),h=f[3]-e>0?(f[3]-e)/2:0;b("#jquery-lightbox").css({top:d[1]+h,left:d[0]});b(window).resize(function(){var a=g();b("#jquery-overlay").css({width:a[0],height:a[1]});a=i();b("#jquery-lightbox").css({top:a[1]+h,left:a[0]})})};c.src=a.imageArray[a.activeImage][0]}function o(c,f){var d=b("#lightbox-container-image-box").width(),e=b("#lightbox-container-image-box").height(),h=c+a.containerBorderSize*2,g=f+a.containerBorderSize*2;d-=h;e-=g;b("#lightbox-container-image-box").animate({width:h,height:g},
+a.containerResizeSpeed,function(){p()});d==0&&e==0&&(b.browser.msie?m(250):m(100));b("#lightbox-container-image-data-box").css({width:c});b("#lightbox-nav-btnPrev,#lightbox-nav-btnNext").css({height:f+a.containerBorderSize*2})}function p(){b("#lightbox-loading").hide();b("#lightbox-image").fadeIn(function(){b("#lightbox-container-image-data-box").animate({opacity:1},"slow");b("#lightbox-image-details-caption").hide();a.imageArray[a.activeImage][1]&&b("#lightbox-image-details-caption").html(a.imageArray[a.activeImage][1]).show();
+a.imageArray.length>1&&b("#lightbox-image-details-currentNumber").html(a.txtImage+" "+(a.activeImage+1)+" "+a.txtOf+" "+a.imageArray.length).show();q()});if(a.imageArray.length-1>a.activeImage)objNext=new Image,objNext.src=a.imageArray[a.activeImage+1][0];if(a.activeImage>0)objPrev=new Image,objPrev.src=a.imageArray[a.activeImage-1][0]}function q(){b("#lightbox-nav").show();var c=function(c){b("#lightbox-nav-btn"+c).show().unbind().removeClass("lightbox-nav-close").attr("title",a["txt"+c]).bind("click",
+function(){c=="Prev"?a.activeImage--:a.activeImage++;k();return!1})},f=function(c){b("#lightbox-nav-btn"+c).show().unbind().addClass("lightbox-nav-close").attr("title",a["txt"+(c=="Prev"?"First":"Last")]).bind("click",function(){j();return!1})};a.imageArray.length>1&&(a.activeImage!=0?c("Prev"):f("Prev"),a.activeImage!=a.imageArray.length-1?c("Next"):f("Next"));r()}function r(){b(document).keydown(function(c){c==null?(keycode=event.keyCode,escapeKey=27):(keycode=c.keyCode,escapeKey=c.DOM_VK_ESCAPE);
+key=String.fromCharCode(keycode).toLowerCase();(key==a.keyToClose||key=="x"||keycode==escapeKey)&&j();if((key==a.keyToPrev||keycode==37)&&a.activeImage!=0)a.activeImage-=1,k(),b(document).unbind();if((key==a.keyToNext||keycode==39)&&a.activeImage!=a.imageArray.length-1)a.activeImage+=1,k(),b(document).unbind()})}function j(){b("#jquery-lightbox").remove();b("#jquery-overlay").fadeOut(function(){b("#jquery-overlay").remove()});b("select").css({visibility:"visible"})}function g(){var a,b;window.innerHeight&&
+window.scrollMaxY?(a=window.innerWidth+window.scrollMaxX,b=window.innerHeight+window.scrollMaxY):document.body.scrollHeight>document.body.offsetHeight?(a=document.body.scrollWidth,b=document.body.scrollHeight):(a=document.body.offsetWidth,b=document.body.offsetHeight);var d,e;if(self.innerHeight)d=document.documentElement.clientWidth?document.documentElement.clientWidth:self.innerWidth,e=self.innerHeight;else if(document.documentElement&&document.documentElement.clientHeight)d=document.documentElement.clientWidth,
+e=document.documentElement.clientHeight;else if(document.body)d=document.body.clientWidth,e=document.body.clientHeight;pageHeight=b<e?e:b;pageWidth=a<d?a:d;return arrayPageSize=[pageWidth,pageHeight,d,e]}function i(){var a,b;if(self.pageYOffset)b=self.pageYOffset,a=self.pageXOffset;else if(document.documentElement&&document.documentElement.scrollTop)b=document.documentElement.scrollTop,a=document.documentElement.scrollLeft;else if(document.body)b=document.body.scrollTop,a=document.body.scrollLeft;
+return arrayPageScroll=[a,b]}function m(a){var b=new Date;do var d=new Date;while(d-b<a)}var a=jQuery.extend({overlayBgColor:"#000",overlayOpacity:0.8,fixedNavigation:!1,containerBorderSize:10,containerResizeSpeed:400,txtImage:"\u56fe\u7247",txtOf:"\u5171",txtFirst:"\u8fd9\u662f\u7b2c\u4e00\u5f20",txtLast:"\u5df2\u662f\u6700\u540e\u4e00\u5f20",txtNext:"\u70b9\u51fb\u67e5\u770b\u4e0b\u4e00\u5f20",txtPrev:"\u70b9\u51fb\u67e5\u770b\u4e0a\u4e00\u5f20",keyToClose:"c",keyToPrev:"p",keyToNext:"n",imageArray:[],
+activeImage:0,controlBar:"bottom"},a),l=this;return this.unbind("click").click(function(){b("select").css({visibility:"hidden"});n();a.imageArray.length=0;a.activeImage=0;if(l.length==1)a.imageArray.push([this.getAttribute("href"),this.getAttribute("title")]);else for(var c=0;c<l.length;c++)a.imageArray.push([l[c].getAttribute("href"),l[c].getAttribute("title")]);for(;a.imageArray[a.activeImage][0]!=this.getAttribute("href");)a.activeImage++;k();return!1})}})(jQuery);
+$.extend({marquee2:function(g,k,h){var c,i,n,l,d,j=k,b;var e=function(){var p=((n.css(j)=="auto")?l:l+parseInt(n.css(j)))*d;var o={};o[j]=-l;n.animate(o,p,"linear",function(){n.css(j,0);e()})};var a=function(o,p){return(h&&h[o])?h[o]:p};var f=function(){var o=a("btnEvent","mouseover");var p=a("btnChangeSpeed",5);var q=function(u,t){var r=d;var s=t;u.bind(o,function(){n.stop();if(j!=s){var x=0;var w="";switch(s){case"top":x=parseInt(n.css("bottom"));w="bottom";break;case"bottom":x=parseInt(n.css("top"));w="top";break;case"left":x=parseInt(n.css("right"));w="right";break;case"right":x=parseInt(n.css("left"));w="left";break}if(isNaN(x)){x=-Math.abs(i-l-parseInt(n.css(s)))}j=s;var v=(i-x<0)?-Math.abs(i-l-x)+l:i-l-x;n.css(j,v).css(w,"")}d=p;e()}).mouseout(function(){n.stop();d=r;e()})};if(h){if(j=="left"||j=="right"){if(h.leftBtn){q($(h.leftBtn),"left")}if(h.rightBtn){q($(h.rightBtn),"right")}}else{if(j=="top"||j=="bottom"){if(h.topBtn){q($(h.topBtn),"top")}if(h.bottomBtn){q($(h.bottomBtn),"bottom")}}}}};var m=function(){c=$(g);i=c.width();n=c.children();n.children().clone().appendTo(n);n.hover(function(){n.stop()},e);l=((j=="left"||j=="right")?n.width():n.height())/2;d=a("speed",40);f();e()}()}});(function(A){A.fn.popup=function(C){var B=A(this);var D=[];B.each(function(){if(A(this).find(".popup-close").length==0){A(this).prepend("<a class=\"popup-close\">X</a>")}D.push(this.id)});B.find(".popup-close").click(function(){A(this).parent().hide();window._NIE_overlayer.hide()});return(new function(){this.show=function(F){var E=A(F);if(!window._NIE_overlayer){if(document.body){A(document.body).append("<div id=\"NIE-overlayer\"></div>");window._NIE_overlayer=A("#NIE-overlayer")}}window._NIE_overlayer.css({"height":A(document).height()+100}).show();E.show().css({"top":(A(window).height()-E.height())/2+A(window).scrollTop(),"left":(A(window).width()-E.width())/2+A(window).scrollLeft()})};this.close=function(F){var E=A(F);E.hide();window._NIE_overlayer.hide()}})}})(jQuery);
+if(!$.scrollview){$.scrollview=function(element){var elem=$(element);if(elem.length==0){return false}var config={screen:".scrollview-screen",next:".scrollview-next",prev:".scrollview-prev",content:".scrollview-content",tab:".scrollview-tab",autoplay:true,direct:"h",time:5000,plugin:null,onScroll:null};$.extend(config,arguments[1]||{});var totalWidth=0,pageSize=0,pageCount,pagePos=1;var timmer;function next(){if(pagePos+1>pageCount){_content.css("left",0);pagePos=1}else{pagePos=pagePos+1}showPage(pagePos)}function prev(){if(pagePos-1<=0){_content.css("left",-pageSize*(pageCount-1));pagePos=pageCount-1}else{pagePos=pagePos-1}showPage(pagePos)}function showPage(p){if(p>pageCount||p<1){return false}stop();_content.animate({"left":-(p-1)*pageSize});pagePos=p;if(config.autoplay){play()}if(config.onScroll!=null){config.onScroll(p)}}function play(){timmer=setTimeout(next,config.time)}function stop(){clearTimeout(timmer)}var _content=elem.find(config.content);_content.children().each(function(){totalWidth=totalWidth+parseInt($(this).width())+parseInt($(this).css("paddingLeft"))+parseInt($(this).css("paddingRight"))});_content.append(_content.html());_content.width(totalWidth*2);pageSize=elem.find(config.screen).width();pageCount=Math.ceil(totalWidth/pageSize);pageCount=totalWidth%pageSize>pageSize/4?pageCount+1:pageCount;function run(){elem.find(config.prev).click(prev);elem.find(config.next).click(next);$(window).blur(function(){stop()}).focus(function(){if(config.autoplay){play()}});if(config.autoplay){play()}}if(config.plugin){eval("("+config.plugin.toString()+")();")}run()}}
+(function(a){a.extend({tab:function(f,g,i){function h(b,a){return typeof i!="undefined"&&typeof i[b]!="undefined"?i[b]:a}function k(b){a(l).removeClass(e);l=b;a(b).addClass(e)}function m(b){a.isFunction(n)&&n(b)}function o(b){typeof g!="string"?a.each(c,function(c){a(d[c]).removeClass(e);d[c]=this[b];a(this[b]).addClass(e)}):(d&&a(d).removeClass(e),d=c[b],a(c[b]).addClass(e))}var j=a(f),l,d,c,n=h("fn",null),p,r=h("time","180"),f=h("index",0),q,e=h("activeClass","current");typeof g!="string"?(c=[],
+d=[],a.each(g,function(){c.push(a(this.toString()));d.push({})}),d=[]):(c=a(g),d={});a.each(j,function(b){a(this).bind("mouseenter",{i:b,o:j[b]},function(a){overStatus=!0;(function(){var b=a.data.o,c=a.data.i;p=setTimeout(function(){overStatus&&q!=c&&(q=c,k(b),o(c),m(c))},r)})()}).bind("mouseleave",{i:b},function(){clearTimeout(p);overStatus=!1})});k(j[f]);o(f);m(f)}})})(jQuery);
+(function(A){A.tabSwitch=function(J,B,D){D=A.extend({activeClass:"current",start:0,callback:null,autoplay:true,time:4000,delay:200},D||{});var C=A(J,document);var F=A(B,document);var H=-1;var G=null;var K=function(L){if(L==H){return }I();A(C[H]).removeClass(D.activeClass);A(F[H]).removeClass(D.activeClass);A(C[L]).addClass(D.activeClass);if(F[L]){A(F[L]).addClass(D.activeClass)}H=L;D.callback(H);E()};var E=function(){if(D.autoplay){G=setTimeout(function(){var L=parseInt(H)+1>=C.length?0:parseInt(H)+1;K(L)},D.time)}};var I=function(){if(G){clearTimeout(G)}};C.each(function(L){A(this).attr("index",L).hover(function(M){K(A(this).attr("index"))})});K(D.start)}})(jQuery);
+$.extend({share:{appendTo:function(e,a){if(e){var d={t163:5,qzone:1,tQQ:3,tSina:2,kaixin:7,bai:9,renren:8,douban:11,msn:17},b=[],c={type:6,fat:$(e)};$.each(d,function(){b.push(this)});if(a){a.site&&(b=[],$.each(a.site,function(){d[this]&&b.push(d[this])}));if(a.url)c.url=a.url;if(a.title)c.title=a.title}c.defShow=b;nie.util.share(c)}}}});
+nie.util.share_traceCome=nie.util.share_traceCome||!1;nie.util.share_css=nie.util.share_css||!1;
+(function(c){nie.util.share=nie.util.share||function(){var v=function(a){c(new Image).bind("readystatechange",function(){}).bind("abort",function(){}).attr("src",a)},m=function(a,c,e,f){e=b.args[a]!=null?b.args[a]:e;return e==""?e:(a=="url"&&(a=e,(e=a.match(b.args.urlReg))?e=a.replace(e[0],e[1]+[c,b.args.product,b.args.traceType].join(",")):(a=x(a),c=a.search+(a.search==""?"?":"&")+"nieShare="+[c,b.args.product,b.args.traceType].join(","),e=/^\//.test(a.pathname)?a.pathname:"/"+a.pathname,e=a.protocol+
+"//"+(a.port==80?a.hostname:a.host)+e+c+a.hash)),encodeURIComponent(e+(typeof f!="undefined"?f:"")))},u=function(a){var b=[],c;for(c in a)b.push(c+"="+a[c]);return b},x=function(a){var b=document.createElement("div");b.innerHTML='<a href="'+a.replace(/"/g,"%22")+'"/>';return b.firstChild},b={data:{},args:{panelID:"NIE-share-panel",fat:"#NIE-share",product:nie.config.site,imgs:null,txt:null,type:1,traceType:null,imgSize:[100,100],defShow:[5,1,2,3],defShow2:[5,1,2,3,8,4],moreShow:[5,1,2,3,4,6,7,8,9,
+10,11,12,13],searchTips:"\u8f93\u5165\u7f51\u7ad9\u540d\u6216\u62fc\u97f3\u7f29\u5199",sideBar_top:100,title:null,url:null,img:null,content:null,urlReg:/([&?]nieShare=)(\d+),([^,]+),(\d+)/},addBtn:function(a,d,e,f,h,j){var k="",l="",a=parseInt(a),n="",i="",o=0,p=16;switch(typeof j!="undefined"?j:b.args.type){case 1:o=-(d-16+(a+1)*6+(a+1)*16);break;case 2:o=-a*32;p=32;break;case 3:o=-(d-16+(a+1)*6+(a+1)*16)}d="background-position:"+e+"px "+o+"px";h==!0?(k=b.data[a].name,l="\u5206\u4eab\u5230"+k,i=
+d):h==!1?(l="\u5206\u4eab\u5230"+b.data[a].name,n="<img width="+p+" height="+p+" src='http://res.nie.netease.com/comm/blank.gif' style='"+d+"'>"):(k=h,i=d);h={index:a,"class":b.args.type==6?"NIE-share":"",style:i,href:"javascript:;",title:l,target:"_self"};n==""?h.text=k:h.html=n;var g=c("<a>",h).appendTo(f);(function(){var c=a;g.click(function(){if(b.data[c]){var a=b.data[c],e=m("url",c,location.href),d=m("title",c,document.title),f=m("img",c,""),g=m("content",c,document.title),s=[650,500],s=u({width:s[0],
+height:s[1],top:(screen.height-s[1])/4,left:(screen.width-s[0])/2,toolbar:"no",menubar:"no",scrollbars:"no",resizable:"yes",location:"no",status:"no"}),h;for(h in a.paramName){var t="";switch(parseInt(h)){case 1:t=e;break;case 2:t=c==5?d+e:d;break;case 3:t=f;break;case 4:t=g;break;case 5:t=encodeURIComponent(nie.util.siteName())}a.params[a.paramName[h]]=t}a="http://"+a.file+"?"+u(a.params).join("&");window.open(a,"_blank",s.join(","));v("http://click.ku.163.com/share.v2.gif?"+["product="+b.args.product,
+"id="+c,"type="+b.args.traceType].join("&"))}})})();return g},addPanel:function(){var a=c("<div>",{id:b.args.panelID,html:"<h3>\u5206\u4eab\u5230...</h3><input type=text value='"+b.args.searchTips+"'/><div></div>"}).hide().appendTo(c(document.body));c("<button>").click(function(){a.hide()}).hover(function(){c(this).addClass("hover")},function(){c(this).removeClass("hover")}).appendTo(a);var d=a.find("div"),e;for(e in b.data)b.addBtn(e,12,5,d,!0,1);a.find("input").click(function(){var a=c(this);a.val()==
+b.args.searchTips&&a.val("")}).keyup(function(){var a=c(this).val().toLowerCase();d.find("a").each(function(){var e=c(this),d=e.attr("index");b.data[d].name.toLowerCase().indexOf(a)!=-1||b.data[d].searchTxt.toLowerCase().indexOf(a)!=-1||b.data[d].searchTxt.replace(/[a-z]/g,"").toLowerCase().indexOf(a)!=-1?e.show():e.hide()})})},showPanel:function(){var a="#"+b.args.panelID,d=c(a),e=c(window);d.length==0&&b.addPanel();d=c(a);a=e.scrollTop()+(e.height()-d.height())/2;d.css({top:a<0?0:a,left:(e.width()-
+d.width())/2}).show().find("a").show()},render:function(){var a=b.args.type;if(b.args.traceType==null)b.args.traceType=a;if(a==1||a==2){var d=c(b.args.fat);if(d.length>0){var e=c("<span>",{"class":"NIE-share NIE-share"+a,html:"<span class='NIE-share-txt'>\u5206\u4eab\u5230:</span>"}).appendTo(d),f=c("<span>",{"class":"NIE-share-iconBtn"}).appendTo(e);c.browser.webkit&&f.css("fontSize",a==2?"41px":"20px");c.each(b.args.defShow,function(){b.addBtn(this,16,0,f,!1)});var h=!0,j,a=c("<span>",{html:"<em>\u66f4\u591a</em>",
+"class":"NIE-share-more"}).mouseenter(function(){clearTimeout(j);h=!0;var a=c(window),b=c(this).children("span"),d=b.outerHeight(),g=b.outerWidth(),f=e.offset();b.css({top:a.scrollTop()+a.height()<f.top+d+20?-d-12:4,left:a.scrollLeft()+a.width()<f.left+e.width()+g?-g+42:0}).fadeIn("fast")}).mouseleave(function(){clearTimeout(j);h=!1;j=setTimeout(function(){h||k.fadeOut("fast")},500)}).appendTo(e),k=c("<span>").appendTo(a);c.each(b.args.moreShow,function(){b.addBtn(this,12,5,k,!0,1)});b.addBtn(-1,
+12,5,k,"\u66f4\u591a...",1).click(function(){k.fadeOut("fast");b.showPanel()})}}else if(a==3){var l=!1,n=!1,i=c("<div>",{id:"NIE-share-sideBar",html:"<div><b></b><span><button></button><h3>\u5206\u4eab\u5230...</h3><p></p></span></div>",mouseleave:function(){l&&(clearTimeout(j),n=!1,j=setTimeout(function(){n||(i.animate({width:30},500),p.animate({right:-120},500,function(){l=!1}))},1E3))},mouseenter:function(){l&&(clearTimeout(j),n=!0)}}).appendTo(c(document.body)),o=i.find("p"),p=i.find("div"),a=
+function(){i.css("top",c(window).scrollTop()+b.args.sideBar_top)};c.each(b.args.moreShow,function(){b.addBtn(this,12,5,o,!0,1)});b.addBtn(-1,12,5,o,"\u66f4\u591a...").click(function(){b.showPanel()});i.find("b").hover(function(){l||(l=!0,i.animate({width:150},500),p.animate({right:0},500))});i.find("button").click(function(){p.animate({right:-150},500,function(){i.remove()})}).hover(function(){c(this).addClass("hover")},function(){c(this).removeClass("hover")});c.browser.msie&&c.browser.msie<=6?(c(window).scroll(a),
+a()):i.css({position:"fixed",top:b.args.sideBar_top})}else if(a==4&&b.args.imgs){var a="NIE-share-img",g=c("#"+a),d=g.length>0,q,r=!1,m=function(a){return b.args.imgSize[0]<a.outerWidth()&&b.args.imgSize[1]<a.outerHeight()};c(b.args.imgs).hover(function(){var a=c(this),e=a.outerHeight(),d=a.offset(),f=c(window),h=g.outerHeight();if(m(a))clearTimeout(q),r=!0,b.args.img=x(a.attr("src")).href,g.find(".NIE-share-more>span").hide(),g.css({top:d.top+e>f.scrollTop()+f.height()?d.top+10:d.top+e-10-h,left:d.left+
+10}).show()},function(){var a=c(this);m(a)&&(r=!1,clearTimeout(q),q=setTimeout(function(){r||g.hide()},500))});b.args.defShow=b.args.defShow2;if(!d)g=c("<div>",{id:a,mouseenter:function(){clearTimeout(q);r=!0},mouseleave:function(){r=!1;clearTimeout(q);q=setTimeout(function(){r||g.hide()},500)}}).appendTo(c(document.body)),b.args.type=1,b.args.fat=g,arguments.callee()}else if(a==5&&b.args.txt){var a="NIE-share-txt",g=c("#"+a),d=g.length>0,w=!1,v=c(b.args.txt),u=function(){var a="";if(window.getSelection)a=
+window.getSelection();else if(document.getSelection)a=document.getSelection();else if(document.selection)a=document.selection.createRange().text;return c.trim(a)};b.args.defShow=b.args.defShow2;if(!d)g=c("<div>",{id:a}).appendTo(c(document.body)),v.mouseup(function(a){setTimeout(function(){var d=c.trim(u());w&&d!=""?(b.args.content=b.args.title=d,g.css({top:a.pageY+15,left:a.pageX-50}).show()):g.hide()},100)}).mouseleave(function(){w=!1}).mouseenter(function(){w=!0}),c(document.body).mouseup(function(){!w&&
+c.trim(u())==""&&g.hide()}),b.args.type=1,b.args.fat=g,arguments.callee()}else a==6&&c.each(b.args.defShow,function(){b.addBtn(this,16,0,b.args.fat,!0,1)})}};b.init=function(){if(location.search!=""&&!nie.util.share_traceCome){var a=location.search.match(b.args.urlReg);if(a)nie.util.share_traceCome=!0,v("http://click.ku.163.com/share.income.gif?"+["id="+a[2],"product="+a[3],"type="+a[4],"_r="+(new Date).getMilliseconds()].join("&"))}a=[[1,"QQ\u7a7a\u95f4","QQKongJian","sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey",
+{1:"url",2:"title",3:"pics",4:"desc",4:"summary"}],[2,"\u65b0\u6d6a\u5fae\u535a","XinLangWeiBo","v.t.sina.com.cn/share/share.php",{1:"url",2:"title",3:"pic"},{c:"nie",content:"gb2312",source:"nie"}],[3,"\u817e\u8baf\u5fae\u535a","TengXunWeiBo","v.t.qq.com/share/share.php",{1:"url",2:"title",3:"pic"}],[4,"\u817e\u8baf\u670b\u53cb","TengXunPengYou","sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey",{1:"url",2:"title",3:"pics",4:"desc",4:"summary"},{to:"pengyou"}],[5,"\u7f51\u6613\u5fae\u535a","WangYiWeiBo",
+"t.163.com/article/user/checkLogin.do",{1:"link",2:"info",3:"images",5:"source"},{check1stImg:!0,togImg:!0,key:"OELT16LMxo0rAmtO"}],[6,"\u641c\u72d0\u5fae\u535a","SouHuWeiBo","t.sohu.com/third/post.jsp",{1:"url",2:"title",3:"pic"},{content:"utf-8"}],[7,"\u5f00\u5fc3\u7f51","KaiXinWang","www.kaixin001.com/repaste/share.php",{1:"rurl",2:"rtitle",4:"rcontent"}],[8,"\u4eba\u4eba\u7f51","RenRenWang","share.renren.com/share/buttonshare.do",{1:"link",2:"title"}],[9,"\u641c\u72d0\u767d\u793e\u4f1a","SouHuBaiSheHui",
+"bai.sohu.com/share/blank/add.do",{1:"link",2:"title"}],[10,"\u6dd8\u6c5f\u6e56","TaoJiangHu","share.jianghu.taobao.com/share/addShare.htm",{1:"url",2:"title",4:"content"}],[11,"\u8c46\u74e3","DouBan","www.douban.com/recommend/",{1:"url",2:"title",3:"image"}],[12,"\u732b\u6251\u63a8\u5ba2","MaoPuTuiKe","tk.mop.com/api/post.htm",{1:"url",2:"title",4:"desc"}],[13,"\u767e\u5ea6Hi","BaiDuHi","apps.hi.baidu.com/share/",{1:"url",2:"title",4:"content"}],[14,"\u767e\u5ea6\u8d34\u5427","BaiDuTieBa","tieba.baidu.com/i/app/open_share_api",
+{1:"link"}],[15,"\u767e\u5ea6\u641c\u85cf","BaiDuShouChang","cang.baidu.com/do/add",{1:"iu",2:"it",4:"dc"},{fr:"ien"}],[16,"\u996d\u5426","FangFou","fanfou.com/sharer",{1:"u",2:"t",4:"d"}],[17,"MSN","Msn","profile.live.com/badge",{1:"url",2:"title",3:"screenshot",4:"description"},{wa:"wsignin1.0"}],[18,"\u5929\u6daf\u793e\u533a","TianYaSheQu","share.tianya.cn/openapp/restpage/activity/appendDiv.jsp",{1:"ccUrl",2:"ccTitle",4:"ccBody"}],[19,"\u51e4\u51f0\u7f51\u5fae\u535a","FengHuangWangWeiBo","t.ifeng.com/interface.php",
+{1:"sourceUrl",2:"title",3:"pic"}],[20,"139\u8bf4\u5ba2","139ShuoKe","shequ.10086.cn/share/share.php",{1:"tourl",2:"title"}],[21,"\u68a6\u5e7b\u4eba\u751f","MengHuanRenSheng","dream.163.com/share/link/",{1:"url",2:"title",4:"content"}]];if(!nie.util.share_css)c.include("http://res.nie.netease.com/comm/js/nie/util/share/share.css"),nie.util.share_css=!0;var d=arguments;if(d.length>0&&d[0].length>0){var d=d[0][0],e;for(e in d)typeof d[e]!="undefined"&&(b.args[e]=d[e])}e=0;for(d=a.length;e<d;e++){var f=
+a[e];b.data[f[0]]={name:f[1],searchTxt:f[2],file:f[3],paramName:f[4],params:typeof f[5]!="undefined"?f[5]:{}}}b.render()}(arguments);return b}})(jQuery);
+nie.util.siteName=nie.util.siteName||function(){var a=null;switch(nie.config.site){default:a="\u7f51\u6613\u6e38\u620f";break;case "nie":a="\u7f51\u6613\u6e38\u620f\u95e8\u6237";break;case "xyq":a="\u68a6\u5e7b\u897f\u6e38";break;case "xy2":a="\u5927\u8bdd\u897f\u6e38\u2161";break;case "xy3":a="\u5927\u8bdd\u897f\u6e383";break;case "pk":a="\u6218\u6b4c";break;case "csxy":a="\u521b\u4e16\u897f\u6e38";break;case "dt":a="\u5927\u5510\u8c6a\u4fa0";break;case "dt2":a="\u5927\u5510\u65e0\u53cc";break;case "tx3":a=
+"\u5929\u4e0b3";break;case "qn":a="\u5029\u5973\u5e7d\u9b42";break;case "wh":a="\u6b66\u9b42";break;case "jl":a="\u7cbe\u7075\u4f20\u8bf4";break;case "zh":a="\u65a9\u9b42";break;case "ff":a="\u65b0\u98de\u98de";break;case "pet":a="\u5ba0\u7269\u738b\u56fd";break;case "itown":a="iTown";break;case "st":a="\u75af\u72c2\u77f3\u5934";break;case "fj":a="\u5bcc\u7532\u897f\u6e38";break;case "ball":a="\u7bee\u7403\u4e5f\u75af\u72c2";break;case "popogame":a="\u6ce1\u6ce1\u6e38\u620f";break;case "xyc":a="\u5361\u724c\u5bf9\u51b3";
+break;case "rich":a="\u5bcc\u7532\u897f\u6e38";break;case "zg":a="\u6218\u56fd\u98ce\u4e91";break;case "sg":a="\u4e09\u56fd\u5929\u4e0b";break;case "xjc":a="\u4ed9\u754c\u6751";break;case "xc":a="\u6e38\u620f\u661f\u57ce"}return a};
+
+//注册
+
+$(function(){
+
+	 nie.use(["nie.util.bigUrs"], function(){	
+
+		 bigUrs = nie.util.bigUrs.create();
+
+		 bigUrs.init();		
+
+	})
+
+
+
+	var w=$(".NIE-quickReg").width();
+
+	$("#width").text("form占用宽:"+w+"px").css("padding-left",(w-100)/2);
+
+})
+
+//
+var regtop;
+
+
+
+
+
+	
+
+
+//四大革新切换
+var fourNews=function()
+{
+	$.Switch({btnDoms:[$("#switch_nav1 span")],imgDoms:[$("#switchs1 .switch")],callBack:function(i){
+			$board=$("#switchs1 .switch").eq(i);
+			if(!$board.attr('initialize')){
+				$board.find('img').each(function(){
+					var src=$(this).attr('src2');
+					$(this).attr('src',src);
+				});
+				$.tab('#switch_item'+i+' ul li','#switch_item'+i+' .switch_img',{activeClass:'sel'});
+				$board.attr('initialize','initialize');
+			}
+		}});
+}
+
+
+
+
+
+
+//视频滚动+图片滚动
+var marlrgo = function(mar,marleft,marright){
+	var num = 0
+	var slideul = mar+" ul"
+	var slideli = mar+" ul li"
+	var slidelilength = $(slideli).length
+	var slideliwidth = $(slideli).eq(0).width()
+	$(slideul).css({"width":(slideliwidth*slidelilength)})
+	if(slideliwidth*slidelilength-$(mar).width()>=slideliwidth){
+		$(marleft).click(function(){
+			if(num==0){
+				num=1
+				$(slideli).last().prependTo(slideul)
+				$(slideul).css({"left":-slideliwidth}).animate({"left":0},function(){num=0})
+			}
+		})
+		$(marright).click(function(){
+			if(num==0){
+				num=1
+				$(slideul).animate({"left":-slideliwidth},function(){$(slideli).eq(0).appendTo(slideul);$(slideul).css({"left":0});num=0})
+			}
+		})
+	}
+}
+//视频滚动+图片滚动结束
+
+	nie.use(['ui.Switch','ui.tabswitch','ui.popup',"ui.tab","util.swfobject","ui.marquee2","util.swfobject","util.share","ui.lightBox",'ui.scrollview'],function(){
+		//四大革新
+	     fourNews();
+		//添加弹出层
+	    $("body").append('<div class="bg"></div>');
+	
+
+        //页面截图
+		$('.scrollview-content a').lightBox();	
+
+		//导航切换
+		$.tab('#mp_tabs span','#mp_content .mp-item');	
+		/*$.tab('#switch_nav1 span','#switchs1 .switch');	*/
+		
+		//横版网游戏滚动
+		$.marquee2("#mar-1","top");
+	    //好评推荐滚动
+		$.marquee2("#mar-2","top");
+		//分享
+		$.share.appendTo("#NIE-share");
+
+
+		//右上角小视频
+		$('#video-trailer').flash({swf:'http://res.nie.netease.com/comm/swf/video_btn.swf?flv=http://v.zh.netease.com/gw/11v1/cgs.f4v',
+			height:92,width:210,allowScriptAccess:'always',allowFullScreen:'true',
+			noFlashTips:"<img src='http:///res.nie.netease.com/zh/qt/2012/1214_fab/images/btn.jpg' style='cursor:pointer;' onclick=\"opendv('http://v.zh.netease.com/gw/11v1/cg.f4v');\">"});
+         
+       
+        //左右滚动切换     
+	marlrgo("#mar-4","#mar-4-left","#mar-4-right")
+	marlrgo("#mar-5","#mar-5-left","#mar-5-right")
+
+           
+
+		    
+
+		
+	});
+
+	
+	regtop = $(".dReg").css("top");
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+//点图片+点SWF弹出视频
+var loadImg=function(src,onload_callBack){				  
+	$(new Image())
+	.load(function(){
+		onload_callBack(this.src);
+	})
+	.bind('readystatechange',function(){
+		if(this.readyState=="complete"){							  
+			onload_callBack(this.src)
+			return;
+		}
+	})
+	.bind("abort",function(){			  
+		return;					  
+	})
+	.attr("src",src);			
+}
+
+function opendv(flv){
+	$(".bg").css({"height":$(document).height()}).show()
+	$(".dTc").show().css({"top":($(window).height()-$(".dTc").height())/2+$(window).scrollTop(),"left":($(window).width()-$(".dTc").outerWidth())/2+$(window).scrollLeft()})
+	
+	if(!flv){
+    var flv = "http://v.zh.netease.com/gw/11v1/cg.f4v";
+	}
+	
+    var flv = flv;
+
+	new nie.util.video("#flash-2",{
+		movieUrl:flv,
+		mp4_movieUrl:flv.replace(/(flv|f4v)$/i,"mp4"),//mp4视频地址
+		width:640,
+		height:360,
+		bufferTime:5,
+		loopTimes:-1,
+		volume:0.3,
+		wmode:"transparent",
+		autoPlay:true
+	});
+}
+
+function closedv(){
+	$(".dTc").hide()
+	$(".bg").hide()	
+    $("#flash-2").html("");
+}
+	
+
+
+
+$(function(){
+	$('#mp_content .mp-video,#mar-4 .scrollview-content li').each(function(i){
+		$(this).click(function(){
+			var flvrel = $(this).attr("href")
+			opendv(flvrel)
+			return false;
+		})
+	})
+
+
+
+});
+
+
+
+
+
+//向上滚动服务器字
+(function($){   
+$.fn.extend({   
+        Scroll:function(opt,callback){   
+                //参数初始化   
+                if(!opt) var opt={};   
+                var _btnUp = $("#"+ opt.up);//Shawphy:向上按钮   
+                var _btnDown = $("#"+ opt.down);//Shawphy:向下按钮   
+                var timerID;   
+                var _this=this.eq(0).find("ul:first");   
+                var     lineH=_this.find("li:first").height(), //获取行高   
+                        line=opt.line?parseInt(opt.line,10):parseInt(this.height()/lineH,5), //每次滚动的行数，默认为一屏，即父容器高度   
+                        speed=opt.speed?parseInt(opt.speed,10):400; //卷动速度，数值越大，速度越慢（毫秒）   
+                        timer=opt.timer?parseInt(opt.timer,10):4000; //滚动的时间间隔（毫秒）   
+                if(line==0) line=1;   
+                var upHeight=0-line*lineH;   
+                //滚动函数   
+                var scrollUp=function(){   
+                        _btnUp.unbind("click",scrollUp); //Shawphy:取消向上按钮的函数绑定   
+                        _this.animate({   
+                                marginTop:upHeight   
+                        },speed,function(){   
+                                for(i=1;i<=line;i++){   
+                                        _this.find("li:first").appendTo(_this);   
+                                }   
+                                _this.css({marginTop:0});   
+                                _btnUp.bind("click",scrollUp); //Shawphy:绑定向上按钮的点击事件   
+                        });   
+  
+                }   
+ 
+               //Shawphy:自动播放   
+                var autoPlay = function(){   
+                        if(timer)timerID = window.setInterval(scrollUp,timer);   
+                };   
+                var autoStop = function(){   
+                        if(timer)window.clearInterval(timerID);   
+                };   
+                 //鼠标事件绑定   
+                _this.hover(autoStop,autoPlay).mouseout();   
+                _btnUp.css("cursor","pointer").click( scrollUp ).hover(autoStop,autoPlay);//Shawphy:向上向下鼠标事件绑定   
+								if(typeof(scrollDown)=="undefined") scrollDown = function(){};//此函数没有找到，此句在修正后请删除
+                _btnDown.css("cursor","pointer").click( scrollDown ).hover(autoStop,autoPlay);   
+  
+        }         
+})   
+})(jQuery);   
+  
+
+
+
+
+
+</script>
+</head>
+<body>
+<div id="NIE-topBar"></div>
+<div class="nmb">
+<div class="wraper wraper-1">
+<div class="wraper wraper-2">
+<div class="wraper wraper-3">
+<div class="wraper wraper-4">
+<div class="head">
+		<a href="http://zh.163.com/index.html" class="meta-home" target="_blank" title="点击返回官网" >返回官网</a>
+		<div class="top-meta">
+		<a href="http://e.weibo.com/soul163" target="_blank" class="meta-z">+关注 斩魂</a>　<a href="http://zh.163.com/index.html" target="_blank" class="meta-g">·官网</a>　<a href="http://zh.163.com/download/" target="_blank" class="meta-d">·游戏</a>　<a href="http://zh.163.com/reg/" target="_blank" class="meta-z">·注册</a>
+		</div>
+<a href="http://zh.163.com/index.html" class="zsz" title="进入官网" target="_blank">进入官网</a>
+<div id="video-trailer"></div>
+<p class="video-text">斩魂首部CG大片《天命》</p>
+
+</div>
+<!--main Start-->
+<div class="main">
+<!--左边 Start-->
+<div class="subject">
+ <!-- ====== x Start ======-->
+ <!-- 4图切换 Start-->
+								<div class="four-area">
+					  				<div class="switchs" id="switchs1">
+										<div class="switch" id="switch_item0">
+											<img class="switch_img" src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/four/mg.jpg" alt="" width="690" height="306"/>
+										</div>
+										<div class="switch" id="switch_item1">
+											<img class="switch_img" src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/four/ck.jpg" alt="" width="690" height="306"/>
+										</div>
+										<div class="switch" id="switch_item2">
+											<img class="switch_img" src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/four/dj.jpg" alt="" width="690" height="306"/>
+										</div>
+										<div class="switch" id="switch_item3">
+											<img class="switch_img" src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/four/jz.jpg" alt="" width="690" height="306"/>
+										</div>
+										<div class="switch_nav" id="switch_nav1">
+											<span id="switch_nav1_1">颠覆美感</span>
+											<span id="switch_nav1_2">颠覆操控感</span>
+											<span id="switch_nav1_3">颠覆打击感</span>
+											<span id="switch_nav1_4">颠覆节奏感</span>
+										</div>
+									</div>
+								</div>   
+  <!-- 4图切换 End-->
+
+
+  <div class="l1">
+<!-- 切换 Start-->
+								<div class="pro-area">
+									<div class="mp-tabs" id="mp_tabs">
+  										<span id="mptab_1" class="current"></span>
+  										<span id="mptab_2"></span>
+  										<span id="mptab_3"></span>
+  										<span id="mptab_4"></span>
+  										<span id="mptab_5"></span>
+  										<span id="mptab_6"></span>
+  										<span id="mptab_7"></span>
+  										<span id="mptab_8"></span>
+  										<span id="mptab_9"></span>
+  										<span id="mptab_10"></span>
+ 									</div>
+ 									<div class="mp-content" id="mp_content">
+ 										<div class="mp-item current" id="mp_1">
+   											<div class="mp-video" href="http://v.zh.netease.com/gw/11v1/player7.f4v"></div>
+  											<div class="mp-text">　　大隐于市，天香国色的乐舞师兼赏金杀手。自创以琴御刀之绝技，以内力注入琴音御使已射出的飞刀，形成多种形态的二次叠加攻击。超强的近身能力，攻击方式多样，连击组合绵长不绝。
+   												</div>
+    									</div>
+    									<div class="mp-item" id="mp_2">
+    										<div class="mp-video" href="http://v.zh.netease.com/11/role/ys.f4v"></div>
+    										<div class="mp-text">　　墨家传人，精通所有远程武器与各式墨家机关、陷阱、火器。切换不同武器，可使招式变化不同形式的攻击效果与攻击范围。拥有最远的攻击射程，极强的爆发力与机动性。</div>
+   										</div>
+    									<div class="mp-item" id="mp_3">
+    										<div class="mp-video" href="http://v.zh.netease.com/11/role/cisha.f4v"></div>
+    										<div class="mp-text">　　玉面童心，听命于神秘组织的终级刺客。精于远距离伏击、通晓各类暗器、毒药，擅驱使驯养的鹰隼和巨雕，配合暗器在短时间内叠加多次大范围攻击；极远的攻击射程，战斗方式直接而致命。</div>
+    								    </div>
+    									<div class="mp-item" id="mp_4">
+    										<div class="mp-video" href="http://v.zh.netease.com/11/role/md.flv"></div>
+    										<div class="mp-text">　　以复仇之火掩埋性情，独有掷出魔枪开启魔阵的“结界能力”，结界可强化自身，同时对敌造成各种减益限制。精通棍术的同时拥有远程施法能力，拥有各职业中最强的攻击变化性。</div>
+    									</div>
+    									<div class="mp-item" id="mp_5">
+    										<div class="mp-video" href="http://v.zh.netease.com/11/role/yingzhan.f4v"></div>
+    										<div class="mp-text">　　自幼师从天魔，并被重用为左膀右臂的魔界精忠。拥有释放天魔赋予的“魔影分身”与自身枪术配合攻击之能力，魔影可与枪技形成多种组合。独有从空中发动连续攻击的“空连”战斗方式。</div>
+   										</div>
+    									<div class="mp-item" id="mp_6">
+    										<div class="mp-video" href="http://v.zh.netease.com/gw/11v1/player9.f4v"></div>
+    										<div class="mp-text">　　正统神嫡，人情淡薄而独痴迷于法器、仙术之力。拥有召唤各种灵界生物；以冷静选择时机释放召唤、操控术为主要战斗方式，绝对的消耗战王者。</div>
+    									</div>
+    									<div class="mp-item" id="mp_7">
+    										<div class="mp-video" href="http://v.zh.netease.com/gw/11v1/player8.f4v"></div>
+    										<div class="mp-text">　　听凭心中正义行事之任侠，与父传三把通灵宝剑心意相通，练悟“人剑合一”的剑法境界。通过与手持兵刃的切换，可分别释放每把剑的能力与相应招式。剑法快如流星，变化万千，以攻为守。</div>
+    									</div>
+    									<div class="mp-item" id="mp_8">
+    										<div class="mp-video" href="http://v.zh.netease.com/11/role/kuangdao.f4v"></div>
+    										<div class="mp-text">　　受尽宿命催折，因而生如刀刃之士。与龙搏命意外获得龙血之力，可通过解印龙血强化战斗力，但同时自身亦会受龙血反噬。拥有超强的防御和体质，战斗方式暴力热血，简单直接，大开大合。</div>
+    									</div>
+    									<div class="mp-item" id="mp_9">
+    										<div class="mp-video" href="http://v.zh.netease.com/11/role/jq.flv"></div>
+    										<div class="mp-text">　　靠个人苦修而成为强者之人。拥有由兵刃释放冰火两种属性攻击，及在其间转化自如的能力。以战斗中积累能量，再远距离施法、或大范围引爆杀伤为战斗方式。</div>
+    									</div>
+ 										<div class="mp-item" id="mp_10">
+    									</div>
+  									</div>
+								</div>
+<!-- 切换 End-->
+  </div>
+ <!-- ====== x End ======-->
+ <!-- ====== x Start ======-->
+  <div class="l2">
+<!-- 精彩视频 Start-->
+<div class="board jcsp" id="jianmianhui">
+					<div class="board-hd"><h3>精彩视频</h3><span class="xq"><!--<a href="http://zh.163.com/download/video.html" target="_blank">更多>></a>--></span></div>
+					<div class="board-bd">
+						<div class="scrollview">
+							<div class="scrollview-screen" id="mar-4">
+								<ul class="scrollview-content" >
+<li href="http://v.zh.netease.com/gw/12v1/0830/all role.f4v"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/v_01.jpg"></li>
+<li href="http://v.zh.netease.com/gw/12v1/0830/pve.f4v"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/v_02.jpg"></li>
+<li href="http://v.zh.netease.com/gw/11v1/featrue_750x422.f4v"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/v_03.jpg"></li>
+<li href="http://v.zh.netease.com/gw/12v1/0830/all role.f4v"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/v_01.jpg"></li>
+								</ul>
+							</div>
+							<a class="scrollview-prev" id="mar-4-left">上一组</a>
+							<a class="scrollview-next" id="mar-4-right">下一组</a>
+						</div>
+					</div>
+</div>
+<!-- 精彩视频 End-->
+  </div>
+ <!-- ====== x End ======-->
+  <!--====== x Start ======-->
+  <div class="l3">
+<!-- 页面截图 Start-->
+<div class="board ymjt" id="jianmianhui2">
+					<div class="board-hd"><h3>精彩截图</h3><span class="xq"><!--<a href="http://zh.163.com/show/huamian.html" target="_blank">更多>></a>--></span></div>
+					<div class="board-bd">
+						<div class="scrollview">
+							<div class="scrollview-screen"  id="mar-5">
+								<ul class="scrollview-content" >
+<li><a title="斩魂角色关卡精彩截图" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/cs3.jpg"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/cs3s.jpg"></a></li>
+<li><a title="斩魂角色关卡精彩截图" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/jq1.jpg"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/jq1s.jpg"></a></li>
+<li><a title="斩魂角色关卡精彩截图" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/jx1.jpg"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/jx1s.jpg"></a></li>
+<li><a title="斩魂角色关卡精彩截图" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/kd1.jpg"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/kd1s.jpg"></a></li>
+<li><a title="斩魂角色关卡精彩截图" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/ny1.jpg"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/ny1s.jpg"></a></li>
+<li><a title="斩魂角色关卡精彩截图" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/sf1.jpg"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/sf1s.jpg"></a></li>
+<li><a title="斩魂角色关卡精彩截图" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/ys1.jpg"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/ys1s.jpg"></a></li>
+<li><a title="斩魂角色关卡精彩截图" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/yz1.jpg"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/yz1s.jpg"></a></li>
+<li><a title="斩魂角色关卡精彩截图" href="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/yz2.jpg"><img src="http://res.nie.netease.com/zh/qt/2012/1214_fab/images/img/yz2s.jpg"></a></li>
+								</ul>
+							</div>
+							<a class="scrollview-prev" id="mar-5-left">上一组</a>
+							<a class="scrollview-next" id="mar-5-right">下一组</a>
+						</div>
+					</div>
+</div>
+<!-- 页面截图 End-->
+  </div>
+ <!-- ====== x End ======-->
+</div>
+<!--左边 End-->
+
+<!--右边 Start-->
+<div class="deputy">
+  <!-- x Start-->
+  <div class="r1">
+ <!-- 注册下载标题栏 Start-->
+ <p class="hjlb">注册下载领1888元VIP礼包</p>
+ <!-- 注册下载标题栏 End-->
+<!-- Start 大通行证.快速注册 -->
+<div class="zc">
+<p class="NIE-quickReg-loading">注册网易通行证加载中,请稍后.</p>
+<form class="NIE-quickReg" method="post" onsubmit="return false;" style="display:none;" action="#">
+	<p class="qrNoEmail"><a class="createEmailBtn" target="_blank">还没有邮箱？</a></p>	
+	<dl>
+		<dt class="qr-username">邮件地址：</dt>
+		<dd class="qr-username">
+			<ul>
+				<li class="qrCon">
+					<input class="qrUserInp qrInpTxt" type="text" name="username" autocomplete="off" tabindex="1" />
+                    <!-- 邮箱地址.错误提示 --><input rel="username" class="qrUserInp qrError qrHide" readonly="readonly" tabindex="1" />
+					<div class="suggestDomain"><ul><!--域名提示建议--></ul></div>
+				</li>				
+				<li class="qrChk"><!-- 邮箱地址.提示 --></li>				
+			</ul>
+		</dd>		
+		<dt class="qr-password">设置密码：</dt>
+		<dd class="qr-password">
+			<ul>
+				<li class="qrCon">
+                	<input class="qrPWInp qrInpTxt" type="password" name="password" tabindex="2" />
+                    <!-- 设置密码.错误提示 --><input rel="password" class="qrPWInp qrError qrHide" readonly="readonly" tabindex="2" />
+                </li>
+				<li class="qrChk"><!-- 设置密码.提示 --></li>			
+			</ul>
+		</dd>
+		<dt class="qr-repassword">确认密码：</dt>
+		<dd class="qr-repassword">
+			<ul>
+				<li class="qrCon">
+                	<input class="qrRePWInp qrInpTxt" type="password" name="repassword" tabindex="3" />
+                	<!-- 确认密码.错误提示 --><input rel="repassword" class="qrRePWInp qrError qrHide" readonly="readonly" tabindex="3" />
+                </li>
+				<li class="qrChk"><!-- 确认密码.提示 --></li>			
+			</ul>
+		</dd>
+		<dt class="qr-captcha">验证码：</dt>
+		<dd class="qr-captcha">
+			<ul>
+				<li class="qrCon">
+                	<input class="qrCaptchaInp qrInpTxt"  type="text" name="captcha" autocomplete="off" tabindex="4" />
+                    <!-- 验证码数.错误提示 --><input rel="captcha" class="qrCaptchaInp qrError qrHide" readonly="readonly" tabindex="4" />
+                    <span class="captcha-wrap hideItem loading"><!--验证码数.图片--></span>
+                </li>
+				<li class="qrChk"><!-- 验证码数.提示 --></li>				
+			</ul>
+		</dd>
+		<dt class="qr-agree"><input id="qr-agreeInp" name="agree" type="checkbox" checked="checked" /></dt>
+		<dd class="qr-agree">
+        	<input type="hidden" name="promark" value="jcnqpki9" />
+            <label for="qr-agreeInp">
+            	我同意
+                "<a href="http://reg.163.com/agreement.shtml" target="_blank">服务条款</a>"和<br />"<a href="http://reg.163.com/agreement_game.shtml" target="_blank">隐私保护和个人信息利用政策</a>"
+            </label>
+        </dd>
+		<dt class="qr-submit"></dt>
+		<dd class="qr-submit"><input class="arSubmitInp" type="submit" tabindex="5"  onmouseover="this.className='arSubmitInp arSubmitInp-h'" onmouseout="this.className='arSubmitInp'" value=""/></dd>
+	</dl>
+</form>
+</div>
+<!-- End 大通行证.快速注册 -->
+<!-- 下载 Start-->
+<div class="xz-nav">
+ <a href="http://ql.gdl.netease.com/zh-1.1.116.exe" class="gf" target="_blank">官方下载</a>
+ <a href="http://down.sandai.net/xlgame/zh0906_setup.exe" class="xl" target="_blank">迅雷极速下载</a>
+ <a href="http://download.17173.com/11737" class="yiao" target="_blank">17173下载</a>
+</div>
+<!-- 下载 End-->
+<!-- 畅享礼包 Start-->
+<div class="cxlb">
+ <a onclick="opends('#tcq-2')" class="cxlb-inp">立即领取</a>
+</div>
+<!-- 畅享礼包 End-->
+  </div>
+ <!-- x End-->
+
+ <!-- 右2 START-->
+<div class="r2">
+<!-- 最受期待 Start-->
+<div class="zsqd">
+<div class="zsqd-tit">最受期待横版</div>
+<div class="zsqd-con">
+<div class="dMar" id="mar-1">
+<ul class=" zsqd-nav">
+ <li><strong>17173：</strong><a href="http://zhanhun.17173.com/zt/evaluation.html" target="_blank">最受期待横版网游</a></li>
+ <li><strong>多玩：</strong><a href="http://zh.netease.com/viewthread.php?tid=4199" target="_blank">重温街机式打击感</a></li>
+ <li><strong>太平洋：</strong><a href="http://gpc.pcgames.com.cn/corefit/1111/2386532.html" target="_blank">国产惊艳格斗之作</a></li>
+ <li><strong>腾讯游戏：</strong><a href="http://games.qq.com/a/20111125/000271.htm" target="_blank">横板过关的升华之作</a></li>
+ <li><strong>766：</strong><a href="http://xin.766.com/news/d/1383580_8.shtml" target="_blank">操作灵活 连击爽快</a></li>
+ <li><strong>tgbus：</strong><a href="http://ol.tgbus.com/yxq/yxpc/201112/864145.shtml" target="_blank">与众不同的格斗游戏</a></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 最受期待 End-->
+<!-- 好评推荐 Start-->
+<div class="hptj">
+<div class="hptj-tit">好评推荐</div>
+<div class="hptj-con">
+<div class="dMar" id="mar-2">
+<ul class=" zsqd-nav">
+ <li><strong>阴川蝴蝶君：</strong>无强化PK十分赞</li>
+ <li><strong>WadeWu：</strong>被虐多了，也可以虐人</li>
+ <li><strong>高东兴：</strong>画面华丽</li>
+ <li><strong>水猫子：</strong>吊丝手残可虐高富帅</li>
+ <li><strong>未来战士：</strong>PK的探索空间够大</li>
+ <li><strong>真心求马子：</strong>高级幻境乃搞基圣地</li>
+ <li><strong>qq52168116：</strong>抗性关卡手残有得忙</li>
+  <li><strong>奇麟：</strong>帮战有点意思</li>
+    <li><strong>41358251：</strong>连击很爽啊</li>
+	 <li><strong>The_安雅：</strong>战斗音效很享受</li>
+ <li><strong>dkjil007：</strong>技能很有震撼力</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 好评推荐 End-->
+</div>
+ <!-- 右2 End-->
+</div>
+<!--右边 End-->
+</div><!--main End-->
+<div class="fx" id="NIE-share">分享到：</div>
+<!--foot Start-->
+<div class="foot">
+<!-- NIE 底部版权 Start -->
+<div id="NIE-copyRight"></div>
+<!-- NIE 底部版权 End -->
+<!--foot End--></div>
+<!--wraper-4--></div>
+<!--wraper-3--></div>
+<!--wraper-2--></div>
+<!--wraper-1--></div>
+</div>
+<!-- 礼包弹窗 Start-->
+
+<!-- 礼包弹框 Start-->
+ 
+
+
+<style>
+ul,li,input,p,img{list-style:none;padding:0;margin:0;}
+.bg{display:none;position:absolute;width:100%;height:100%;background:#000;filter:Alpha(opacity=70);opacity:0.7;top:0;left:0;z-index:9999;}
+.cylb {display:none;position:absolute;color:#333;font-size:14px;font-family:"Microsoft YaHei","SimHei";line-height:18px;z-index:10000;width:636px;height:482px;background:url(http://res.nie.netease.com/zh/qt/2012/0823_welcome/images/tk-cxlb-bg.png) no-repeat 0 0}
+.cylb .aCloseQ {position:absolute;display:block;width:59px;height:49px;overflow:hidden;text-indent:-9999px;cursor:pointer;top:0;right:0;}
+.cylb .cylb-tit{height:49px;}
+.cylb .cylb-tit span{float:left;text-indent:-99999px}
+.cylb .cylb-con{padding:28px;}
+
+.cylb .cylb-con .yzm{width:350px;height:152px;padding-left:131px}
+
+
+.dMain2 {position:relative;height:234px;}
+.tkList1 {position:absolute;width:286px;top:80px;right:0;}
+.tkList1 li {height:29px;line-height:22px;}
+.tkList1 .li_1 {height:40px;text-align:center;}
+.tkList1 li span {float:left;display:block;width:105px;height:22px;text-align:right;}
+.tkList1 li .inpTxt {width:158px;height:22px;line-height:22px;padding:0 2px;background:#E8E8E8;border:none;color:#838383;}
+.tkList1 li .inpBut {width:80px;height:35px;background:url(http://res.nie.netease.com/zh/qt/2012/0823_welcome/images/inp-new.png) no-repeat -141px -464px;border:none;cursor:pointer;}
+.tkList1 li .inpBut-h{background:url(http://res.nie.netease.com/zh/qt/2012/0823_welcome/images/inp-new.png) no-repeat -141px -504px;}
+
+.bg {display:none;position:absolute;width:100%;height:100%;background:#000;filter:Alpha(opacity=70);opacity:0.7;top:0;left:0;z-index:9999;}
+.sj {display:none;position:absolute;z-index:10000;width:343px;height:460px;background:#6b0f05 url(../images/tc.jpg) no-repeat;}
+.dTc_sj1 ,.dTc_sj2{height:100px;padding:100px 0 0;background:#F2F2F2;text-align:center;font-size:14px;color:#333;}
+.sj .aClose {position:absolute;display:block;width:28px;height:28px;top:10px;right:10px;cursor:pointer;color:#000}
+.iIframe {position:absolute;width:250px;height:130px;top:258px;left:42px;}
+.dTxt3 {position:absolute;width:300px;top:83px;left:21px;color:#de9249;}
+.dTxt3 span {color:#ffdab6}
+.dTxt4 {position:absolute;width:300px;top:380px;left:21px;color:#de9249;}
+
+
+
+.cylb{height:236px}
+.dMain2{display:none}
+</style>
+
+<div class="cylb " id="tcq-2">
+<div class="cylb-tit"><span>预约新服步骤</span><a class="aCloseQ" onclick="closedsQ('#tcq-2')">关闭</a></div>
+<div class="cylb-con">
+
+		<!-- 验证码 Start-->
+<div class="yzm">
+<iframe src="http://app.nie.163.com/get_cdkey/zhanhun_cdkey_20120912.html"  scrolling="no" width="350" height="125" frameborder="0"  allowtransparency="true"></iframe>
+<p class="text">【如何激活礼包】登录斩魂找NPC枫弥激活即可</p>
+</div>
+		<!-- 验证码 End-->
+
+
+
+		<!-- 手机号 Start-->
+<div class="dMain2">
+
+<ul class="tkList1">
+<li><span>您的姓名： </span><input type="text" class="inpTxt" id="name"></li>
+<li><span>您的手机号：</span><input type="text" class="inpTxt" id="from"></li>
+<li><span>您好友手机号：</span><input type="text" class="inpTxt" id="to"></li>
+<li class="li_1"><input type="button" class="inpBut" id="invite"  onmouseover="this.className='inpBut inpBut-h'" onmouseout="this.className='inpBut'" value=" "></li>
+</ul>
+
+</div>
+		<!-- 手机号 End-->
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- 手机弹框 End-->
+
+<div class=" dTc_sj1 sj" id="tc-1">
+<a onclick="closedsQ('#tc-1')" class="aBut aClose">×</a>
+<div class="dTxt3">
+发送成功！
+</div>
+
+</div>
+
+<div class=" dTc_sj2 sj" id="tc-2">
+<a onclick="closedsQ('#tc-2')" class="aBut aClose">×</a>
+<span id="error_txt"></span>
+</div>
+
+	<!-- 手机弹框 End-->
+
+<script>
+
+function opends(o){
+	var obj = $(o)
+	$(".dTc").hide()
+	$(".bg").css({"height":$(document).height()}).show()
+	obj.fadeIn().css({"top":($(window).height()-obj.height())/2+$(window).scrollTop(),"left":($(window).width()-obj.outerWidth())/2+$(window).scrollLeft()})
+}
+
+function opends(o){
+	var obj = $(o)
+	$(".sj").hide()
+	$(".bg").css({"height":$(document).height()}).show()
+	obj.fadeIn().css({"top":($(window).height()-obj.height())/2+$(window).scrollTop(),"left":($(window).width()-obj.outerWidth())/2+$(window).scrollLeft()})
+}
+function closedsQ(o){
+	$(o).hide()
+	$(".bg").hide()	
+}
+
+$(function(){
+$(".cxlb-inp").click(function(){
+$.ajax({
+    url: "http://gs.163.com:10001/app/jsonp/incr_access_num",
+    data: {
+        fragment: "a",
+        product_id: 2,
+        mode: 0,
+        sign: "WsQHRJWwb5elZmgD/Ur24iSeg64="
+    },
+    type: "GET",
+    dataType: "jsonp",
+    success: function(data) {
+    },
+    cache: false
+});
+})
+})
+</script>
+
+        <script> 
+            $(document).ready(function () {
+                var is_phone = function (phone) {
+                    return phone.match(/^13\d{9}$|^14\d{9}$|^15\d{9}$|^18\d{9}$|^16\d{9}$/);
+                };
+ 
+                $("#invite").click(function () {
+                    var name = $("#name").val(), from = $("#from").val(), to = $("#to").val();
+                    if (!name) {
+                        alert('姓名不能为空');
+                        return false;
+                    }
+ 
+                    if (!is_phone(from)) {
+                        alert('你的手机号码格式错误');
+                        return false;
+                    }
+ 
+                    if (!is_phone(to)) {
+                        alert('朋友的手机号码格式错误');
+                        return false;
+                    }
+ 
+                    if (from === to) {
+                        alert('不能自己邀请自己');
+                        return false;
+                    }
+ 
+                    $.getJSON(
+                        "http://sms-invite.webapp.163.com/invite/zh/guanwang?callback=?",
+                        {'var': name, 'from': from, 'to': to},
+                        function (ret) {
+                            if (ret.result === 'param_error') {
+                                alert('参数错误');
+                                return false;
+                            }
+                            if (ret.result === 'include_keywords') {
+                                alert('姓名包含关键字');
+                                return false;
+                            }
+                            if (ret.result === 'product_channel_error') {
+                                alert('产品/渠道错误');
+                                return false;
+                            }
+                            if (ret.result === 'ip_send_num_limit') {
+                                alert('达到ip发送上限');
+                                return false;
+                            }
+                            if (ret.result === 'sender_term_limit') {
+                                alert('达到短期发送者发送上限');
+                                return false;
+                            }
+                            if (ret.result === 'receiver_term_limit') {
+                                alert('达到短期接收者接收上限');
+                                return false;
+                            }
+                            if (ret.result === 'total_limit') {
+                                alert('达到发送手机发送总数限制');
+                                return false;
+                            }
+                            if (ret.result === 'send_sms_error') {
+                                alert('系统错误');
+                                return false;
+                            }
+                            if (ret.result === 'server_error') {
+                                alert('系统错误');
+                                return false;
+                            }
+                            if (ret.result === 'ok') {
+                                alert('邀请成功');
+                                return false;
+                            }
+                        }
+                    )
+                });
+            });
+        </script> 
+
+<!-- 礼包弹框 End-->
+<!-- 礼包弹窗 End-->
+<script type="text/javascript" src="http://res.nie.netease.com/zh/qt/2012/1214_fab/js/jquery.slider.js"></script>
+
+<!-- 视频弹框 Start-->
+<div class="dTc">
+<a class="aClose" onClick="closedv()">关闭</a>
+<div class="dFlash_2" id="flash-2"></div>
+</div>
+<!-- 视频弹框 End-->
+<!-- AdForward I-Point:斩魂FAB Begin --> 
+<script language="JavaScript"> 
+function rand(num) {
+   return Math.floor(Math.random()*num)+1;
+}
+document.write("<iframe  src=\"http://allyes.nie.163.com/main/adftrack?db=afanie&point=1053&cache="+rand(9999999)+"&pre="+escape(document.referrer)+"\" width=\"0\" height=\"0\"><\/iframe>"); 
+</script> 
+<!-- AdForward I-Point:斩魂FAB End --> 
+</body>
+</html>

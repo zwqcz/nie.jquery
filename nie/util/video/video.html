@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <!--#include virtual="/global_include/config.html"-->
+  <title><!--#echo var='Title'--></title>
+  <meta name="keywords" content="<!--#echo var='Keywords'-->" />
+  <meta name="description" content="<!--#echo var='Description'-->" />
+  <meta name="robots" content="all" />
+  <meta name="author" content="NetEase.GameDep." />
+  <meta name="copyright" content="NetEase Inc." />
+  <meta name="front-end technicist" content="" />
+  
+  <link type="text/css" rel="stylesheet" href="css/base.css" media="all" />
+  <!--[if IE 6]><script>try{document.execCommand("BackgroundImageCache", false, true);}catch(e){}</script><![endif]-->  
+  <!-- jquery mix NIE (最新版本）-->
+  <script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>  
+  <script> 
+  nie.util.video=nie.util.video||function(fat,data){			
+			this.fatDom=$(fat);			
+			if(this.fatDom.length>0){				
+				var	params={
+						width:["100%",1],
+						height:["100%",1],
+						wmode:["direct",0],
+						bgcolor:["000000",0],
+						movieUrl:[null,1],
+						videoWidth:[null,1],
+						videoHeight:[null,1],
+						volume:[.8,1],
+						autoPlay:[false,1],
+						startImg:[null,1],
+						loopTimes:[0,1],
+						maskImg:[null,1],
+						bufferTime:[5,1]
+					},
+					default_params={videoWidth:"width",videoHeight:"height"},
+					_flashvars={};
+				for(var i in params){
+					if(typeof data[i]!="undefined"){
+						/*
+						var _val=data[i];
+						if(i=="movieUrl" && /^http/.test(data[i])){
+							params[i][0]=window.location.href+_val;
+						}
+						else params[i][0]=_val;
+						*/
+						params[i][0]=data[i];
+					}
+				}
+				for(var i in default_params){
+					if(params[i][0]==null){
+						params[i][0]=params[default_params[i]][0];
+					}
+				}
+				for(var i in params){
+					if(params[i][1]==1) _flashvars[i]=params[i][0];
+				}
+				this.fatDom.flash({
+						width:params.width[0],
+						height:params.height[0],
+						swf: 'player.swf?_'+new Date().getTime(),
+						allowFullScreen:true,					
+						allowscriptaccess:"always",						
+						wmode:params.wmode[0],
+						bgcolor:params.bgcolor[0],
+						hasVersion:10.2,
+						flashvars:_flashvars
+				});
+				this.change=function(movieUrl){
+					this.fatDom.flash(function(){
+						this.change(movieUrl);
+					});
+				}								
+				this.stop=function(movieUrl){
+					this.fatDom.flash(function(){
+						this.stop();
+					});
+				}
+				this.pause=function(movieUrl){
+					this.fatDom.flash(function(){
+						this.pause();
+					});
+				}
+			}		
+		}
+ nie.use(["util.swfobject"],function(){
+	  $(function(){
+		  video=new nie.util.video("#center",{
+			  	movieUrl:"http://video.nie.163.com/912x506.flv",
+				width:912,
+				height:506,
+				bufferTime:5,
+				startImg:"http://res.nie.netease.com/tx3/gw/11v1/images/hot/pic1.jpg"
+			  });
+		 
+	  });
+  });
+  </script>
+  <!-- 本项目专有共用js -->
+  <!--<script type="text/javascript" src="js/com.js"></script>-->  
+</head>
+<body>
+<!--#include virtual="/global_site_inc/topBar.last.html"-->
+<!-- 页面外套 Start -->
+<div id="wrap">
+  <div id="wrap-bg1">
+    <div id="wrap-bg2">
+      <div id="wrap-bg3">      
+      
+      	<!-- 主体 Start -->
+        <div id="main">
+        
+          <!-- 页眉 Start -->
+          <div id="header">
+		 
+          </div>
+          <!-- 页眉 End -->
+          
+          <!-- 中心 Start -->
+          <div id="center">
+          </div>
+          <!-- 中心 End -->
+          
+          <!-- 页脚 Start -->
+          <div id="footer">
+          
+          	<!-- NIE 底部版权 Start -->
+            <div id="NIE-copyRight">
+            </div>
+            <!-- NIE 底部版权 End -->
+            
+          </div>
+          <!-- 页脚 End -->
+          
+        </div>        
+        <!-- 主体 End -->
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 页面外套 End -->
+
+<!-- 底部代码 Start -->
+<div id="botCode">
+  <!-- 专有(如专题) 统计 Start -->
+  <!--#include virtual="include/count.html"-->
+  <!-- 专有(如专题) 统计 End -->   
+</div>
+<!-- 底部代码 End -->
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+/*preload*/
+.NIE-quickReg-loading{}
+/*layout*/
+.NIE-quickReg{width:280px;font-family:Arial;font-size:12px;line-height:170%;color:#000;}
+.qrNoEmail{text-align:right;padding:0 25px 0 0;margin:0;}
+/* bg */
+.qrChk i{_background:url(icon.gif) no-repeat;}
+.qrChk>i{background:url(icon.png) no-repeat;}
+.NIE-quickReg .loading{background:url(loading.gif) no-repeat center;}
+/* items */
+.NIE-quickReg dl{width:280px;}
+.NIE-quickReg dl,.NIE-quickReg dt,.NIE-quickReg dd,.NIE-quickReg ul,.NIE-quickReg li{position:relative;z-index:1;margin:0;padding:0;list-style:none;float:left;}	
+.NIE-quickReg dt.qr-username,.NIE-quickReg dd.qr-username,.NIE-quickReg .qr-username ul,.NIE-quickReg .qr-username li{z-index:2;}
+.NIE-quickReg .qr-username li.qrTips{z-index:1;}
+.NIE-quickReg dt{width:85px;height:26px;line-height:20px;text-align:right;}
+.NIE-quickReg dd{width:195px;height:26px;}
+.NIE-quickReg .qrHide{position:absolute;visibility:hidden;}
+.NIE-quickReg .hideItem{display:none;}
+.NIE-quickReg ul{}
+/* current */
+.NIE-quickReg .qrHover input.qrInpTxt,.NIE-quickReg .qrHover .qrCon input.right,.NIE-quickReg .qrHover .qrCon input.error{background:#E8F8FF;border-color:#69F;}
+/* content:input */
+.qrCon{width:170px;height:22px;float:left;}	
+.NIE-quickReg .qrCon input.right{border:1px #6C0 solid;background:#f4fef0;}
+.NIE-quickReg .qrCon input.error{border:1px #C00 solid;background:#FF9;}
+.qrCon input.inp-tips{color:gray;font-weight:normal;}
+.qrUserInp,.qrUser163Inp,.qrDomainSel,.qrPWInp,.qrRePWInp,.qrCaptchaInp,.qrActivityInp{height:20px;padding:0 8px;line-height:20px;float:left;border:1px #C4C4C4 solid;background:#fff;}
+.qrUserInp,.qrPWInp,.qrRePWInp,.qrActivityInp{width:152px;}
+.qrUser163Inp,.qrCaptchaInp{width:47px;}
+.qr-captcha .qrCon{height:32px;}
+/*error input*/
+.qrError{color:red;font-weight:normal;font-size:12px;border:1px red solid;background:#FF9;}
+/* error check */
+li.qrChk{width:25px;height:22px;float:left;}		
+.qrChk i{width:25px;height:22px;display:none;}
+.qrChk i.right{background-position:center -24px;}
+.qrChk i.error{background-position:center -60px;}
+.loading .loading,.error .error,.right .right{display:inline-block;}		
+/*tips*/
+.qrSubmitInp,.qr-agree label{cursor:pointer;}
+.qrSubmitInp{}
+.captcha-wrap{position:absolute;top:-2px;width:100px;height:32px;line-height:32px;margin-left:5px;float:left;display:inline-block;}
+.captcha-wrap img{cursor:pointer;float:left;}
+/*agreement*/
+.NIE-quickReg .qr-agree{height:auto;line-height:18px;}
+/*effect*/
+.NIE-quickReg .suggestEmail,.NIE-quickReg .suggestDomain{-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;box-shadow:0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;}
+#NIE-quickReg-msg{-webkit-box-shadow:0 2px 7px #333, 0 0 0 #999 inset;-moz-box-shadow:0 2px 7px #333, 0 0 0 #999 inset;box-shadow:0 2px 7px #333, 0 0 0 #999 inset;}
+/*suggest domain*/
+.NIE-quickReg .suggestDomain{position:absolute;z-index:2;top:21px;left:0;width:99.5%;background:#fff;border:1px #999 solid;display:none;overflow:hidden;}
+.NIE-quickReg .suggestDomain ul{width:100%;}
+.NIE-quickReg .suggestDomain li{width:100%;height:22px;color:#000;padding:1px 5px;line-height:22px;}
+.NIE-quickReg .suggestDomain li.title{}
+.NIE-quickReg .suggestDomain li.hover{background:#E8F8FF;border-bottom-color:#F90;cursor:pointer;}
+/*info box*/
+#NIE-quickReg-msg,#NIE-quickReg-msg-title,#NIE-quickReg-closeBtn,#not163Mail,#NIE-quickReg-msg a.btn,#NIE-quickReg-msg .error,#NIE-quickReg-msg .right{background:url(item.gif);}
+#NIE-quickReg-msg{position:absolute;z-index:10001;background-color:#fff;border:1px #fff solid;background-position:bottom;}
+#NIE-quickReg-msg *{font-size:12px;color:#000;font-family:simSun,Arial;}
+a#NIE-quickReg-closeBtn{position:absolute;right:0;top:0;width:28px;height:28px;line-height:900px;display:inline;background-repeat:no-repeat;background-position:-120px -30px;overflow:hidden;}
+a#NIE-quickReg-closeBtn:hover{background-position:-120px -62px;}
+#NIE-quickReg-msg-bg{position:absolute;z-index:10000;background:#000;opacity:.5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50);}
+#NIE-quickReg-msg-title{height:29px;text-indent:12px;line-height:29px;color:#616372;font-weight:bold;}
+#NIE-quickReg-msg-con{margin-top:15px;margin-bottom:15px;}
+#NIE-quickReg-msg a.btn{width:120px;height:31px;line-height:31px !important;text-indent:0 !important;font-size:14px;font-weight:bold;text-decoration:none;color:#7c7e87 !important;text-align:center;display:inline-block;background-position:0 -29px;overflow:hidden;}
+#NIE-quickReg-msg a.btn:hover{color:#336699 !important;background-position:0 -60px;}
+#NIE-quickReg-msg .error,#NIE-quickReg-msg .right{margin:15px;padding-left:55px;background-repeat:no-repeat;}
+#NIE-quickReg-msg .right{background-position:0 -91px;}
+#NIE-quickReg-msg .error{background-position:0 -407px;}
+#NIE-quickReg-msg-con .info{padding-top:10px;margin:0 0 10px 0;font-weight:bold;font-size:14px;}
+#NIE-quickReg-msg-con .reason{line-height:18px;margin:0 0 5px 0;}
+#NIE-quickReg-msg .right{width:130px;margin-left:auto;margin-right:auto;float:none;padding:0;}
+#NIE-quickReg-msg .right .info{text-indent:50px;margin-bottom:25px;}
+/*2nd captch*/
+#NIE-quickReg-msg .reVer{padding:0 15px;}
+#NIE-quickReg-msg .reVer p{padding:0;margin:0;text-align:center;}
+#NIE-quickReg-msg .reVer p.reVer-l1{font-weight:bold;text-align:left;}
+#NIE-quickReg-msg .reVer p.reVer-l2{line-height:24px;text-align:center;}
+#NIE-quickReg-msg .reVer p.reVer-l3{}
+#NIE-reVerInp{width:203px;height:22px;margin:5px 0;line-height:22px;font-size:16px;border:1px #333 solid;}
+#NIE-reVerImg{width:205px;height:30px;background:url(loading.gif) no-repeat center;display:inline-block;}
+#NIE-reVerImg img{cursor:pointer;}
+#NIE-reVerSubmit{}
+/*not 163Mail*/
+#not163Mail{width:340px;margin:0 auto;padding:8px 45px 0 100px;background-position:50px -91px;background-repeat:no-repeat;}
+#not163Mail h1,#not163Mail h2,#not163Mail h3,#not163Mail ol,#not163Mail li{margin:0;padding:0;}
+#not163Mail h1{font-size:14px;font-weight:bold;}
+#not163Mail h2{margin:20px 0;font-size:14px;}
+#not163Mail h3{margin:10px 0;font-weight:normal;}
+#not163Mail h3 b{font-family:Arial, Helvetica, sans-serif;color:#006699;}
+#not163Mail ul.tips,#not163Mail ul.tips li{margin:0;padding:0;list-style:none;}
+#not163Mail ul.tips{width:100%;float:none;font-size:12px;line-height:20px;color:#666;background:none;}
+#not163Mail ul.tips ol li{list-style:decimal;margin-left:20px;}
+#not163Mail a{color:#006699;}
+#not163Mail a:hover{color:#F63;}

@@ -1,0 +1,495 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+
+<title>《战歌》2.0版8月3日升级公测，预约新服，享六大特权- 《大话西游之战歌》官方网站--硬派回合巨作</title>
+<meta name="keywords" content="大话西游之战歌,大话西游之战歌官网,战歌官网,战歌2.0版,免费网游,免费无商城" />
+<meta name="description" content="《战歌》2.0版8月3日升级公测，7月27日至8月2日，预约新服，享六大特权，下载、注册、预约步步有奖！数码大奖！苹果ipad、itouch、佳能相机等多款数码大奖拿到手软！" />
+<meta name="author" content="网易，NetEase Inc." />
+<meta name="copyright" content="网易，NetEase Inc." />
+<meta name="pmid" content="271320" />
+<meta name="editor" content="leleli" />
+<meta name="designer" content="yoyo" />
+<meta name="front-end technicist" content="Django" />
+<link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/comm/js/nie/util/urs/bigUrs.case1.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/pk/qt/12/0726_fab/css/main.v2.css" media="all" />
+<!-- jquery mix NIE (最新版本）-->
+<script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+<script src="com.js">
+</script>
+<script>
+var regtop
+
+function opends(o){
+	var obj = $(o)
+	$(".dTc").hide()
+	$(".bg").css({"height":$(document).height()}).show()
+	obj.fadeIn().css({"top":($(window).height()-obj.height())/2+$(window).scrollTop(),"left":($(window).width()-obj.outerWidth())/2+$(window).scrollLeft()})
+	//obj.fadeIn().css({"top":490,"left":($(window).width()-obj.outerWidth())/2+$(window).scrollLeft()})
+	if(o=="#tc-1"){
+		$(".dReg_1").show().css("top",($(window).height()-obj.height())/2+$(window).scrollTop()+120)
+	}
+}
+function closeds(o){
+	$(".dReg_1").hide()
+	var obj = $(o)
+	$(".dTc").hide()
+	$(".bg").hide()
+}
+
+var showimg = function(o1,o2){
+	$(o1).eq(o2).find("img").each(function(i){
+		if ($(this).attr("src") == undefined || $(this).attr("src") == ""){
+/*			var img = new Image();     
+			img.src = $(this).attr("src2")
+			img.onload=function(){
+				$(o1).eq(o2).find("img").eq(i).attr("src",img.src)
+			}*/
+			var src=$(this).attr('src2');
+			$(this).attr('src',src);
+		}						 
+	})
+}
+
+function addVideo(idOrClass,url,width,height){
+	$(idOrClass).flash({
+		swf: "http://res.nie.netease.com/comm/swf/video_player_nobtn.swf?flv="+url+"&width="+width+"&height="+height,
+		wmode:"transparent",
+		allowScriptAccess:"always",
+		width: width,
+		height:height
+	});
+}
+
+var videolist =["http://v.nie.netease.com/pk/2011/gw/skill1.f4v",
+				"http://v.nie.netease.com/pk/2011/gw/skill2.f4v",
+				"http://v.nie.netease.com/pk/2011/gw/skill3.f4v",
+				"http://v.nie.netease.com/pk/2011/gw/skill4.f4v",
+				"http://v.nie.netease.com/pk/2011/gw/skill5.f4v",
+				"http://v.nie.netease.com/pk/2011/gw/skill6.f4v",
+				"http://v.nie.netease.com/pk/2011/gw/skill7.f4v"]
+
+$(function(){
+	$("body").append('<div class="bg"></div>')
+	nie.use(["ui.tab","util.swfobject","util.share",'nie.util.video'],function(){
+		/*
+		var o=new Function();
+		o.prototype= nie.util.bigUrs.create();
+		bigUrs2= new o();
+		bigUrs2.form=$("#NIE-quickReg-2")
+
+		bigUrs2.init();
+		
+		
+		var o2=new Function();
+		o2.prototype= nie.util.bigUrs.create();
+		bigUrs1= new o2();
+		bigUrs1.form=$("#NIE-quickReg-1")
+
+		bigUrs1.init();
+		*/
+		
+		 bigUrs2 =  new nie.util.bigUrs.create();
+		 bigUrs2.form=$("#NIE-quickReg-2")
+
+		bigUrs2.init();
+			//	bigUrs2.test =2;
+
+		 bigUrs = new  nie.util.bigUrs.create();
+bigUrs.form=$("#NIE-quickReg-1")
+		bigUrs.init();
+		//bigUrs.test =1;
+
+		
+		/*nie.util.video("#flash-1",{
+			movieUrl:"http://v.nie.netease.com/nie/2012/0720_chinajoy/890-280_2.f4v",
+			width:289,
+			height:185,
+			bufferTime:5,
+			loopTimes:-1,
+			wmode:"transparent",
+			startImg:"http://res.nie.netease.com/xy2/qt/12/0725_xunlei/images/img.jpg",
+			autoPlay:false
+		});*/
+		
+		$('#flash-1').flash({
+			swf: 'http://res.nie.netease.com/pk/zt/12/0720_free/free.swf',
+			wmode:"transparent",
+			allowscriptaccess:"always",
+			width: 289,
+			height: 185
+		});
+		
+		$('#flash-2').flash({
+			swf: 'http://res.nie.netease.com/pk/qt/12/0726_fab/swf/feature.swf?1',
+			wmode:"transparent",
+			allowscriptaccess:"always",
+			width: 602,
+			height: 288
+		});
+
+		$.tab("#tab-1 a","#tabcon-1 > .con",{fn:function(index){addVideo(".iImg1",videolist[index],240,165)}});
+
+		$.share.appendTo("#share");
+		
+		
+	});
+	
+	regtop = $(".dReg").css("top")
+});</script>
+</head>
+<body>
+<div id="NIE-topBar"></div>
+
+<div id="wrap">
+<div id="wrap-1">
+<div id="wrap-2">
+<div id="wrap-3">
+
+<div id="main">
+
+<div class="dMain1">
+<a href="http://pk.163.com/index.html" target="_blank" class="aBut aLogo">战歌</a>
+<div class="dLink">
+<a href="http://pk.163.com/index.html" target="_blank" class="aBut aBut_1">官网</a>
+<a href="http://reg.163.com/reg/reg.jsp?product=pk&url=http://pk.163.com/download/&loginurl=http://pk.163.com/" target="_blank" class="aBut aBut_2">注册</a>
+<a href="http://pk.163.com/download/" target="_blank" class="aBut aBut_3">下载</a> 
+</div>
+<a href="http://pk.163.com/index.html" target="_blank" class="aBut aBut_4">进入官网</a>
+</div>
+
+<div class="dMain2">
+<a class="aBut aBut_5" onclick="opends('#tc-1')">点击下载>></a>
+<a class="aBut aBut_6" onclick="opends('#tc-1')">点击注册>></a>
+<a class="aBut aBut_7" onclick="opends('#tc-1')">查看预约>></a>
+<a class="aBut aBut_8" onclick="opends('#tc-1')">奖励查询>></a>
+</div>
+
+<div class="dMain3 clear">
+
+<div class="dLeft">
+
+<div class="dBox1 dBox1_1">
+<div class="dHead1">
+<h3>全新战歌2.0 畅玩无忌</h3>
+</div>
+
+<div class="dFlash1" id="flash-1"></div>
+
+</div>
+
+<div class="dBox1 dBox1_2">
+<div class="dHead1">
+<h3>全新战歌2.0 体验升级</h3>
+</div>
+
+<div class="dFlash2" id="flash-2"></div>
+
+</div>
+
+
+
+<div class="dBox1 dBox1_3">
+<div class="dHead1">
+<h3>全新主角展示</h3>
+</div>
+
+<div class="dTab" id="tab-1">
+<a>大唐官府</a>
+<a>方寸山</a>
+<a>幽冥地府</a>
+<a>白骨洞</a>
+<a>瑶池</a>
+<a>普陀山</a>
+<a>魔龙潭</a>
+</div>
+
+<div class="dTabcon dTabcon_1" id="tabcon-1">
+    <span class="iImg1"></span>
+
+    
+    <div class="con">
+        <div class="dTxt1">
+        <p class="p_1"><strong>大唐官府</strong><span>（武技门派）：</span></p>
+        <p>> <strong>门派介绍：</strong>肉盾与团队辅助，也可一击绝杀对手。</p>
+        <p>> <strong>可选种族：</strong>人族</p>
+        <p>> <strong>发展方向：</strong>气血，力量，速度全面发展，根据时代与<br/>　　　　　　 对手调控属性。</p>
+        </div>
+    </div>
+        
+    <div class="con">
+        <div class="dTxt1">
+        <p class="p_1"><strong>方寸山</strong><span>（法术门派）：</span></p>
+        <p>> <strong>门派介绍：</strong>第一封系门派，起着掌握战局的重要作用。</p>
+        <p>> <strong>可选种族：</strong>人族</p>
+        <p>> <strong>发展方向：</strong>速度的巅峰是方寸追求的方向。</p>
+        </div>
+    </div>
+    
+    <div class="con">
+        <div class="dTxt1">
+        <p class="p_1"><strong>幽冥地府</strong><span>（武技门派）：</span></p>
+        <p>> <strong>门派介绍：</strong>最强的单体武技输出，需要判断对手来选择<br/>　　　　　　 出手的技能，弱地府茫然，强地府逆天。</p>
+        <p>> <strong>可选种族：</strong>妖族</p>
+        <p>> <strong>发展方向：</strong>以力为主，速度需要快对手的输出单位一点</p>
+        </div>
+    </div>
+
+    
+    <div class="con">
+        <div class="dTxt1">
+        <p class="p_1"><strong>白骨洞</strong><span>（武技门派）：</span></p>
+        <p>> <strong>门派介绍：</strong>唯一的毒系门派，持续性的伤害以及辅助的<br/>　　　　　　 封印让对手疼不欲生。</p>
+        <p>> <strong>可选种族：</strong>人族</p>
+        <p>> <strong>发展方向：</strong>加力的毒系白骨或加敏的敏系白骨都很强大</p>
+        </div>
+    </div>
+
+  
+    
+    <div class="con">
+        <div class="dTxt1">
+        <p class="p_1"><strong>瑶池</strong><span>（武技门派）：</span></p>
+        <p>> <strong>门派介绍：</strong>第一法术输出，拥有强悍的多目标法术伤害<br/>　　　　　　 技能。</p>
+        <p>> <strong>可选种族：</strong>仙族</p>
+        <p>> <strong>发展方向：</strong>力量为主，速度可高可低</p>
+        </div>
+    </div>
+
+  
+    <div class="con">
+        <div class="dTxt1">
+        <p class="p_1"><strong>普陀山</strong><span>（法技门派）：</span></p>
+        <p>> <strong>门派介绍：</strong>第一治疗门派，不只可以群体补充气血，还<br/>　　　　　　 可以起死回生，化腐朽为神奇。</p>
+        <p>> <strong>可选种族：</strong>仙族</p>
+        <p>> <strong>发展方向：</strong>智慧，气血，速度全面发展，根据时代与对<br/>　　　　　　 手调控属性。</p>
+        </div>
+    </div>
+        
+    <div class="con">
+        <div class="dTxt1">
+        <p class="p_1"><strong>魔龙潭</strong><span>（武技门派）：</span></p>
+        <p>> <strong>门派介绍：</strong>恐怖的控尸门派，团队中的另类突击手。</p>
+        <p>> <strong>可选种族：</strong>人（孤刃、雪娇），仙（惊风羽、无双）<br/>　　　　　　 妖（饮魂侯、鱼血薇）</p>
+        <p>> <strong>发展方向：</strong>力量为主，速度可高可低。</p>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+
+</div>
+
+<div class="dRight">
+
+<div class="dBox3">
+
+<ul class="ulList1">
+<li>再世情缘（可预约）　 |　 佳期如梦（预约）</li>
+<li>丹桂飘香（可预约）<!--　 |　 佳期如梦（预约）--> </li>
+</ul>
+
+<a href="http://xyw.gdl.netease.com/ZGOnline-4.0.187-mini.exe" target="_blank" class="aBut aBut_9">官方下载</a>
+<a class="aBut aBut_10" onclick="opends('#tc-1')">查看预约流程</a>
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="dShare">
+分享到：<span id="share"></span>
+</div>
+
+<div id="footer" class="clear">
+  <!-- NIE 底部版权 Start -->
+  <div id="NIE-copyRight"> </div>
+  <!-- NIE 底部版权 Enda -->
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="dReg">
+<!-- Start 大通行证.快速注册 -->
+<p class="NIE-quickReg-loading">注册网易通行证加载中,请稍后.</p>
+<form class="NIE-quickReg" method="post" onsubmit="return false;" style="display:none;" action="#" id="NIE-quickReg-1">
+<p class="qrNoEmail"><a class="createEmailBtn" target="_blank">还没有邮箱？</a></p>	
+<dl>
+<dt class="qr-username">邮件地址：</dt>
+<dd class="qr-username">
+<ul>
+<li class="qrCon">
+<input class="qrUserInp qrInpTxt" type="text" name="username" autocomplete="off" tabindex="1" />
+<!-- 邮箱地址.错误提示 --><input rel="username" class="qrUserInp qrError qrHide" readonly="readonly" tabindex="1" />
+<div class="suggestDomain"><ul><!--域名提示建议--></ul></div>
+</li>				
+<li class="qrChk"><!-- 邮箱地址.提示 --></li>				
+</ul>
+</dd>		
+<dt class="qr-password">设置密码：</dt>
+<dd class="qr-password">
+<ul>
+<li class="qrCon">
+<input class="qrPWInp qrInpTxt" type="password" name="password" tabindex="2" />
+<!-- 设置密码.错误提示 --><input rel="password" class="qrPWInp qrError qrHide" readonly="readonly" tabindex="2" />
+</li>
+<li class="qrChk"><!-- 设置密码.提示 --></li>			
+</ul>
+</dd>
+<dt class="qr-repassword">确认密码：</dt>
+<dd class="qr-repassword">
+<ul>
+<li class="qrCon">
+<input class="qrRePWInp qrInpTxt" type="password" name="repassword" tabindex="3" />
+<!-- 确认密码.错误提示 --><input rel="repassword" class="qrRePWInp qrError qrHide" readonly="readonly" tabindex="3" />
+</li>
+<li class="qrChk"><!-- 确认密码.提示 --></li>			
+</ul>
+</dd>
+<dt class="qr-captcha">验证码：</dt>
+<dd class="qr-captcha">
+<ul>
+<li class="qrCon">
+<input class="qrCaptchaInp qrInpTxt"  type="text" name="captcha" autocomplete="off" tabindex="4" />
+<!-- 验证码数.错误提示 --><input rel="captcha" class="qrCaptchaInp qrError qrHide" readonly="readonly" tabindex="4" />
+<span class="captcha-wrap hideItem loading"><!--验证码数.图片--></span>
+</li>
+<li class="qrChk"><!-- 验证码数.提示 --></li>				
+</ul>
+</dd>
+<dt class="qr-agree"><input id="qr-agreeInp" name="agree" type="checkbox" checked="checked" /></dt>
+<dd class="qr-agree">
+<input type="hidden" name="promark" value="8pozrhw0" />
+<label for="qr-agreeInp">
+我同意
+"<a href="http://reg.163.com/agreement.shtml" target="_blank">服务条款</a>"和<br />"<a href="http://reg.163.com/agreement_game.shtml" target="_blank">隐私保护和个人信息利用政策</a>"
+</label>
+</dd>
+<dt class="qr-submit"></dt>
+<dd class="qr-submit"><input type="submit" tabindex="5" value="" onmouseout="this.className='arSubmitInp btn_reg'" onmouseover="this.className='arSubmitInp btn_reg hover'" class="arSubmitInp btn_reg"></dd>
+</dl>
+</form>
+<!-- End 大通行证.快速注册 -->	
+</div>
+
+<div class="dReg dReg_1">
+<!-- Start 大通行证.快速注册 -->
+<p class="NIE-quickReg-loading">注册网易通行证加载中,请稍后.</p>
+<form class="NIE-quickReg" method="post" onsubmit="return false;" style="display:none;" action="#" id="NIE-quickReg-2">
+<p class="qrNoEmail"><a class="createEmailBtn" target="_blank">还没有邮箱？</a></p>	
+<dl>
+<dt class="qr-username">邮件地址：</dt>
+<dd class="qr-username">
+<ul>
+<li class="qrCon">
+<input class="qrUserInp qrInpTxt" type="text" name="username" autocomplete="off" tabindex="1" />
+<!-- 邮箱地址.错误提示 --><input rel="username" class="qrUserInp qrError qrHide" readonly="readonly" tabindex="1" />
+<div class="suggestDomain"><ul><!--域名提示建议--></ul></div>
+</li>				
+<li class="qrChk"><!-- 邮箱地址.提示 --></li>				
+</ul>
+</dd>		
+<dt class="qr-password">设置密码：</dt>
+<dd class="qr-password">
+<ul>
+<li class="qrCon">
+<input class="qrPWInp qrInpTxt" type="password" name="password" tabindex="2" />
+<!-- 设置密码.错误提示 --><input rel="password" class="qrPWInp qrError qrHide" readonly="readonly" tabindex="2" />
+</li>
+<li class="qrChk"><!-- 设置密码.提示 --></li>			
+</ul>
+</dd>
+<dt class="qr-repassword">确认密码：</dt>
+<dd class="qr-repassword">
+<ul>
+<li class="qrCon">
+<input class="qrRePWInp qrInpTxt" type="password" name="repassword" tabindex="3" />
+<!-- 确认密码.错误提示 --><input rel="repassword" class="qrRePWInp qrError qrHide" readonly="readonly" tabindex="3" />
+</li>
+<li class="qrChk"><!-- 确认密码.提示 --></li>			
+</ul>
+</dd>
+<dt class="qr-captcha">验证码：</dt>
+<dd class="qr-captcha">
+<ul>
+<li class="qrCon">
+<input class="qrCaptchaInp qrInpTxt"  type="text" name="captcha" autocomplete="off" tabindex="4" />
+<!-- 验证码数.错误提示 --><input rel="captcha" class="qrCaptchaInp qrError qrHide" readonly="readonly" tabindex="4" />
+<span class="captcha-wrap hideItem loading"><!--验证码数.图片--></span>
+</li>
+<li class="qrChk"><!-- 验证码数.提示 --></li>				
+</ul>
+</dd>
+<dt class="qr-agree"><input id="qr-agreeInp" name="agree" type="checkbox" checked="checked" /></dt>
+<dd class="qr-agree">
+<input type="hidden" name="promark" value="91s7peok" />
+<label for="qr-agreeInp">
+我同意
+"<a href="http://reg.163.com/agreement.shtml" target="_blank">服务条款</a>"和<br />"<a href="http://reg.163.com/agreement_game.shtml" target="_blank">隐私保护和个人信息利用政策</a>"
+</label>
+</dd>
+<dt class="qr-submit"></dt>
+<dd class="qr-submit"><input type="submit" tabindex="5" value="" onmouseout="this.className='arSubmitInp btn_reg'" onmouseover="this.className='arSubmitInp btn_reg hover'" class="arSubmitInp btn_reg"></dd>
+</dl>
+</form>
+<!-- End 大通行证.快速注册 -->	
+</div>
+
+<div class="dTc dTc" id="tc-1">
+<a onclick="closeds('#tc-1')" class="aBut aClose">×</a>
+
+<a href="http://pk.gdl.netease.com/XYOnline-2.0.391.exe" target="_blank" class="aBut aBut_11">官方下载</a>
+
+<div class="dTxt2">
+<p>1. 输入帐号登录游戏（推荐使用3M微端，5秒下载飞速预约）；</p>
+<p>2. 选择新服预约专区中一个开放预约的服务器，创建角色；</p>
+<p>3. 预约成功。8月3日使用预约号进入新服，享六大特权！ </p>
+
+</div>
+
+<div class="dTxt3 dTxt3_1">
+<p>参与预约并于8月3日上线，即享绿色通道及<strong>数码大奖</strong>！</p>
+</div>
+
+<div class="dTxt3 dTxt3_2">
+<p>多种活动、海量经验、<strong>极品道具</strong>、紫装、<strong>绝版宝宝</strong>一个不少！</p>
+</div>
+
+<div class="dTxt3 dTxt3_3">
+<p>游戏内珍稀道具，BOSS战宠，还有时尚<strong>数码大奖</strong>等你来抽！</p>
+</div>
+
+</div>
+
+
+
+<div class="hide">
+<!-- AdForward I-Point:xyw_2点零版本_开服引导页 Begin --> 
+<script language="JavaScript"> 
+function rand(num) {
+   return Math.floor(Math.random()*num)+1;
+}
+document.write("<iframe  src=\"http://allyes.nie.163.com/main/adftrack?db=afanie&point=1022&cache="+rand(9999999)+"&pre="+escape(document.referrer)+"\" width=\"0\" height=\"0\"><\/iframe>"); 
+</script> 
+<!-- AdForward I-Point:xyw_2点零版本_开服引导页 End --> 
+</div>
+
+</body>
+</html>

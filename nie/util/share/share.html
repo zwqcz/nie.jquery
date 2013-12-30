@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>分享组件</title>
+<meta name="robots" content="all" />
+<meta name="author" content="NetEase.GameDep." />
+<meta name="copyright" content="NetEase Inc." />
+<meta name="front-end technicist" content="Lam" />
+<!--[if IE 6]><script>try{document.execCommand("BackgroundImageCache", false, true);}catch(e){}</script><![endif]-->
+
+<script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+<script charset="utf-8" src="../share.source.js" ></script>
+<!--
+<script charset="utf-8" src="../../../util/fixPNG.js"></script>
+   <script charset="utf-8" src="../share.source.js"></script>
+   -->
+<script>
+//nie.use(["nie.util.share"],function(){
+	$(function(){
+		var share=nie.util.share();
+		var share2=nie.util.share({
+				fat:$("#NIE-share2"),
+				type:2
+			});
+		var	share3=nie.util.share({
+				type:3
+			});
+		var	share4=nie.util.share({
+				type:4,
+				imgs:$("p img")
+			});
+		var	share5=nie.util.share({
+				type:5,
+				txt:$(".content")
+			});
+		var share6=nie.util.share({
+				fat:$("#NIE-share6"),
+				type:6
+			});
+	});
+//});
+  </script>
+<style>
+
+body, html {
+	font-size:12px;
+}
+.content {
+	width:400px;
+	background:#F5F5F5;
+	border:1px #CCC solid;
+	padding:20px;
+	word-break:break-all;
+	line-height:24px;
+	overflow:hidden;
+}
+h2 {
+	color:blue;
+	margin:0;
+	padding:30px 0 5px 0;
+}
+p.code {
+	width:800px;
+	background:#F5F5F5;
+	color:#333;
+	border:1px #CCC dashed;
+	padding:10px;
+	display:inline-block;
+	word-break:break-all;
+	line-height:18px;
+	overflow:hidden;
+	clear:both;
+}
+.tips{color:#999;}
+.NIE-share-wrap{ display:inline-block;}
+</style>
+</head>
+<body>
+<h1>分享组件</h1>
+<p style="font-size:14px;"><span style="color:red;">组件模块：</span>nie.util.share</p>
+<h2>1.小icon：</h2>
+<p class="code">var share=nie.util.share({<br />
+　//product:"产品号", <span class="tips">//选填，自适应163.com域名的产品，论坛需要指定（论坛指定规范：天下贰论坛 product="tx2_bbs"）</span><br />
+　//type:1,<span class="tips">//分享组件类别，默认:1（1：小icon，2：大icon，3：右侧滚动条分享，4：图片分享，5：文本分享）</span><br />
+　//fat:"#NIE-share",<span class="tips">//分享组件插入父级（dom或选择器），默认："#NIE-share"</span><br />
+　//title:null,<span class="tips">//分享的标题,默认：当前页面的title</span><br />
+　//url:null,<span class="tips">//分享的链接，默认：当前页面的url</span><br />
+　//img:null,<span class="tips">//分享的图片，默认：null</span><br />
+　//content:null<span class="tips">//分享的正文内容，只有部分平台支持。默认：当前页面的title</span><br />
+});</p>
+<p><span id="NIE-share" class="NIE-share-wrap"></span></p>
+<h2>2.大icon：</h2>
+<p class="code">var share2=nie.util.share({<br />
+　fat:&quot;#NIE-share2&quot;,<span class="tips">//分享组件插入父级（dom或选择器），默认："#NIE-share"</span><br />
+　type:2<span class="tips">//分享组件类别，默认:1（1：小icon，2：大icon，3：右侧滚动条分享，4：图片分享，5：文本分享）</span><br />
+　//product:"产品号",<span class="tips">//选填，自适应163.com域名的产品，论坛需要指定（论坛指定规范：天下贰论坛 product="tx2_bbs"）</span><br />
+　//title:null,<span class="tips">//分享的标题,默认：当前页面的title</span><br />
+　//url:null,<span class="tips">//分享的链接，默认：当前页面的url</span><br />
+　//img:null,<span class="tips">//分享的图片，默认：null</span><br />
+　//content:null<span class="tips">//分享的正文内容，只有部分平台支持。默认：当前页面的title</span><br />
+});</p>
+<div id="NIE-share2" style="height:30px;"></div>
+<h2>3.右侧滚动条分享：</h2>
+<p class="code">var	share3=nie.util.share({<br />
+　type:3<span class="tips">//分享组件类别，默认:1（1：小icon，2：大icon，3：右侧滚动条分享，4：图片分享，5：文本分享）</span><br />
+　//product:"产品号", <span class="tips">//选填，自适应163.com域名的产品，论坛需要指定（论坛指定规范：天下贰论坛 product="tx2_bbs"）</span><br />
+　//title:null,<span class="tips">//分享的标题,默认：当前页面的title</span><br />
+　//url:null,<span class="tips">//分享的链接，默认：当前页面的url</span><br />
+　//img:null,<span class="tips">//分享的图片，默认：null</span><br />
+　//content:null<span class="tips">//分享的正文内容，只有部分平台支持。默认：当前页面的title</span><br />
+});</p>
+<p>效果：看右边滚动</p>
+<h2>4.图片分享：</h2>
+<p class="code">var	share4=nie.util.share({<br />
+　type:4,<span class="tips">//分享组件类别，默认:1（1：小icon，2：大icon，3：右侧滚动条分享，4：图片分享，5：文本分享）</span><br />
+　imgs:&quot;img&quot;,<span class="tips">//需要分享的图片（dom或选择器）</span><br />
+　//product:"产品号", <span class="tips">//选填，自适应163.com域名的产品，论坛需要指定（论坛指定规范：天下贰论坛 product="tx2_bbs"）</span><br />
+　//title:null,<span class="tips">//分享的标题,默认：当前页面的title</span><br />
+　//url:null,<span class="tips">//分享的链接，默认：当前页面的url</span><br />
+　//img:null,<span class="tips">//分享的图片，默认：null</span><br />
+　//content:null<span class="tips">//分享的正文内容，只有部分平台支持。默认：当前页面的title</span><br />
+});</p>
+<p><img src="http://ww2.sinaimg.cn/bmiddle/6e9b75b6gw1dksc45yl5oj.jpg"></p>
+<h2>5.文本分享：</h2>
+<p class="code">var	share5=nie.util.share({<br />
+　type:5,<span class="tips">//分享组件类别，默认:1（1：小icon，2：大icon，3：右侧滚动条分享，4：图片分享，5：文本分享）</span><br />
+　txt:$("p"),<span class="tips">//需要分享的文本（dom或选择器）</span><br />
+　//product:"产品号", <span class="tips">//选填，自适应163.com域名的产品，论坛需要指定（论坛指定规范：天下贰论坛 product="tx2_bbs"）</span><br />
+　//title:null,<span class="tips">//分享的标题,默认：当前页面的title</span><br />
+　//url:null,<span class="tips">//分享的链接，默认：当前页面的url</span><br />
+　//img:null,<span class="tips">//分享的图片，默认：null</span><br />
+　//content:null<span class="tips">//分享的正文内容，只有部分平台支持。默认：当前页面的title</span><br />
+});</p>
+<div class="content">选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！选择我吧！123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123</div>
+<div id="NIE-share6"></div>
+</body>
+</html>

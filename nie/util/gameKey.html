@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<script src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+<script>
+nie.use(["nie.util.gameKey"],function(){
+	$(function(){
+		var gameKey=nie.util.gameKey.create();
+		gameKey.appID=3;
+		gameKey.fatDOM="form";//form选择器
+		gameKey.touchDOM="form";//触发dom（选择器）而显示验证码
+		/*
+		点击的结果回调
+		gameKey.callBack=function(result){
+			alert(result.success+":"+result.msg);
+		}
+		*/
+		gameKey.pid=2;
+		gameKey.init();
+	});
+});
+</script>
+<style>
+.NIE-captchaBox{ width:100px; height:30px;display:inline-block;}
+.NIE-captchaBox-loading{background:url(http://res.nie.netease.com/comm/js/nie/util/urs/loading.gif) no-repeat center;}
+.NIE-captchaBox img{width:100px; height:30px; cursor:pointer;}
+</style>
+</head>
+<body>
+<form action="#" onsubmit="return false;">
+<p>手机号码：<input type="text" name="NIE-gameKey-tel" /></p>
+<p>验证码:<input type="text" name="NIE-captchaInput" /><span class="NIE-captchaBox"></span></p>
+<p><input type="submit" value="获取激活码" /></p>
+</form>
+</body>
+</html>

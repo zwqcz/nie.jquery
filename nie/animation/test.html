@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset="gb2312" />
+
+<script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+
+<script>
+nie.animation=nie.animation||function(options){
+	var _defaults={
+			selector:""
+		},
+		_settings=$.extend({}, _defaults, options),		
+		_holder=$(_settings.selector);
+		_addStyle=function(styleContent){
+			var style;
+			if(document.all){
+				style= document.createStyleSheet();  
+				style.cssText = styleContent;  		
+			}
+			else{
+				style=document.createElement("style");
+				style.type = "text/css";   		
+				style.textContent = styleContent;  
+			}	
+			style.id=_styleID="nie-animation-style-"+new Date().getTime()+"-"+Math.floor(Math.random()*1000);
+			try{
+				document.getElementsByTagName("head")[0].appendChild(style);
+			}
+			catch(e){}
+			style=null;
+		},
+		_removeStyle=function(){
+		console.log(document.getElementById(_styleID));
+			document.getElementsByTagName("head")[0].removeChild(document.getElementById(_styleID));
+		},
+		_styleID=null,
+		_className=null,
+		_getStyle=function(attr,val){
+			var __code="";				
+			if(attr=="transform") __code="-webkit-$attr:$val;\
+										-moz-$attr:$val;\
+										-o-$attr:$val;\
+										-ms-$attr:$val;";
+			else if(attr=="transition")  __code="-webkit-$attr:$val;\
+										-moz-$attr:$val;\
+										-o-$attr:$val;\
+										$attr:$val;";
+			else __code="$attr:$val;";
+			return __code.replace(/\$attr/g,attr).replace(/\$val/g,val);
+		},
+		_setClass=function(objects){
+			_className="nie-animation-"+new Date().getTime()+"-"+Math.floor(Math.random()*1000);
+			var _style="";
+			for(var attr in objects){				
+				_style+=_getStyle(attr,objects[attr]);
+			}
+			_addStyle("."+_className+"{"+_style+"}");
+			setTimeout(function(){
+			//	_holder.addClass(_className);
+				//_removeStyle();
+			},0);
+			_holder.attr("style",_style);
+		};
+		this.stop=function(){
+			_holder.removeClass(_className);
+			//_holder.attr("style","");
+		};
+		this.goLine=function(to,time){
+			if(typeof to=="object"){
+				var _data={"transition":"all "+time/1000+"s ease"},
+					_posAttr=["left","top","right","bottom","opacity"];
+				for(var i=0,l=_posAttr.length;i<l;i++){
+					if (typeof to[_posAttr[i]]!="undefined") _data[_posAttr[i]]= to[_posAttr[i]]+(_posAttr[i]=="opacity"?"":"px");
+				}
+				_setClass(_data);
+				_posAttr=null;
+			}
+		};
+};
+$(function(){
+	var a = new nie.animation({
+		selector:"#car"
+	})
+	var car2=$("#car2");
+	$(window).scroll(function(){a.goLine({top:$(window).scrollTop()+100,"opacity":0},1000);})
+	//$(window).scroll(function(){	car2.stop().animate({top:$(window).scrollTop()+100},100);	});
+	//$(window).scroll(function(){	car3.stop().animate({backgroundPositionY:$(window).scrollTop()+100},100);	});
+});
+</script>
+<style>
+#car{position:absolute;top:0;left:0;width:465px; height:620px; background:url(http://res.nie.netease.com/mkey/gw/13v2/images/mobile.png) no-repeat;}
+#car2{position:absolute;top:0;right:0;width:465px; height:620px; background:url(http://res.nie.netease.com/mkey/gw/13v2/images/mobile.png) no-repeat;}
+#car3{position:absolute;top:0;right:500px;width:465px; height:1000620px; background:url(http://res.nie.netease.com/mkey/gw/13v2/images/mobile.png) no-repeat;}
+</style>
+</head>
+<body style="height:100000px;">
+<div id="car"></div>
+<div id="car2"></div>
+<div id="car3"></div>
+</body>
+</html>

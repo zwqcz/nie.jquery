@@ -1,0 +1,87 @@
+﻿player.swf 影片報表
+
+
+
+中繼資料
+
+
+位元組           值
+
+    
+
+      1285    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> <xmp:CreatorTool>Adobe Flash Professional CS5.5 - build 325</xmp:CreatorTool> <xmp:CreateDate>2011-07-26T10:42:57+08:00</xmp:CreateDate> <xmp:MetadataDate>2013-11-22T12:30:05+08:00</xmp:MetadataDate> <xmp:ModifyDate>2013-11-22T12:30:05+08:00</xmp:ModifyDate> <xmp:Rating>5</xmp:Rating> </rdf:Description> <rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"> <dc:format>application/x-shockwave-flash</dc:format> <dc:title> <rdf:Alt> <rdf:li xml:lang="x-default">网易游戏视频播放器</rdf:li> </rdf:Alt> </dc:title> <dc:creator> <rdf:Seq> <rdf:li>林嘉玮</rdf:li> </rdf:Seq> </dc:creator> <dc:description> <rdf:Alt> <rdf:li xml:lang="x-default">联系:garylam020@gmail.com</rdf:li> </rdf:Alt> </dc:description> <dc:rights> <rdf:Alt> <rdf:li xml:lang="x-default">不允许反编译该程序，不允许商业用途。如需个人研究使用请联系林嘉玮。</rdf:li> </rdf:Alt> </dc:rights> </rdf:Description> <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"> <xmpMM:InstanceID>xmp.iid:AF3B04692E53E311A9168E6511714948</xmpMM:InstanceID> <xmpMM:DocumentID>xmp.did:AF3B04692E53E311A9168E6511714948</xmpMM:DocumentID> <xmpMM:OriginalDocumentID>xmp.did:DB3B891331B7E0118FD1AD63351C14A3</xmpMM:OriginalDocumentID> <xmpMM:DerivedFrom rdf:parseType="Resource"> <stRef:instanceID>xmp.iid:AB3B04692E53E311A9168E6511714948</stRef:instanceID> <stRef:documentID>xmp.did:30E2471E1CC0E01184D0C733823220F8</stRef:documentID> <stRef:originalDocumentID>xmp.did:DB3B891331B7E0118FD1AD63351C14A3</stRef:originalDocumentID> </xmpMM:DerivedFrom> </rdf:Description> <rdf:Description rdf:about="" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/"> <photoshop:AuthorsPosition>互联网技术工程师</photoshop:AuthorsPosition> </rdf:Description> <rdf:Description rdf:about="" xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/"> <xmpRights:Marked>True</xmpRights:Marked> </rdf:Description> </rdf:RDF> 
+
+影格 #    影格位元組         總共位元組         場景
+
+    
+    
+    
+
+   1         33864         33864    場景 1 (AS 3.0 類別匯出影格)
+
+場景      形狀位元組         文字位元組         ActionScript 位元組
+
+    
+    
+    
+
+場景 1             0             0               21615
+
+元件                       形狀位元組         文字位元組         ActionScript 位元組
+
+    
+    
+    
+
+bar.bg                            0             0                   0
+btnBg                            22             0                   0
+controller                        0             0                   0
+timeBar                          19             0                   0
+playPoint                         0             0                   0
+preLoad_timePoint_fat             0             0                   0
+main                              0           101                   0
+fullBtn                          22             0                   0
+fullBtn.pic                     109             0                   0
+圆球                           95             0                   0
+播放点                        33             0                   0
+preLoad_timePoint                 0             0                   0
+timeTxt                          41            45                   0
+控件背景重复部分            63             0                   0
+loading.mc                        0             0                   0
+loading.pic                      42             0                   0
+音量MC                         86             0                   0
+timeTips.right                   30             0                   0
+timeTips.left                    30             0                   0
+timeTips.mid                     30             0                   0
+stopBtn                           0             0                   0
+playBtn                         110             0                   0
+preLoad_timePoint_top            17             0                   0
+stopBtnimg                       28             0                   0
+stopBtn_big                       0             0                   0
+補間動畫 1                   29             0                   0
+stopIcon.bg                      46             0                   0
+voiceBtn.bg                      20             0                   0
+voiceBtn.line                    34             0                   0
+補間動畫 2                    0             0                   0
+喇叭                            0             0                   0
+音量                           51             0                   0
+音量点                        48             0                   0
+元件 1                         22             0                   0
+音量遮罩                      0             0                   0
+
+字體名稱       位元組           字元
+
+    
+    
+
+ArialMT          8021     .0123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 
+
+ActionScript 位元組    位置
+
+    
+
+           21615    場景 1:影格 1
+
+
+
+

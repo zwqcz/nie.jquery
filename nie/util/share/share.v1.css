@@ -1,0 +1,21 @@
+/* com bg */
+.NIE-share-png{background:url(icon.png);}
+#NIE-share-panel,#NIE-share-panel button,#NIE-share-panel input{background:url(items.jpg) no-repeat;}
+/* item */
+.NIE-share-btn{font-size:12px;line-height:16px;margin-right:2px;font-style:normal;text-decoration:none;}
+.NIE-share-btn i,.NIE-share-more2 i{width:16px;height:16px;float:left;display:inline;}
+.NIE-share-more{position:relative; float:left;}
+.NIE-share-more-txt{width:42px;height:16px;font-size:12px; float:left;line-height:17px;text-indent:17px;color:#fff;background-position:-16px -16px; display:inline-block;}
+.NIE-share-moreIcon{background-position:-16px 0;}
+.NIE-share-morePanel{position:absolute;z-index:998;top:19px;left:0; width:198px; padding:2px;border:1px solid #c2c2c2; background:#fff;}
+.NIE-share-morePanel a{width:85px;color:#333;padding:3px 5px;display:inline-block;border:1px #fff solid;float:left;}
+#NIE-share-panel div a:hover,a.NIE-share-btn:hover{background:#f0f0f0;border-color:#e0e0e0;}
+a.NIE-share-btn i{margin-right:4px;}
+
+#NIE-share-panel{position:absolute;z-index:999;width:320px;height:360px; padding:4px;background-position:-111px -46px;border:1px #c2c2c2 solid;overflow:hidden;}
+#NIE-share-panel button{position:absolute;z-index:2;right:10px;top:10px; width:12px;height:12px;border:0;cursor:pointer;}
+#NIE-share-panel button.hover{background-position:0 -12px;}
+#NIE-share-panel h3{position:relative;margin:10px 5px;color:#575757;font-weight:bold;font-size:16px;}
+#NIE-share-panel input{width:308px;height:22px;padding-left:10px;margin-bottom:5px; color:#c2c2c2;line-height:22px;border:1px #c2c2c2 solid;background-color:#fff;background-position:100% -24px;background-repeat:no-repeat;}
+#NIE-share-panel div{ width:309px;height:280px; padding:5px;background:#fff;border:1px #c2c2c2 solid; overflow-y: scroll }
+#NIE-share-panel div a{width:87px;color:#333;padding:5px 3px;display:inline-block;border:1px #fff solid;float:left;}

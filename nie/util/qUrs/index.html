@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+<link type="text/css" rel="stylesheet" href="base.v2.css" media="all" />
+<script charset="gb2312" src="../qUrs.source.test.js"></script>
+<script>
+
+//nie.use(["nie.util.qUrs"],function(){
+	$(function(){
+		var qUrs=new nie.util.qUrs({
+			holder:"#f1",//容器选择器，默认为"div.NIE-quickReg"
+			"type":1//类别 1:邮箱注册需要验证码;2:邮箱注册不需要验证码;			
+			//"msgType":1//提交后信息类别 1:弹框(默认);2:切换层(iframe专用)
+		});
+		var qUrs2=new nie.util.qUrs({holder:"#f2",type:2,msgType:2});
+		var qUrs3=new nie.util.qUrs({
+			holder:"#f3",
+			type:1,
+			activity:[//额外填项，只允许两项
+				{
+					name:"QQ号码",//填项名称
+					/*
+						验证
+						返回:true|error msg
+					*/
+					rule:function(val){
+						return /^\d+$/.test(val)?true:"请正确输入qq号码。";
+					},
+					defaultValue:"15181677"//默认值，选填
+				}
+			]
+		});
+	});
+//});
+</script>
+<style>
+h2{clear:both; padding: 20px 0 5px 0;}
+</style>
+</head>
+<body>
+<h2>验证码：</h2>
+<!-- Start 大通行证.快速注册 -->
+<div id="f1" class="NIE-quickReg">
+<p class="NIE-quickReg-loading">注册网易通行证加载中,请稍候.</p>
+<input type="hidden" name="promark" value='gnmf5kc6'>
+</div>
+<!-- End 大通行证.快速注册 -->
+
+<h2>无验证码图片(iframe版)：</h2>
+<!-- Start 大通行证.快速注册 -->
+<div id="f2" class="NIE-quickReg">
+<p class="NIE-quickReg-loading">注册网易通行证加载中,请稍候.</p>
+<input type="hidden" name="promark" value='hqrsm26k'>
+</div>
+<!-- End 大通行证.快速注册 -->
+
+<h2>增加额外填项：</h2>
+<!-- Start 大通行证.快速注册 -->
+<div id="f3" class="NIE-quickReg">
+<p class="NIE-quickReg-loading">注册网易通行证加载中,请稍候.</p>
+<input type="hidden" name="promark" value='hqrsm26k'>
+</div>
+<!-- End 大通行证.快速注册 -->
+</body>
+</html>
+  

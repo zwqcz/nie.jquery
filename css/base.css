@@ -1,0 +1,111 @@
+@charset "gb2312";
+/*
+	描述:	
+*/
+
+/* =s reset */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;padding:0;vertical-align:baseline;}
+/* =e reset */
+
+/* =s base */
+html,body{height:100%;}
+body{font-family:"宋体",Arial;line-height:170%;font-size:12px;color:#000;}
+i{font-style:normal;}
+ul,li{list-style:none;float:left;}
+a:link,a:active,a:visited{color:#000;}
+a:hover{color:#F60;}
+a.under:link,a.under:active,a.under:visited,a.under:hover{text-decoration:underline;}
+a img{border:0;}
+/* 浮动 [flt加方向首个字母] */
+.fltL{float:left;}
+.fltR{float:right;}
+.fltN{float:none;}
+.setCenter{margin:0 auto;}
+/* 显示 */
+.show{display:block;}
+.hide{display:none;}
+/* 间隔距离 [space加高度px] */
+.space5,.space10,.space15,.space20,.space25,.space30{display:block;clear:both;overflow:hidden;}
+.space5{height:5px;}
+.space10{height:10px;}
+.space15{height:15px;}
+.space20{height:20px;}
+.space25{height:25px;}
+.space30{height:30px;}
+/* clear [clr加值首个字母] */ 
+.clrB{clear:both;}
+.clrL{clear:left;}
+.clrR{clear:right;}
+.clrN{clear:none;}
+/* =e base */
+
+/* =s Font */
+/* 字体重量 [首字母]*/
+.b{font-weight:bold;}
+.n{font-weight:normal;}
+/* 字大小 [f加字像素值] */
+.f12{font-size:12px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+/* 字体位置 [txt加方位首个字母] */
+.txtC{text-align:center;}
+.txtL{text-align:left;}
+.txtR{text-align:right;}
+/* 垂直位置 [vera加方位首个字母] */
+.veraM{vertical-align:middle;}
+.veraT{vertical-align:top;}
+.veraB{vertical-align:bottom;}
+/* 行距 [l加行距像素值] */
+.l16{line-height:16px;}
+.l18{line-height:18px;}
+.l20{line-height:20px;}
+.l22{line-height:22px;}
+.l24{line-height:24px;}
+.l25{line-height:25px;}
+/* 字缩进 [ti加缩进字数] */
+.ti0{text-indent:0;}
+.ti2{text-indent:2em;}
+/* 字颜色 [color加颜色英文] */
+.colorRed{}
+.colorBlue{}
+.colorOrange{}
+.colorBrown{}
+.colorGreen{}
+.colorGray{}
+.colorWhite{color:#fff;}
+/* 链接 [link加颜色英文] */
+a.linkRed:link,a.linkRed:active,a.linkRed:visited{}
+a.linkRed:hover{}
+a.linkBlue:link,a.linkBlue:active,a.linkBlue:visited{}
+a.linkBlue:hover{}
+a.linkOrange:link,a.linkOrange:active,a.linkOrange:visited{}
+a.linkOrange:hover{}
+/* =e Font */
+
+
+/* =s layout */
+/* 外套 */
+#wrap{/*max-width:1260px;min-width:960px;_width:expression((document.documentElement.clientWidth>1260||document.body.clientWidth>1260)?"1260px":"100%");margin:0 auto;*/}
+/* 外套背景图 */
+#wrap-bg1,#wrap-bg2,#wrap-bg3{width:100%;float:left;}
+#wrap-bg1{}
+#wrap-bg2{}
+#wrap-bg3{}
+/* 主体 */
+#main{position:relative;width:960px;margin:0 auto;}
+/* 页眉 */
+#header{}
+/* 中心 */
+#center{}
+/* 页脚 */
+#footer{text-align:center;clear:both;}
+#footer,#footer a{color:#000;text-decoration:none;}
+#footer a:hover{text-decoration:underline;}
+/* 底部版权(共3行）*/
+#NIE_copyRight-1{}
+#NIE_copyRight-2{}
+#NIE_copyRight-3{}
+/* 底部代码（隐藏） */
+#botCode{display:none;}
+/* =e layout */

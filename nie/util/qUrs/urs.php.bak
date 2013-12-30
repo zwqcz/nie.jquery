@@ -1,0 +1,30 @@
+<?php
+$callback=$_GET["callback"];
+$file=$_GET["file"];
+$json="";
+switch($file){
+	case "IdCreator":
+		$json="{id:2}";
+		break;
+	case "Verifier":
+		$json="{verCapResult:0}";
+		break;
+	case "checkUserName":
+		$json="{status:104}";
+		break;
+	case "submit":
+		$json='{num:2302,is163Mail:true,mailUrl:"http://mail.qq.com",msg:"fuck.",reDirectUrl:"http://nie.163.com"}';
+		break;
+	case "sendActiveMail":
+		$json='{status:1,info:"done"}';		
+		break;
+	case "sendMobileCaptcha":
+		$json='{success:true,msg:"error"}';
+		break;
+	case "regMobile":
+		$mUA=$_GET["m_username"];
+		$json='{success:true,msg:"fuck",url:"http://www.163.com/?eef=2",UA:"m12332@163.com",mUA:"'.$mUA.'"}';
+		break;
+}
+echo "$callback($json)";
+?>

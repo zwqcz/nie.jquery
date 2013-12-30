@@ -1,0 +1,20 @@
+@charset "gb2312";
+.NIE-share{height:18px;text-indent:18px;font-size:12px;text-decoration:none;line-height:18px;background:url(share.gif) no-repeat;display:inline-block;}
+.NIE-share-netease{background-position:0 -241px;}
+.NIE-share-kaixin{background-position:0 0;}
+.NIE-share-renren{background-position:0 -29px;}
+.NIE-share-douban{background-position:0 -58px;}
+.NIE-share-bai{background-position:0 -87px;}
+.NIE-share-qzone{background-position:0 -116px;}
+.NIE-share-tSina{background-position:0 -145px;}
+.NIE-share-qq{background-position:0 -178px;}
+.NIE-share-msn{background-position:0 -214px;}
+.NIE-share-t163{background-position:0 -241px;}
+.NIE-share-tQQ{background-position:0 -277px;}
+
+#NIE-share-img,#NIE-share-txt{position:absolute;z-Index:999;background:#fff;padding:2px 5px;font-size:12px;font-weight:bold;line-height:18px;color:#333;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;filter:alpha(opacity=90);opacity:.9;display:none;}
+#NIE-share-img b,#NIE-share-txt b{color:#000;display:block;float:left;}
+#NIE-share-img span,#NIE-share-txt span{display:block;float:left;}
+#NIE-share-img a,#NIE-share-txt a{float:left;opacity:.75;filter:alpha(opacity=75);}
+#NIE-share-img a:hover,#NIE-share-txt a:hover{opacity:1;filter:alpha(opacity=100);}
+.NIE-share-hideTxt{width:20px;}

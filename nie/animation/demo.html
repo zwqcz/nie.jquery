@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+    <title>《Crisis：危机2015》引擎专题 网易首创尖端3D引擎</title>
+    <meta name="keywords" content="代号F,网易FPS,次世代FPS,危机2015,网易研发,Dynamite" />
+    <meta name="description" content="Dynamite，是网易为其旗下首款FPS次世代大作自主研发的专业尖端3D引擎！游戏独有高级光照渲染以及可视粒子特效系统，FPS全新体验即将开启！" />
+    <meta name="robots" content="all"/>
+    <meta name="author" content="网易，NetEase Inc." />
+    <meta name="copyright" content="网易，NetEase Inc." />
+    <meta name="pmid" content="273023" />
+    <meta name="editor" content="crystal" />
+    <meta name="designer" content="TerryLin" />
+    <meta name="front-end technicist" content="Gseven,eyfan" />
+
+    <link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/wj/qt/13/0809_engine/css/bass.css" media="all"/>
+    <link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/wj/qt/13/0809_engine/css/index.css" media="all"/>
+    <!--[if IE 6]>
+    <script>try {
+        document.execCommand("BackgroundImageCache", false, true);
+    } catch (e) {
+    }</script><![endif]-->
+    <!-- jquery mix NIE (最新版本）-->
+    <script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+    <script charset="gb2312" src="http://res.nie.netease.com/wj/qt/13/0809_engine/js/html5.js"></script>
+	<script>
+	nie.animation=nie.animation||function(options){
+	var _defaults={
+			selector:""
+		},
+		_time=300,
+		_setTime=0,
+		_settings=$.extend({}, _defaults, options),		
+		_holder=$(_settings.selector),
+		_addStyle=function(styleContent){
+			var style;
+			if(document.all){
+				style= document.createStyleSheet();  
+				style.cssText = styleContent;  		
+			}
+			else{
+				style=document.createElement("style");
+				style.type = "text/css";   		
+				style.textContent = styleContent;  
+			}	
+			style.id=_styleID="nie-animation-style-"+new Date().getTime()+"-"+Math.floor(Math.random()*1000);
+			try{
+				document.getElementsByTagName("head")[0].appendChild(style);
+			}
+			catch(e){}
+			style=null;
+		},
+		_removeStyle=function(){
+		console.log(document.getElementById(_styleID));
+			document.getElementsByTagName("head")[0].removeChild(document.getElementById(_styleID));
+		},
+		_styleID=null,
+		_className=null,
+		_getStyle=function(attr,val){
+			var __code="/**/";				
+			if(attr=="transform") __code+="-webkit-$attr:$val;\
+										-moz-$attr:$val;\
+										-o-$attr:$val;\
+										-ms-$attr:$val;";
+			else if(attr=="transition")  __code+="-webkit-$attr:$val;\
+										-moz-$attr:$val;\
+										-o-$attr:$val;\
+										$attr:$val;";
+			else __code+="$attr:$val;";
+			return __code.replace(/\$attr/g,attr).replace(/\$val/g,val);
+		},
+		_setClass=function(objects){
+			_className="nie-animation-"+new Date().getTime()+"-"+Math.floor(Math.random()*1000);
+			var _style="";
+			for(var attr in objects){				
+				_style+=_getStyle(attr,objects[attr]);
+			}
+			//_addStyle("."+_className+"{"+_style+"}");
+			
+			_holder.attr("style",_style);
+		};	
+		this.goLine=function(to,time){	
+			var _now=new Date().getTime();
+			if(_now-_setTime>=_time){
+				if(typeof to=="object"){
+					var _data={"transition":"all "+time/1000+"s ease"},
+						_posAttr=["left","top","right","bottom","opacity"];
+					for(var i=0,l=_posAttr.length;i<l;i++){
+						if (typeof to[_posAttr[i]]!="undefined") _data[_posAttr[i]]= to[_posAttr[i]]+(_posAttr[i]=="opacity"?"":"px");
+					}
+					_setClass(_data);
+					_posAttr=null;
+				}
+			}
+			_setTime=_now;
+		};
+};
+	$(function(){
+		var p1=$("div.part1"),
+			p1_b1=p1.find("div.ball"),
+			p1_b2=p1.find("div.text"),
+			na_p1_b1=new nie.animation({selector:p1_b1}),
+			na_p1_b2=new nie.animation({selector:p1_b2}),
+			p2=$("div.part2"),
+			p2_b1=p2.find("div.box"),
+			p2_b2=p2.find("h2"),
+			chkFn={
+				1000:function(sTop){				
+					na_p1_b1.goLine({"top":93+200*sTop/1000},1000);
+					na_p1_b2.goLine({"top":180+300*sTop/1000},1000);
+				},
+				2000:function(sTop){					
+					na_p2_b1.goLine({"top":-280+(315+280)*sTop/1000},1000);
+					na_p2_b2.goLine({"top":-460+(315+460)*sTop/1000},1000);
+				}
+			},
+			win=$(window);	
+		win.scroll(function(){
+			var _sTop=win.scrollTop();
+			for(var posY in chkFn){
+				if(_sTop>=posY-1000&&_sTop<=posY){
+					chkFn[posY](_sTop);					
+				}
+			}
+		});
+	});
+	</script>
+	</head>
+<body  style="overflow:visible;">
+
+
+<div id="wrap">
+
+<h1 class="hidden">中国首款专为FPS打造的次世代游戏引擎</h1>
+
+<h2 class="hidden">Dynamite是网易专门研发的尖端3D引擎，致力于打造世界顶级的FPS产品，为玩家带来最极致的枪战体验</h2>
+
+    <a class="fixed-logo" href="">危机2015</a>
+	<p id="index-link"><a href="http://wj.163.com/" target="_blank" >进入官网</a>&nbsp;&nbsp;&nbsp;|</p>
+    <div id="NIE-share"><span>分享到:</span></div>
+    <nav class="fixed-nav">
+        <ul>
+            <li class="link1"><a href="javascript:void(0)">新世代顶级游戏画面</a></li>
+            <li class="link2"><a href="javascript:void(0)">高精度模型</a></li>
+            <li class="link3"><a href="javascript:void(0)">物理拟真系统</a></li>
+            <li class="link4"><a href="javascript:void(0)">动态地理模型</a></li>
+            <li class="link5"><a href="javascript:void(0)">音效仿真系统</a></li>
+            <li class="link6"><a href="javascript:void(0)">高智能AI系统</a></li>
+        </ul>
+    </nav>
+<div class="part part1" >
+    <div class="content-bg content1-bg1 ball"></div>
+    <div class="content-bg content1-bg2 text"></div>
+    <div class="content-bg content1-bg3 st1"></div>
+    <div class="content-bg content1-bg4 st2"></div>
+    <div class="content-bg content1-bg5 st3"></div>
+    <div class="content content1">
+        <div class="scroll-tip"></div>
+    </div>
+</div>
+
+<div class="part part2">
+    <div class="content-bg content2-bg1"></div>
+    <div class="content-bg content2-bg2"></div>
+    <div class="content-bg content2-bg3"></div>
+    <div class="content content2">
+        <h2>新世代顶级游戏画面</h2>
+        <div class="box">
+            <a href="javascript:void(0)" class="btn_video" onclick="openDV2()"></a>
+
+            <ul class="nav_swicth">
+                <li class="morn current">早上</li>
+                <li class="noon">中午</li>
+                <li class="even">晚上</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="part part3">
+    <div class="content-bg" id="part3-mask"></div>
+    <div class="content content3">
+        <h2>高精法线贴图</h2>
+        <hgroup class="hidden">高精法线贴图 人物和枪械（包含零件）细节凹凸精美、明暗立体、材质鲜活，让玩家极有质感</hgroup>
+        <div class="box">
+            <a href="javascript:void(0)" class="btn_video" onclick="popWindow('pop2')"></a>
+        </div>
+
+    </div>
+    <div class="soldier soldier3-1"></div>
+    <div class="soldier soldier3-2"></div>
+    <div class="soldier soldier3-3"></div>
+    <div class="soldier soldier3-4"></div>
+</div>
+
+<div class="part part4">
+    <div class="content content4">
+        <h2>角色实时受击效果</h2>
+        <hgroup class="hidden">角色实时受击效果 爆炸的火焰和烟雾，带来泥屑飞溅/空气扰动，让战斗气氛更加浓烈，受击后摇晃/抖动，爆头血肉横飞，刺激和爽快空前强烈！</hgroup>
+        <div class="box"> <a href="javascript:void(0)" class="btn_video" onclick="popWindow('pop3')"></a> </div>
+
+    </div>
+
+    <div class="missile"><img src="http://res.nie.netease.com/wj/qt/13/0809_engine/images/daodan.png" alt=""></div>
+    <div class="stone"></div>
+</div>
+
+<div class="part part5">
+    <div class="content content5">
+        <h2>动态地理模型</h2>
+        <hgroup class="hidden">动态地理模型 战场加入实时事件，如场景变化、天气变化，空中或远程火力，令战局充满变数，让战术更加灵活！</hgroup>
+        <div class="box"><a href="javascript:void(0)" class="btn_video" onclick="popWindow('pop4')"></a></div>
+    </div>
+
+    <div class="home"></div>
+</div>
+
+<div class="part part6">
+    <div class="content content6">
+        <h2>多轨高仿真音效</h2>
+        <hgroup class="hidden">多轨高仿真音效 支持声源、移动、遮挡变化，音效仿真处理，提高完美高度！</hgroup>
+        <div class="box"> <a href="javascript:void(0)" class="btn_video" onclick="popWindow('pop5')"></a> </div>
+
+    </div>
+
+    <div class="head"></div>
+</div>
+
+<div class="part part7">
+    <div class="content content7">
+        <h2>高智能AI系统</h2>
+        <hgroup class="hidden">高智能AI系统 支持怪物自定义路径袭击/攻击状态自主变化，拒绝枯燥的挑战！</hgroup>
+        <div class="box"><a href="javascript:void(0)" class="btn_video" onclick="popWindow('pop6')"></a></div>
+    </div>
+    <div class="gs1"></div>
+    <div class="gs2"></div>
+    <div class="gs3"></div>
+
+</div>
+<div class="back-top">
+	<img src="http://res.nie.netease.com/wj/qt/13/0809_engine/images/btn_top.png">
+</div>
+
+<footer id="footer">
+    <div id="NIE-copyRight"></div>
+</footer>
+
+</div>
+<!--[if IE 6]>
+<div style="color:#fff;background:#000;font-size: 14px;padding: 10px 0;text-align: center;font-weight: bold;">还在使用老掉牙IE6？这不科学！请使用IE8以上版本或者chrome，firefox等浏览器获得更好的视觉效果。</div>
+<div class="wrap-ie6">
+   <div class="part1-ie6"></div>
+   <div class="part2-ie6"></div>
+   <div class="part3-ie6"></div>
+   <div class="part4-ie6"></div>
+   <div class="part5-ie6"></div>
+   <div class="part6-ie6"></div>
+   <div class="part7-ie6"></div>
+</div>
+<![endif]-->
+<div class="popup" id="popTc">
+   <a href="javascript:void(0)" class="close_pop" onclick="popClose('pop1')">关闭<span></span></a>
+
+   <div class="video"></div>
+</div>
+
+</body>
+</html>

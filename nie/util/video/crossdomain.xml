@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+	<allow-access-from domain="*.163.com" />
+	<allow-access-from domain="*.netease.com" />
+	<allow-access-from domain="nx.netease.com:9045" />
+	<allow-access-from domain="cms.netease.com" />
+</cross-domain-policy>

@@ -1,0 +1,166 @@
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\jquery(mixNIE).last.source.js --js_output_file G:\workspace\jqueryMixNIE\jquery(mixNIE).last.js
+
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\jquery(mixNIE).last.source.js --js_output_file e:\workspace\jqueryMixNIE\jquery(mixNIE).last.js
+合作方 暂时泰国英3
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\jquery.p.last.source.js --js_output_file e:\workspace\jqueryMixNIE\jquery(mixNIE).p.last.js
+
+
+jquery-1.3.2(mixNIE)
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\jquery-1.3.2(mixNIE).source.js -o G:\workspace\jqueryMixNIE\jquery-1.3.2(mixNIE).js --charset gb2312
+
+jquery-1.4.2(mixNIE)
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\jquery-1.4.2(mixNIE).source.js -o G:\workspace\jqueryMixNIE\jquery-1.4.2(mixNIE).js --charset gb2312
+
+jquery-1.4.4(mixNIE)
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\jquery-1.4.4(mixNIE).source.js -o G:\workspace\jqueryMixNIE\jquery-1.4.4(mixNIE).js --charset gb2312
+
+
+1.4.4
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\jquery-1.4.4(mixNIE).source.js  --js_output_file G:\workspace\jqueryMixNIE\jquery-1.4.4(mixNIE).js
+
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\ui\jscroll.js -o G:\workspace\jqueryMixNIE\ui\jscroll.js --charset gb2312
+
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\xml2json.js -o G:\workspace\jqueryMixNIE\util\xml2json.js --charset gb2312
+
+
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\bjTime.js -o G:\workspace\jqueryMixNIE\util\bjTime.js --charset gb2312
+
+clipBoard
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\util\clipBoard.source.js  --js_output_file G:\workspace\jqueryMixNIE\util\clipBoard.js 
+
+cookie
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\cookie.source.js -o G:\workspace\jqueryMixNIE\util\cookie.js --charset gb2312
+
+swfobject
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\swfobject.source.js -o G:\workspace\jqueryMixNIE\util\swfobject.js --charset gb2312
+java -jar e:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar e:\workspace\jqueryMixNIE\util\swfobject.source.js -o e:\workspace\jqueryMixNIE\util\swfobject.js --charset gb2312
+
+mousewheel
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\event\mousewheel.source.js -o G:\workspace\jqueryMixNIE\event\mousewheel.js --charset gb2312
+
+onImagesLoad
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\onImagesLoad.source.js -o G:\workspace\jqueryMixNIE\util\onImagesLoad.js --charset gb2312
+
+linkEvent
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\linkEvent.source.js -o G:\workspace\jqueryMixNIE\util\linkEvent.js --charset gb2312
+
+tab
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\ui\tab.source.js --js_output_file G:\workspace\jqueryMixNIE\ui\tab.js
+
+
+bjTime
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\util\bjTime.source.js  --js_output_file G:\workspace\jqueryMixNIE\util\bjTime.js
+
+marquee
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\ui\marquee.source.js -o G:\workspace\jqueryMixNIE\ui\marquee.js --charset gb2312
+
+url
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\util\url.source.js --js_output_file G:\workspace\jqueryMixNIE\util\url.js
+
+share
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\util\share.source.js --js_output_file G:\workspace\jqueryMixNIE\util\share.js
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\util\share.v2.source.js --js_output_file G:\workspace\jqueryMixNIE\util\share.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\util\share.v2.source.js --js_output_file e:\workspace\jqueryMixNIE\util\share.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\nie\util\share.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\share.js
+clipBoard
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\util\clipBoard.source.js --js_output_file G:\workspace\jqueryMixNIE\util\clipBoard.js
+
+scrollAction
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\scrollAction.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\util\scrollAction.js --charset gb2312
+
+Switch
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\jqueryMixNIE\ui\Switch.source.js --js_output_file G:\workspace\jqueryMixNIE\ui\Switch.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\jqueryMixNIE\ui\Switch.source.js --js_output_file e:\workspace\jqueryMixNIE\ui\Switch.js
+
+marquee2
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\ui\marquee2.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\ui\marquee2.js --charset gb2312
+
+scrollTo
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\jqueryMixNIE\util\scrollTo.source.js --js_output_file G:\workspace\jqueryMixNIE\util\scrollTo.js
+
+styleSheet
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\styleSheet.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\util\styleSheet.js --charset gb2312
+
+nie.art.disclaimer
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\jqueryMixNIE\nie\art\disclaimer.source.js --js_output_file G:\workspace\jqueryMixNIE\nie\art\disclaimer.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js e:\workspace\jqueryMixNIE\nie\art\disclaimer_v2.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\art\disclaimer.js 
+nie.urs
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\jqueryMixNIE\nie\util\urs.source.js --js_output_file G:\workspace\jqueryMixNIE\nie\util\urs.js
+nie.bigUrs
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\jqueryMixNIE\nie\util\bigUrs.source.js --js_output_file G:\workspace\jqueryMixNIE\nie\util\bigUrs.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js e:\workspace\jqueryMixNIE\nie\util\bigUrs.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\bigUrs.js
+nie.bigUrs_v1
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\jqueryMixNIE\nie\util\bigUrs_v1.source.js --js_output_file G:\workspace\jqueryMixNIE\nie\util\bigUrs_v1.js
+bigUrs_noCaptcha
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js e:\workspace\jqueryMixNIE\nie\util\bigUrs_noCaptcha.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\bigUrs_noCaptcha.js
+
+fixPNG
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\fixPNG.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\util\fixPNG.js --charset gb2312
+
+validate
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\validate.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\util\validate.js --charset gb2312
+
+lazyload
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\util\lazyload.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\util\lazyload.js --charset gb2312
+
+blockUI
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\ui\blockUI.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\ui\blockUI.js --charset gb2312
+
+lightBox
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\jqueryMixNIE\ui\lightBox.source.js --js_output_file G:\workspace\jqueryMixNIE\ui\lightBox.js 
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js e:\workspace\jqueryMixNIE\ui\lightBox.source.js --js_output_file e:\workspace\jqueryMixNIE\ui\lightBox.js 
+
+test:
+oauth
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\test\oauth.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\test\oauth.js --charset gb2312
+sha1
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\test\sha1.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\test\sha1.js --charset gb2312
+
+
+nie.util.debug
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\nie\util\debug.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\nie\util\debug.js --charset gb2312
+
+event.drag
+java -jar G:\workspace\jqueryMixNIE\yuicompressor-2.4.2.jar G:\workspace\jqueryMixNIE\event\drag.source.js --charset utf8 -o G:\workspace\jqueryMixNIE\event\drag.js --charset gb2312
+
+topBar
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\nie.topBar\js\topBar.last.source.js --js_output_file G:\workspace\nie.topBar\js\topBar.last.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js e:\workspace\nie.topBar\js\topBar.last.source.js --js_output_file e:\workspace\nie.topBar\js\topBar.last.js
+
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js e:\workspace\nie.topBar\js\topBar.last.source.v2.js --js_output_file e:\workspace\nie.topBar\js\topBar.v2.last.js
+
+
+nie.util.video
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\nie\util\video.source.js  --js_output_file G:\workspace\jqueryMixNIE\nie\util\video.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\nie\util\video.source.js  --js_output_file e:\workspace\jqueryMixNIE\nie\util\video.js
+
+nie.util.share
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\nie\util\share.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\share.js
+
+nie.util.freshNews
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\nie\util\freshNews.source.js --js_output_file G:\workspace\jqueryMixNIE\nie\util\freshNews.js
+
+nie.util.captcha
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\nie\util\captcha.source.js --js_output_file G:\workspace\jqueryMixNIE\nie\util\captcha.js
+
+nie.util.gameKey
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js  G:\workspace\jqueryMixNIE\nie\util\gameKey.source.js --js_output_file G:\workspace\jqueryMixNIE\nie\util\gameKey.js
+
+nie.util.siteName
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\nie\util\siteName.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\siteName.js
+
+nie.util.avt
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\nie\util\avt.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\avt.js 
+
+nie.util.pageLoad
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\nie\util\pageLoad.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\pageLoad.js 
+java -jar g:\workspace\jqueryMixNIE\compiler.jar --js  g:\workspace\jqueryMixNIE\nie\util\pageLoad.source.js --js_output_file g:\workspace\jqueryMixNIE\nie\util\pageLoad.js 
+
+ui.pop
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js  e:\workspace\jqueryMixNIE\ui\pop.source.js --js_output_file e:\workspace\jqueryMixNIE\ui\pop.js
+
+nie.util.qUrs
+java -jar G:\workspace\jqueryMixNIE\compiler.jar --js G:\workspace\jqueryMixNIE\nie\util\qUrs.source.js --js_output_file G:\workspace\jqueryMixNIE\nie\util\qUrs.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js e:\workspace\jqueryMixNIE\nie\util\qUrs.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\qUrs.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js e:\workspace\jqueryMixNIE\nie\util\qUrs_v2.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\qUrs_v2.js
+java -jar e:\workspace\jqueryMixNIE\compiler.jar --js e:\workspace\jqueryMixNIE\nie\util\qUrs_v2.source.js --js_output_file e:\workspace\jqueryMixNIE\nie\util\qUrs.js

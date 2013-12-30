@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+<script>
+var a=function(_v1,_v2){
+	var self=this;
+	var v1=_v1;
+	this.v2=_v2;
+	var remote=function(callBack){
+		$.ajax({
+					type : "get", //jquey是不支持post方式跨域的
+					async:false,
+					url : "getJSON.php", //跨域请求的URL
+					dataType : "jsonp",
+					//传递给请求处理程序，用以获得jsonp回调函数名的参数名(默认为:callback)
+					//jsonp: "jsoncallback",
+					//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+					//jsonpCallback:"success_jsonpCallback",
+					//成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+					success : function(json){
+						callBack(json);
+					}
+				});
+	}
+	var d=function(fn){
+		var _fn=fn;
+		this.run=function(){
+			_fn();
+		};
+	};
+	var d1=new d(function(){
+		var aa=v1;
+		remote(function(json){
+			//console.log(json);
+			console.log(aa)
+			console.log(arguments.callee);
+		});
+	});	
+	d1.run();
+}
+a1=new a(1,2);
+a2=new a(3,4);
+</script>
+</head>
+
+<body>
+</body>
+</html>

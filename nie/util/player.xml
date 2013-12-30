@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="gb2312"?>
+<config>
+    <!--视频文件cdn控制-->
+	<movieCDNcontrol>
+		<channel domain="v.zh.netease.com">
+			<cdn>
+				<domain>v02.zh.netease.com</domain>		
+				<timeout>10</timeout>
+				<rate>50</rate>
+			</cdn>
+			<cdn>
+				<domain>v03.zh.netease.com</domain>
+				<timeout>10</timeout>		
+				<rate>50</rate>
+			</cdn>
+		</channel>		
+		<channel domain="v.wh.netease.com">
+			<cdn>
+				<domain>v02.wh.netease.com</domain>		
+				<timeout>10</timeout>
+				<rate>50</rate>
+			</cdn>
+			<cdn>
+				<domain>v03.wh.netease.com</domain>
+				<timeout>10</timeout>		
+				<rate>50</rate>
+			</cdn>
+		</channel>
+		<channel domain="v.qn.netease.com">
+			<cdn>
+				<domain>v02.qn.netease.com</domain>		
+				<timeout>10</timeout>
+				<rate>50</rate>
+			</cdn>
+			<cdn>
+				<domain>v03.qn.netease.com</domain>
+				<timeout>10</timeout>		
+				<rate>50</rate>
+			</cdn>
+		</channel>
+	</movieCDNcontrol>
+</config>

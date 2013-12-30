@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>网易游戏.快速注册（样本）</title>
+<!-- NIE urs css-->
+<!--<link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/comm/js/nie/util/urs/big.case1.css" media="all" />-->
+<style>
+/*预载信息*/
+.NIE-quickReg-loading{font-size:14px;font-weight:bold;}
+/*快速注册*/
+.NIE-quickReg{font-family:simSun,Arial;font-size:12px;line-height:170%;color:#000;display:none;}
+.NIE-quickReg table{border-collapse:collapse;}
+.NIE-quickReg table td{padding:1px;vertical-align:middle;}
+.NIE-quickReg table tr.line2{display:table-row;}
+.NIE-quickReg table tr.line2 td{padding:0;}
+.NIE-quickReg .username,.NIE-quickReg .password,.NIE-quickReg .captcha,.NIE-quickReg .realname,.NIE-quickReg .idtype,.NIE-quickReg .idno,.NIE-quickReg .phone{height:18px;padding-left:5px;float:left;line-height:18px;font-size:12px;border:1px #7f9db9 solid;font-family:Arial,Helvetica,sans-serif;}
+.NIE-quickReg .idtype{float:right;}
+.NIE-quickReg .username,.NIE-quickReg .password,.NIE-quickReg .realname,.NIE-quickReg .idno,.NIE-quickReg .phone{width:142px;}
+.NIE-quickReg .captcha{width:92px;}
+.NIE-quickReg .inp-tips{color:gray;}
+.NIE-quickReg .inp-info{display:none;}
+.NIE-quickReg input.right{}
+.NIE-quickReg input.error{color:#ff0000;border-color:#ff0000;background-color:#ffff99;}
+.NIE-quickReg .submit{cursor:pointer;}
+.NIE-quickReg .hideItem .loading,.NIE-quickReg label.info i.loading{background:url(loading.gif) no-repeat center;}
+.NIE-quickReg .noLoading{background:none;}
+.NIE-quickReg .hideItem{display:none;}
+.NIE-quickReg span.userName-tips i,.NIE-quickReg .recomUserName i,.NIE-quickReg label.info i{_background:url(icon.gif) no-repeat;}
+.NIE-quickReg span.userName-tips>i,.NIE-quickReg .recomUserName>i,.NIE-quickReg label.info>i{background:url(icon.png) no-repeat;}
+.NIE-quickReg a.close{position:absolute;right:0;top:0;width:12px;height:12px;line-height:12px;font-family:Arial;font-weight:bold;text-decoration:none;color:#fff;text-align:center;display:block;background:#dadaaf;overflow:hidden;}
+.NIE-quickReg a.close:hover{background:#b8b883;}
+.NIE-quickReg span.userName-tips{position:absolute;z-index:99;width:150px;margin-top:1px;padding:7px 8px 5px 8px;color:#a29452;line-height:18px;background:#fff6d9;border:1px #dadaaf solid;display:none;}
+.NIE-quickReg span.userName-tips i{position:absolute;z-index:100;top:-6px;left:20px;width:11px;height:6px;display:block;background-position:0 0;overflow:hidden;}
+.NIE-quickReg .recomUserName{position:absolute;z-index:99;width:165px;margin-top:1px;padding:3px;color:#a29452;display:none;background:#fff6d9;border:1px #dadaaf solid;}
+.NIE-quickReg .recomUserName i{position:absolute;z-index:100;top:-6px;left:20px;width:11px;height:6px;display:block;background-position:0 0;overflow:hidden;}
+.NIE-quickReg .recomUserName a.choose{width:160px;height:20px;padding-left:5px;line-height:20px;font-family:Arial;float:left;color:#000;text-decoration:none;display:block;clear:both;}
+.NIE-quickReg .recomUserName a.choose:hover{color:#fff;background-color:#b8b883;}
+.NIE-quickReg .recomUserName a.choose input{float:left;margin:1px 0 0 0 /9;margin:3px 2px 0 0;}
+.NIE-quickReg .domain{float:left;font-family:simSun;margin-left:1px;font-size:10px;font-size:12px\9;display:inline-block;}
+.NIE-quickReg .captcha-wrap{width:100px;height:32px;float:left;display:inline-block;}
+.NIE-quickReg .captcha-wrap img{cursor:pointer;}
+.NIE-quickReg #captchaBtn{width:4em;margin:2px 0 0 5px;color:#1e50a2;line-height:14px;float:left;text-decoration:none;cursor:pointer;display:block;}
+.NIE-quickReg #captchaBtn:hover{color:#F60;}
+.NIE-quickReg label.info{position:relative;height:20px;margin-left:2px;float:left;overflow:hidden;display:none;}
+.NIE-quickReg label.info i{width:20px;height:20px;display:block;}
+.NIE-quickReg label.info i.right{background-position:0 -24px;}
+.NIE-quickReg label.info i.error{background-position:0 -60px;}
+.NIE-quickReg label.agree{cursor:pointer;}
+.NIE-quickReg .tips{font-size:12px;text-align:right;}
+/*建议域名邮箱*/
+.NIE-quickReg .suggestDomain{position:absolute;z-index:999;width:149px;background:#FFF;border:1px #999 solid;display:none;}
+.NIE-quickReg td>.suggestDomain{width:auto;min-width:149px;}
+.NIE-quickReg .suggestDomain,.NIE-quickReg .suggestDomain li{margin:0;padding:0;list-style:none;}
+.NIE-quickReg .suggestDomain li{height:18px;line-height:18px;color:#666;padding:0 5px;font-family:Arial,Helvetica,sans-serif;}
+.NIE-quickReg .suggestDomain li.title{}
+.NIE-quickReg .suggestDomain li.hover{background:#E6F2FF;color:#000;cursor:pointer;}
+/*信息框*/
+#NIE-quickReg-msg,#NIE-quickReg-msg-title,#NIE-quickReg-closeBtn,#not163Mail,#NIE-quickReg-msg a.btn,#NIE-quickReg-msg .error,#NIE-quickReg-msg .right{background:url(urs/item.gif);}
+#NIE-quickReg-msg{position:absolute;z-index:10001;background-color:#fff;border:1px #fff solid;background-position:bottom;}
+a#NIE-quickReg-closeBtn{position:absolute;right:0;top:0;width:28px;height:28px;line-height:900px;display:inline;background-repeat:no-repeat;background-position:-120px -30px;overflow:hidden;}
+a#NIE-quickReg-closeBtn:hover{background-position:-120px -62px;}
+#NIE-quickReg-msg *{font-size:12px;font-family:simSun,Arial;}
+#NIE-quickReg-msg-bg{position:absolute;z-index:10000;background:#000;opacity:.8;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";filter:alpha(opacity=80);}
+#NIE-quickReg-msg-title{height:29px;text-indent:12px;line-height:29px;color:#616372;font-weight:bold;}
+#NIE-quickReg-msg-con{ margin-top:15px;margin-bottom:15px;}
+#NIE-quickReg-msg a.btn{width:120px;height:31px;line-height:31px;font-size:14px;font-weight:bold;text-decoration:none;color:#7c7e87;text-align:center;display:inline-block;background-position:0 -29px;overflow:hidden;}
+#NIE-quickReg-msg a.btn:hover{color:#336699;background-position:0 -60px;}
+#NIE-quickReg-msg .error,#NIE-quickReg-msg .right{margin:15px; padding-left:55px; background-repeat:no-repeat;}
+#NIE-quickReg-msg .right{ background-position:0 -91px;}
+#NIE-quickReg-msg .error{ background-position:0 -407px;}
+#NIE-quickReg-msg-con .info{ padding-top:10px; margin:0 0 10px 0;font-weight:bold; font-size:14px;}
+#NIE-quickReg-msg-con .reason{line-height:18px; margin:0 0 5px 0;}
+#NIE-quickReg-msg .right{ width:130px; margin-left:auto; margin-right:auto; padding:0;}
+#NIE-quickReg-msg .right .info{text-indent:50px; margin-bottom:25px;}
+
+/*非网易邮箱*/
+#not163Mail{width:340px;margin:0 auto;padding:8px 45px 0 100px;background-position:50px -91px;background-repeat:no-repeat;}
+#not163Mail h1,#not163Mail h2,#not163Mail h3,#not163Mail ol,#not163Mail li{margin:0;padding:0;}
+#not163Mail h1{font-size:14px;font-weight:bold;}
+#not163Mail h2{margin:20px 0;font-size:14px;}
+#not163Mail h3{margin:10px 0;font-weight:normal;}
+#not163Mail h3 b{font-family:Arial, Helvetica, sans-serif;color:#006699;}
+#not163Mail ul.tips,#not163Mail ul.tips li{margin:0;padding:0;list-style:none;}
+#not163Mail ul.tips{font-size:12px;line-height:20px;color:#666;}
+#not163Mail ul.tips ol li{list-style:decimal;margin-left:20px;}
+#not163Mail a{color:#006699;}
+#not163Mail a:hover{color:#F63;}
+</style>
+<!-- jquery mix NIE (最新版本）-->
+<script charset="gb2312" type="text/javascript" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+<script type="text/javascript">
+
+$(function(){	
+	//nie.use(["nie.util.bigUrs_debug","nie.util.debug"],function(){
+	//nie.use(["nie.util.debug","nie.util.bigUrs"],function(){
+	nie.use(["nie.util.debug","nie.util.bigUrs"],function(){
+		debug = nie.util.debug.create();		
+		bigUrs = nie.util.urs.create(); 
+		bigUrs.init();
+		
+		bigUrs.regData={
+			username:"12323@126.com",
+			is163Mail:true,
+			mailUrl:"http://www.163.com"
+		}
+		/*bigUrs.showMsg({
+				result:true,         //必填
+				status:200,
+				 msg:"您输入的信息不符合标准，如：用户名和密码不能相同，用户名包括不允许的字符，用户名和密码长度应大于6位等。",         	  //必填
+				 url:"",               //必填
+				 data:{},             //必填
+				 confirmFn:function(){}, //选择填写，点击信息框"确认"按钮触发的函数
+ 				 username:"12323@gmail.com",	  //用户名
+				 is163Mail:true,   //是否非网易邮箱
+				 mailUrl:"http://www.163.com"		  //邮箱登陆url
+		});*/
+		bigUrs.showMsg({									
+									msg:"提交数据中，请稍后...",
+									url:null,
+									result:true
+								});
+	});		
+});
+</script>
+<style>
+body{margin:0;padding:0;background-color:transparent;}
+
+</style>
+</head>
+<body>
+<p class="NIE-quickReg-loading">注册帐号加载中,请稍后.</p>
+<form class="NIE-quickReg" method="post" onsubmit="return false;">
+<table>
+<tr>
+<td width="60">通 行 证：</td>
+<td width="250"><input rel="username" tabindex="1" class="username inp-info" type="text" />
+<input tabindex="1" name="username" class="username" type="text" autocomplete="off" />
+<label class="info" for="username"><!--用户名.对错提示--></label></td>
+</tr>
+<tr class="line2">
+<td width="60"></td>
+<td>
+<ul class="recomUserName">
+<!--用户名.推荐-->
+</ul>
+<ul class="suggestDomain">
+<!--用户名.域名推荐-->
+</ul>
+</td>
+</tr>
+<tr>
+<td>密　　码：</td>
+<td><input rel="password" tabindex="2" class="password inp-info" type="text" maxlength="16" />
+<input tabindex="2" name="password" class="password" type="password" maxlength="16" />
+<label class="info" for="password"><!--密码.对错提示--></label></td>
+</tr>
+<tr>
+<td>重复密码：</td>
+<td><input rel="repassword" tabindex="3" class="password inp-info" type="text" maxlength="16" />
+<input tabindex="3" name="repassword" class="password" type="password" maxlength="16" />
+<label class="info" for="repassword"><!--重复密码.对错提示--></label></td>
+</tr>
+<tr>
+<td>验 证 码：</td>
+<td><input rel="captcha" tabindex="8" class="captcha inp-info" type="text" />
+<input tabindex="8" name="captcha" class="captcha" type="text" autocomplete="off" />
+<label class="info" for="captcha"></label></td>
+</tr>
+<tr class="hideItem">
+<td width="60"></td>
+<td><span class="captcha-wrap loading"></span><a id="captchaBtn">看不清，换一张！</a></td>
+</tr>
+<tr>
+<td colspan="2"><label class="agree" for="agreement"><input id="agreement" name="agree" type="checkbox" checked="checked" />同意</label>《<a href="http://reg.163.com/agreement.shtml" target="_blank">网易服务条款</a>》和《<a href="http://reg.163.com/agreement_game.shtml" target="_blank">隐私保护和个人信息利用政策</a>》</td>
+</tr>
+<tr>
+<td></td>
+<td><input tabindex="9" class="submit" type="submit" value="完成注册" />
+<input type="hidden" name="product" value="game" />
+<input type="hidden" name="promark" value="tx2sdgc1" /></td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>

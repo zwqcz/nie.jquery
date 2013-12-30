@@ -1,0 +1,7 @@
+/**
+ * @author Lam
+ */
+$.extend({
+	getXML:{
+	}
+});

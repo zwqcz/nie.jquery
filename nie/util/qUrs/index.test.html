@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
+<script charset="gb2312" src="../qUrs.source.test.js"></script>
+<script>
+//nie.use(["nie.util.qUrs"],function(){
+	$(function(){
+		var o1=new nie.util.qUrs({
+			holder:"#f1",//����ѡ������Ĭ��Ϊ"div.NIE-quickReg"
+			"type":1//��� 1:����ע����Ҫ��֤��;2:����ע�᲻��Ҫ��֤��;			
+			//"msgType":1//�ύ����Ϣ��� 1:����(Ĭ��);2:�л���(iframeר��)
+		});
+		var o2=new nie.util.qUrs({holder:"#f2",type:2,msgType:2});
+	});
+//});
+</script>
+<style>
+html,body{width:100%;height:100%;padding:0;margin:0;}
+h2{clear:both;}
+</style>
+<link type="text/css" rel="stylesheet" href="http://res.nie.netease.com/comm/js/nie/util/qUrs/base.css" media="all" />
+
+</head>
+<body>
+<h2>��֤�룺</h2>
+<!-- Start ��ͨ��֤.����ע�� -->
+<div id="f1" class="NIE-quickReg">
+<p class="NIE-quickReg-loading">ע������ͨ��֤������,���Ժ�.</p>
+<input type="hidden" name="promark" value='hqrsm26k'>
+</div>
+<!-- End ��ͨ��֤.����ע�� -->
+
+<h2>����֤��ͼƬ(iframe��)��</h2>
+<!-- Start ��ͨ��֤.����ע�� -->
+<div id="f2" class="NIE-quickReg">
+<p class="NIE-quickReg-loading">ע������ͨ��֤������,���Ժ�.</p>
+<input type="hidden" name="promark" value='hqrsm26k'>
+</div>
+<!-- End ��ͨ��֤.����ע�� -->
+</body>
+</html>
+  

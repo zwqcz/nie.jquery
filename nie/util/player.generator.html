@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title></title>
+<style>
+html,body{font-size:12px; line-height:24px;}
+html,body,p,form{margin:0; padding:0;}
+div{width:1000px; margin:0 auto;}
+</style>
+<script src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js" ></script>
+<script>
+$(function(){
+	$("form").submit(function(){
+		var code='<object data="http://res.nie.netease.com/comm/js/nie/util/player.swf" type="application/x-shockwave-flash" width="$videoWidth" height="$videoHeight">\
+<param name="allowFullScreen" value="true">\
+<param name="allowscriptaccess" value="always">\
+<param name="wmode" value="direct">\
+<param name="flashvars" value="width=$videoWidth&height=$videoHeight&movieUrl=$videoUrl&videoWidth=$videoWidth&videoHeight=$videoHeight&volume=0.8&autoPlay=$autoPlay&loopTimes=$loopTimes$startImgData">\
+<param name="movie" value="http://res.nie.netease.com/comm/js/nie/util/player.swf">\
+<param name="quality" value="high">\
+<param name="bgcolor" value="$bgcolor">\
+<div>\
+<h4>页面需要新版Adobe Flash Player.</h4>\
+<p>\
+<a href="http://www.adobe.com/go/getflashplayer"><img width="112" height="33" alt="获取新版Flash" src="http://res.nie.netease.com/comm/js/util/swfobject/get_flash_player.gif"></a>\
+</p>\
+</div>\
+</object>',
+			videoUrl=$.trim($("input[name=videoUrl]").val()),
+			videoWidth=$("input[name=videoWidth]").val(),
+			videoHeight=$("input[name=videoHeight]").val(),
+			startImg=$.trim($("input[name=startImg]").val()),
+			bgcolor=$.trim($("input[name=bgColor]").val()),
+			loopTimes=$("input[name=loopTimes]").val();			
+		if(videoUrl&&videoWidth&&videoHeight){
+			if(/^\d+$/.test(videoWidth)&&/^\d+$/.test(videoHeight)&&/^-?\d+$/.test(loopTimes)&&/^http:\/\//.test(videoUrl)&&(startImg==""||(startImg!=""&&/^http:\/\//.test(startImg)))){
+				code=code.replace(/\$videoUrl/g,videoUrl)
+						.replace(/\$videoWidth/g,videoWidth)
+						.replace(/\$videoHeight/g,videoHeight)
+						.replace(/\$autoPlay/g,$("select[name=autoPlay]").val()==1)
+						.replace(/\$loopTimes/g,loopTimes)
+						.replace(/\$bgcolor/g,bgcolor)
+						.replace(/\$startImgData/g,(startImg!=""?"&startImg="+startImg:""));
+				$("textarea").text(code);
+			}
+			else{
+				alert("请填写正确！");
+			}
+		}
+		else{
+			alert("请填写完整！");
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div>
+<h1>视频代码生成器</h1>
+<form onsubmit="return false;">
+<p>视频地址：<input name="videoUrl" type="text" style="width:800px;" /></p>
+<p>视频宽：<input name="videoWidth" type="text" style="width:50px;" />px</p>
+<p>视频高：<input name="videoHeight" type="text" style="width:50px;" />px</p>
+<p>背景颜色：<input name="bgColor" type="text" style="width:100px;" value="#000000" />(默认黑色，如果修改白色 值为#ffffff)</p>
+<p>是否自动播放：<select name="autoPlay"><option value="1">是</option><option value="0">否</option></select></p>
+<p>循环播放次数：<input name="loopTimes" type="text" value="-1" style="width:50px;" />次(-1代表无限次)</p>
+<p>预览图片地址：<input name="startImg" type="text" style="width:700px;" />(不填写为不需要预览图片)</p>
+<p style="padding-top:20px;"><input type="submit" value="生成代码" /></p>
+</form>
+<textarea style=" margin-top:50px;width:1000px; height:300px;" onmouseover="this.select();">
+</textarea>
+</div>
+</body>
+</html>

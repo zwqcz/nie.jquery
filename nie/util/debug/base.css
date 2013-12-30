@@ -1,0 +1,24 @@
+.NIE-debug{position:absolute;z-index:999;width:300px;padding:5px;font-size:12px;color:#000;background:#E4E4E4;border:1px #CCC solid;}
+.NIE-debug .content,.NIE-debug .type{cursor:auto;}
+.zoom-big .content{display:list-item;}
+.zoom-big .type{display:inline-block;}
+.zoom-small .content,.zoom-small .type{display:none;}
+.NIE-debug .zoomBtn{position:absolute;right:0;top:0px;cursor:pointer;}
+.NIE-debug h3{font-size:14px;}
+.NIE-debug h3,.NIE-debug p,.NIE-debug ol,.NIE-debug li{margin:0;padding:0;}
+.NIE-debug ol.content{height:300px;padding:5px;border:1px #ccc solid;background:#fff;overflow-y:scroll;overflow-x:none;}
+.NIE-debug ol.content li{margin-left:25px;line-height:18px;word-break:break-all;list-style:outside decimal;display:none;}
+.NIE-debug ol.showpass li.pass{display:list-item;}
+.NIE-debug ol.showerror li.error{display:list-item;}
+.NIE-debug ol.showwarn li.warn{display:list-item;}
+.NIE-debug ol li i{font-weight:bold;font-style:normal;}
+.NIE-debug ol li.pass i{color:#693;}
+.NIE-debug ol li.error i{color:red;}
+.NIE-debug ol li.warn i{color:#F90;}
+.NIE-debug .type{float:left;padding:5px 0;}
+.NIE-debug .type label{padding-right:5px;margin-right:5px;float:left;line-height:20px;color:#fff;cursor:pointer;}
+.NIE-debug .type label input{float:left;}
+.NIE-debug .type .pass{background:#693;}
+.NIE-debug .type .error{background:red;}
+.NIE-debug .type .warn{background:#F90}
+.NIE-debug .type button.clear{float:left; cursor:pointer;}

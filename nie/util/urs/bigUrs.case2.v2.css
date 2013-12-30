@@ -1,0 +1,106 @@
+/*预载信息*/
+.NIE-quickReg-loading{font-size:14px;}
+/*快速注册*/
+.NIE-quickReg{font-family:Arial;font-size:12px;line-height:170%;color:#000;}
+.qrLogin{font-size:14px;}
+/* bg */
+.qrChk i{_background:url(icon.gif) no-repeat;}
+.qrChk>i{background:url(icon.png) no-repeat;}
+.NIE-quickReg .loading{background:url(loading.gif) no-repeat center;}
+/* items */
+.NIE-quickReg dl{width:460px;}
+.NIE-quickReg dl,.NIE-quickReg dt,.NIE-quickReg dd,.NIE-quickReg ul,.NIE-quickReg li{position:relative;z-index:1;margin:0;padding:0;list-style:none;float:left;}	
+.NIE-quickReg dt.qr-username,.NIE-quickReg dd.qr-username,.NIE-quickReg .qr-username ul,.NIE-quickReg .qr-username li{z-index:2;}
+.NIE-quickReg dt.qr-createEmail,.NIE-quickReg dd.qr-createEmail,.NIE-quickReg .qr-createEmail ul,.NIE-quickReg .qr-createEmail li{z-index:2;}
+.NIE-quickReg .qr-username li.qrTips{z-index:1;}
+.NIE-quickReg .qr-createEmail li.qrTips{z-index:1;}
+.NIE-quickReg dt{width:115px;height:75px;font-size:14px;line-height:31px;text-align:right;}
+.NIE-quickReg dt b{padding-right:3px;color:red;font-weight:bold;font-style:normal;}
+.NIE-quickReg dd{width:340px;}
+.NIE-quickReg dt.qrHide,.NIE-quickReg dd.qrHide{position:absolute;visibility:hidden;}
+.NIE-quickReg .hideItem{display:none;}
+.NIE-quickReg ul{}
+/* 当前激活 */
+.NIE-quickReg .qrHover input.qrInpTxt,.NIE-quickReg .qrHover .qrCon input.right,.NIE-quickReg .qrHover .qrCon input.error{background:#E8F8FF;border-color:#69F;}
+.NIE-quickReg .qrHover .qrTips{color:#69F;}			
+/* 内容:输入框 */
+.qrCon{width:260px;height:33px;float:left;}	
+.NIE-quickReg .qrCon input.right{border:1px #6C0 solid;background:#f4fef0;}
+.NIE-quickReg .qrCon input.error{border:1px red solid;background:#FF9;}				
+.qrCon input.inp-tips{color:gray;font-weight:normal;}
+.qrUserInp,.qrUser163Inp,.qrDomainSel,.qrPWInp,.qrRePWInp,.qrCaptchaInp{height:31px;padding:0 8px;line-height:31px;font-size:14px;float:left;border:1px #868686 solid;background:#fff;}
+.qrUserInp,.qrPWInp,.qrRePWInp{width:244px;}
+.qrUser163Inp,.qrCaptchaInp{width:137px;}
+.qrDomainSel{width:100px;padding:0;margin:3px 0 0 5px;float:left;font-family:Arial;}
+.qrCon>.qrDomainSel{height:33px;margin-top:0;}
+/* 错误检查 */
+li.qrChk{width:25px;height:32px;margin-left:5px;float:left;}		
+.qrChk i{width:25px;height:32px;display:none;}
+.qrChk i.right{background-position:center -18px;}
+.qrChk i.error{background-position:center -54px;}
+.qrChk em{position:absolute;top:0;left:37px;width:130px;height:31px;padding:0 10px 0 15px; font-size:12px;color:#000;font-weight:normal;font-style:normal;background:#FF9;border:1px red solid;line-height:31px;display:none;　word-wrap:break-word;}
+.qrChk em span{display:inline-block;}
+.qrChk>em{width:auto;min-width:130px;}
+.qrChk em b{position:absolute;top:9px;left:-7px;width:7px;height:9px;overflow:hidden;}
+.loading .loading,.error .error,.right .right,.error em{display:inline-block;}		
+/*规则提示*/
+.qrTips{width:260px;height:42px;line-height:32px;color:#8A8A8A;font-size:12px;float:left;}
+.qrSubmitInp,.qr-agree label{cursor:pointer;}
+.qrSubmitInp{}
+.captcha-wrap{position:absolute;top:1px;width:100px;height:32px;line-height:32px;margin-left:5px;float:left;display:inline-block;}
+.captcha-wrap img{cursor:pointer;float:left;}
+/*协议*/
+.NIE-quickReg .qr-agree{height:65px;font-size:14px;}
+/*特效*/
+.NIE-quickReg .suggestEmail,.NIE-quickReg .suggestDomain{-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;box-shadow:0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;}
+#NIE-quickReg-msg{-webkit-box-shadow:0 2px 7px #333, 0 0 0 #999 inset;-moz-box-shadow:0 2px 7px #333, 0 0 0 #999 inset;box-shadow:0 2px 7px #333, 0 0 0 #999 inset;}
+/*新建网易邮箱*/
+.NIE-quickReg .suggestEmail{position:absolute;top:26px;left:0;width:268px;padding:5px;background:#fff;border:1px #999 solid;-moz-border-radius:3px;-webkit-border-radius:3px;display:none;}
+.NIE-quickReg .suggestEmail ul{width:100%;}
+.NIE-quickReg .suggestEmail li{width:100%;}
+.NIE-quickReg .suggestEmail li.title{padding-bottom:5px;text-indent:5px;}
+.NIE-quickReg .suggestEmail li.other{padding-top:5px;text-indent:5px;}
+.NIE-quickReg .suggestEmail li.other a{color:#01689c;text-decoration:none;}
+.NIE-quickReg .suggestEmail li.other a:hover{text-decoration:underline;}
+.NIE-quickReg .suggestEmail li.hover{cursor:pointer;}
+.NIE-quickReg .suggestEmail li.hover span,.NIE-quickReg .suggestEmail li.hover em{text-decoration:underline;}
+.NIE-quickReg .suggestEmail li span{font-family:Verdana;}
+.NIE-quickReg .suggestEmail li span input{float:left;}
+.NIE-quickReg .suggestEmail li em{font-weight:bold;color:#01689c;font-style:normal;font-family:Verdana;}
+.NIE-quickReg .suggestEmail li i{position:absolute;right:0;color:gray;font-style:normal;text-align:right;}
+/*建议域名邮箱*/
+.NIE-quickReg .suggestDomain{position:absolute;z-index:2;top:25px;left:0;width:99.5%;font-size:14px;background:#fff;border:1px #999 solid;display:none;overflow:hidden;}
+.NIE-quickReg .suggestDomain ul{width:100%;}
+.NIE-quickReg .suggestDomain li{width:100%;height:22px;color:#000;padding:1px 5px;line-height:22px;}
+.NIE-quickReg .suggestDomain li.title{}
+.NIE-quickReg .suggestDomain li.hover{background:#E8F8FF;border-bottom-color:#F90;cursor:pointer;}
+/*信息框*/
+#NIE-quickReg-msg,#NIE-quickReg-msg-title,#NIE-quickReg-closeBtn,#not163Mail,#NIE-quickReg-msg a.btn,#NIE-quickReg-msg .error,#NIE-quickReg-msg .right{background:url(item.gif);}
+#NIE-quickReg-msg{position:absolute;z-index:10001;background-color:#fff;border:1px #fff solid;background-position:bottom;}
+#NIE-quickReg-msg *{font-size:12px;color:#000;font-family:simSun,Arial;}
+a#NIE-quickReg-closeBtn{position:absolute;right:0;top:0;width:28px;height:28px;line-height:900px;display:inline;background-repeat:no-repeat;background-position:-120px -30px;overflow:hidden;}
+a#NIE-quickReg-closeBtn:hover{background-position:-120px -62px;}
+#NIE-quickReg-msg-bg{position:absolute;z-index:10000;background:#000;opacity:.5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50);}
+#NIE-quickReg-msg-title{height:29px;text-indent:12px;line-height:29px;color:#616372;font-weight:bold;}
+#NIE-quickReg-msg-con{margin-top:15px;margin-bottom:15px;}
+#NIE-quickReg-msg a.btn{width:120px;height:31px;line-height:31px;font-size:14px;font-weight:bold;text-decoration:none;color:#7c7e87;text-align:center;display:inline-block;background-position:0 -29px;overflow:hidden;}
+#NIE-quickReg-msg a.btn:hover{color:#336699;background-position:0 -60px;}
+#NIE-quickReg-msg .error,#NIE-quickReg-msg .right{margin:15px;padding-left:55px;background-repeat:no-repeat;}
+#NIE-quickReg-msg .right{background-position:0 -91px;}
+#NIE-quickReg-msg .error{background-position:0 -407px;}
+#NIE-quickReg-msg-con .info{padding-top:10px;margin:0 0 10px 0;font-weight:bold;font-size:14px;}
+#NIE-quickReg-msg-con .reason{line-height:18px;margin:0 0 5px 0;}
+#NIE-quickReg-msg .right{width:130px;margin-left:auto;margin-right:auto;padding:0;}
+#NIE-quickReg-msg .right .info{text-indent:50px;margin-bottom:25px;}
+/*非网易邮箱*/
+#not163Mail{width:340px;margin:0 auto;padding:8px 45px 0 100px;background-position:50px -91px;background-repeat:no-repeat;}
+#not163Mail h1,#not163Mail h2,#not163Mail h3,#not163Mail ol,#not163Mail li{margin:0;padding:0;}
+#not163Mail h1{font-size:14px;font-weight:bold;}
+#not163Mail h2{margin:20px 0;font-size:14px;}
+#not163Mail h3{margin:10px 0;font-weight:normal;}
+#not163Mail h3 b{font-family:Arial, Helvetica, sans-serif;color:#006699;}
+#not163Mail ul.tips,#not163Mail ul.tips li{margin:0;padding:0;list-style:none;}
+#not163Mail ul.tips{font-size:12px;line-height:20px;color:#666;}
+#not163Mail ul.tips ol li{list-style:decimal;margin-left:20px;}
+#not163Mail a{color:#006699;}
+#not163Mail a:hover{color:#F63;}
