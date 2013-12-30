@@ -1107,6 +1107,9 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 					logo=get_pngImg(88,31,path+"pangu.{s}.png",false,1);
 					showPart1=false;
 					break;
+				 case "lj":
+					bcode=t1+'(2013)C-RPG081号';
+					break;
 				 default:
 					showPart1=false;
 					break;
