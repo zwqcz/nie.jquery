@@ -731,7 +731,7 @@ fail_type		1 代表手机号已注册，2代表手机号已绑定，3代表邮�
 				type : "get", //jquey是不支持post方式跨域的
 				async:false,
 				//url : (file=="submit"?"https://reg.nie.163.com/web/quick/":serverPath)+file+"?"+getBindParams($.extend({"promark":promark,"id":id,"output":"json","isTest":1,"isReActive":1},params)), //跨域请求的URL
-				url : (file=="submit"?"https://reg.nie.163.com/web/quick/":serverPath)+file+"?"+getBindParams($.extend({"promark":promark,"id":id,"output":"json"},params)), //跨域请求的URL
+				url : (/^(submit|regMobile)$/.test(file)?"https://reg.nie.163.com/web/quick/":serverPath)+file+"?"+getBindParams($.extend({"promark":promark,"id":id,"output":"json"},params)), //跨域请求的URL
 				//url : "urs.php?file="+file+"&"+getBindParams($.extend({"promark":promark,"id":id,"output":"json"},params)), //跨域请求的URL
 				dataType : "jsonp",				
 				//传递给请求处理程序，用以获得jsonp回调函数名的参数名(默认为:callback)
