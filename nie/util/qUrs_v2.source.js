@@ -36,6 +36,7 @@ nie.util.qUrs=nie.util.qUrs||function(options){
 			};
 		},
 		defaults={
+			"activeIndex":1,//默认显示标签（0:邮箱注册，1:手机注册）
 			"holder":"div.NIE-quickReg",
 			"type":1,//类别 1:需要验证码;2:不需要验证码;3:手机注册
 			"loginFn":null,//游戏登录(默认null)：用在检查用户名存在的时候调用，方便web游戏
@@ -1178,7 +1179,7 @@ fail_type		1 代表手机号已注册，2代表手机号已绑定，3代表邮�
 			var _self=this,
 				_data=[],
 				_UA=[],//用户帐号名称:username|m_username
-				_activeIndex=1,//默认显示的form			
+				_activeIndex=settings.activeIndex,//默认显示的form			
 				_tab=$("<ul class=qr-tab>").appendTo(holder),//tab标签
 				_tabs=[],//标签数组集合
 				_regType=[],//注册类型集合1:邮箱注册;2:手机号码注册
