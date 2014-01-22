@@ -904,7 +904,8 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 				   "newwar":"xxx",//武魂国战悬疑页面
 				   "tuku.xyq":"xyq",//梦幻图库
 				   "so.xyq":"xyq",//梦幻搜索
-				   "story":"xy2"//大话西游2故事会
+				   "story":"xy2",//大话西游2故事会
+				   "byy":1//网易代理手游
 		  		},
 		  		tmpID=null,
 		  		getID=function(key){
