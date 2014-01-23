@@ -14,7 +14,7 @@ nie=(typeof nie =="undefined" || !nie)?{
 			www.xn--owt49tjseb46a.com	www.梦幻西游.com
 			www.xn--owt49tjseb46a.cn	www.梦幻西游.cn
 			*/
-			return v?(v[1].substring(0,v[1].length-1)).toLowerCase():(/^(www\.)?(xn--owt49tjseb46a\.xn--fiqs8s|xn--owt49tjseb46a\.com|xn--owt49tjseb46a\.cn)$/i.test(hn)?"xyq":null);
+			return v?(v[1].substring(0,v[1].length-1)).toLowerCase():(/^(www\.)?(梦幻西游|xn--owt49tjseb46a)\.(com|cn|中国|xn--fiqs8s)$/i.test(hn)?"xyq":null);
 		}(),
 		/**
 		*	开始时间（检查页面speed）
