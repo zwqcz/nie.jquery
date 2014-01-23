@@ -6,8 +6,15 @@
 **/
 nie=(typeof nie =="undefined" || !nie)?{
 		site:function(){
-			var v = /^((?:[^\.]+\.)+)163\.com$/i.exec(window.self.location.hostname);
-			return v?(v[1].substring(0,v[1].length-1)).toLowerCase():null;
+			var hn=window.self.location.hostname,
+				v = /^((?:[^\.]+\.)+)163\.com$/i.exec(hn);
+			/*
+			xyq中文域名
+			www.xn--owt49tjseb46a.xn--fiqs8s	www.梦幻西游.中国
+			www.xn--owt49tjseb46a.com	www.梦幻西游.com
+			www.xn--owt49tjseb46a.cn	www.梦幻西游.cn
+			*/
+			return v?(v[1].substring(0,v[1].length-1)).toLowerCase():(/^(www\.)?(xn--owt49tjseb46a\.xn--fiqs8s|xn--owt49tjseb46a\.com|xn--owt49tjseb46a\.cn)$/i.test(hn)?"xyq":null);
 		}(),
 		/**
 		*	开始时间（检查页面speed）
@@ -972,7 +979,7 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 						defaultWhiteLogo=0,//是否默认反白logo
 						lteIE6=$.browser.msie && parseInt($.browser.version)<=6;//是否小于等于ie6
 			  switch(nie.config.copyRight.product){
-			  	  case "xyq":		  		
+			  	  case "xyq":					
 			  		bcode=t1+"【2005】017号（2011）C-RPG042号";
 			  		break;
 			  	  case "xy2":
