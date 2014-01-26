@@ -14,7 +14,7 @@ nie=(typeof nie =="undefined" || !nie)?{
 			www.xn--owt49tjseb46a.com	www.梦幻西游.com
 			www.xn--owt49tjseb46a.cn	www.梦幻西游.cn
 			*/
-			return v?(v[1].substring(0,v[1].length-1)).toLowerCase():(/^(www\.)?(梦幻西游|xn--owt49tjseb46a)\.(com|cn|中国|xn--fiqs8s)$/i.test(hn)?"xyq":null);
+			return v?(v[1].substring(0,v[1].length-1)).toLowerCase():(/^(www\.)?(梦幻西游|xn--owt49tjseb46a)\.(com|cn|net|中国|xn--fiqs8s)$/i.test(hn)?"xyq":null);
 		}(),
 		/**
 		*	开始时间（检查页面speed）
@@ -912,7 +912,8 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 				   "tuku.xyq":"xyq",//梦幻图库
 				   "so.xyq":"xyq",//梦幻搜索
 				   "story":"xy2",//大话西游2故事会
-				   "byy":1//网易代理手游
+				   "byy":1,//网易代理手游
+				   "zs":1//游戏助手
 		  		},
 		  		tmpID=null,
 		  		getID=function(key){
@@ -982,8 +983,8 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 			  switch(nie.config.copyRight.product){
 			  	  case "xyq":					
 			  		bcode=t1+"【2005】017号（2011）C-RPG042号";				  
-					if (/^(www\.)?(梦幻西游|xn--owt49tjseb46a)\.(com|cn|中国|xn--fiqs8s)$/i.test(window.self.location.hostname)){
-						spCode="<a href='http://www.miibeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=NBN7SfCGvF3Mn2QYb26Sq6Z1snhDrJGylWDW8vznrLLJfhhCfghv!-1742855666' target='_blank'>ICP备粤B2-20090191-23</a>";
+					if (/^(www\.)?(梦幻西游|xn--owt49tjseb46a)\.(com|cn|net|中国|xn--fiqs8s)$/i.test(window.self.location.hostname)){
+						spCode="<a href='http://www.miibeian.gov.cn' target='_blank'>ICP备粤B2-20090191-23</a>";
 					}
 			  		break;
 			  	  case "xy2":
