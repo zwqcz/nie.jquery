@@ -169,7 +169,7 @@ NIE
 						"height=469,width=605,scrollbars=0,location=no,menubar=no,resizable=1,status=no,toolbar=no");
 		}
 		var bugReporter = '';
-		if(/nie|dt2|zh|pk|xy2|xyq|xy3|tx3|qn|dt|dtws2|jl|st|pet|xc|ff|lj|dota|wh|y3/.test(nie.config.site)){
+		if(/nie|dt2|zh|pk|xy2|xyq|xy3|tx3|qn|dt|dtws2|jl|st|pet|xc|ff|lj|dota|wh|y3|x3|xdw|zd/.test(nie.config.site)){
 			bugReporter = '<a class="artDisclaimer-btn bugReporter" href="javascript:void(0);" onclick="nieBugReporter();">页面纠错</a>';
 		}
 		
