@@ -164,9 +164,16 @@ NIE
 				title : document.title,
 				site : nie.config.site
 			}
-			window.open('http://page-bug-report.webapp.163.com/app/report?site={$site}&title={$title}&refer={$refer}'.replace('{$site}',conf.site)
+			
+			if(/y3|x3|xdw|zd/.test(nie.config.site)){
+				window.open('http://page-bug-report.webapp.163.com/app/report?site={$site}&title={$title}&refer={$refer}'.replace('{$site}',conf.site)
+						.replace('{$title}',encodeURIComponent(conf.title)).replace('{$refer}', conf.refer), 'bugReportWindow', 
+						"height=550,width=550,scrollbars=0,location=no,menubar=no,resizable=1,status=no,toolbar=no");
+			}else{
+				window.open('http://page-bug-report.webapp.163.com/app/report?site={$site}&title={$title}&refer={$refer}'.replace('{$site}',conf.site)
 						.replace('{$title}',encodeURIComponent(conf.title)).replace('{$refer}', conf.refer), 'bugReportWindow', 
 						"height=469,width=605,scrollbars=0,location=no,menubar=no,resizable=1,status=no,toolbar=no");
+			}
 		}
 		var bugReporter = '';
 		if(/nie|dt2|zh|pk|xy2|xyq|xy3|tx3|qn|dt|dtws2|jl|st|pet|xc|ff|lj|dota|wh|y3|x3|xdw|zd/.test(nie.config.site)){
