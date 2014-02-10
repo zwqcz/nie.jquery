@@ -6,8 +6,15 @@
 **/
 nie=(typeof nie =="undefined" || !nie)?{
 		site:function(){
-			var v = /^((?:[^\.]+\.)+)163\.com$/i.exec(window.self.location.hostname);
-			return v?(v[1].substring(0,v[1].length-1)).toLowerCase():null;
+			var hn=window.self.location.hostname,
+				v = /^((?:[^\.]+\.)+)163\.com$/i.exec(hn);
+			/*
+			xyq中文域名
+			www.xn--owt49tjseb46a.xn--fiqs8s	www.梦幻西游.中国
+			www.xn--owt49tjseb46a.com	www.梦幻西游.com
+			www.xn--owt49tjseb46a.cn	www.梦幻西游.cn
+			*/
+			return v?(v[1].substring(0,v[1].length-1)).toLowerCase():(/^(www\.)?(梦幻西游|xn--owt49tjseb46a)\.(com|cn|net|中国|xn--fiqs8s)$/i.test(hn)?"xyq":null);
 		}(),
 		/**
 		*	开始时间（检查页面speed）
@@ -904,7 +911,9 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 				   "newwar":"xxx",//武魂国战悬疑页面
 				   "tuku.xyq":"xyq",//梦幻图库
 				   "so.xyq":"xyq",//梦幻搜索
-				   "story":"xy2"//大话西游2故事会
+				   "story":"xy2",//大话西游2故事会
+				   "byy":1,//网易代理手游
+				   "zs":1//游戏助手
 		  		},
 		  		tmpID=null,
 		  		getID=function(key){
@@ -952,6 +961,7 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 						showPart1=true,
 						age=16,
 						sug='本游戏故事情节设置紧凑',
+						spCode="",
 						agePermision='本游戏适合$age岁以上的玩家进入。<br />',
 						suggestion='积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。<br />',
 						infoStr=' <a href="http://nie.163.com/bs/ca_lianyun.html" target="_blank">联运推广</a> -',
@@ -971,8 +981,11 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 						defaultWhiteLogo=0,//是否默认反白logo
 						lteIE6=$.browser.msie && parseInt($.browser.version)<=6;//是否小于等于ie6
 			  switch(nie.config.copyRight.product){
-			  	  case "xyq":		  		
-			  		bcode=t1+"【2005】017号（2011）C-RPG042号";
+			  	  case "xyq":					
+			  		bcode=t1+"【2005】017号（2011）C-RPG042号";				  
+					if (/^(www\.)?(梦幻西游|xn--owt49tjseb46a)\.(com|cn|net|中国|xn--fiqs8s)$/i.test(window.self.location.hostname)){
+						spCode="<a href='http://www.miibeian.gov.cn' target='_blank'>ICP备粤B2-20090191-23</a>";
+					}
 			  		break;
 			  	  case "xy2":
 			  		//bcode=t1+'【2005】016号';
@@ -1120,7 +1133,7 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 			  if(defaultWhiteLogo==1) nie.config.copyRight.setSiteDefaultStyle("white");
 			  var showMoreInfo=showPart1 && /^\/($|index.html|boot.html)/.test(window.self.location.pathname);
 			  if(showMoreInfo){
-				  plusCode='<br><span id="ncp-l3" style="display:inline-block;padding-top:10px;">'+agePermision.replace("$age",age)+suggestion+'全国文化市场统一举报电话：12318　文化部网络游戏举报和联系电子邮箱：<a href="mailto:wlwh@vip.sina.com">wlwh@vip.sina.com</a><br /><a target="_blank" href="http://nie.163.com/news/2010/6/9/442_216957.html">《网络游戏管理暂行办法》</a>'+bcode+'　《网络文化经营许可证》'+wcode+'</span>';
+				  plusCode='<br><span id="ncp-l3" style="display:inline-block;padding-top:10px;">'+agePermision.replace("$age",age)+suggestion+'全国文化市场统一举报电话：12318　文化部网络游戏举报和联系电子邮箱：<a href="mailto:wlwh@vip.sina.com">wlwh@vip.sina.com</a><br /><a target="_blank" href="http://nie.163.com/news/2010/6/9/442_216957.html">《网络游戏管理暂行办法》</a>'+bcode+'　《网络文化经营许可证》'+wcode+" "+spCode+'</span>';
 				  bcode=wcode="";
 			  }
 			  else{
