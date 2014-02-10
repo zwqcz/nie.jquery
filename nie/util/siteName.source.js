@@ -20,8 +20,7 @@ nie.util.siteName=nie.util.siteName||function(){
 			"rich":"富甲西游",
 			"ball":"篮球也疯狂",
 			"popogame":"泡泡游戏",			
-			"zg":"战国风云",
-			"sg":"三国天下"
+			"zg":"战国风云"
 		};	
 	return _data[nie.config.site]?_data[nie.config.site]:"网易游戏";
 };
