@@ -197,7 +197,11 @@ nie.util.share_css=nie.util.share_css||false;
 					var	a=$("<a>",_obj).appendTo(fatDom);			
 					(function(){
 					  var _i=id;
-					  a.click(function(){jump(_i);});
+					  a.click(function(){jump(_i);}).hover(function(){
+                          $(this).addClass('NIE-share-btn-hover'+_i);
+                      },function(){
+                          $(this).removeClass('NIE-share-btn-hover'+_i);
+                      });
 					})();
 					return a;
 				},
