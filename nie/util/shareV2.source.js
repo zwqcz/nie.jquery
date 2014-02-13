@@ -206,7 +206,7 @@ nie.util.share_css=nie.util.share_css||false;
                     var	a=$("<a>",_obj).appendTo(fatDom);
                     (function(){
                         var _i=id;
-                        a.click(function(){jump(_i);});
+                        a.click(function(){jump(_i);}).addClass('NIE-share-btn'+_i);
                     })();
                     return a;
                 },
