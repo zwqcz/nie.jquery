@@ -1267,7 +1267,8 @@ fail_type		1 代表手机号已注册，2代表手机号已绑定，3代表邮�
 				_data.push({"items":_items,"form":_form});
 			}	
 		},
-		allItems=null;//全部填项		
+		allItems=null,//全部填项		
+		captcha=new Captcha();
 	holder.empty();//clear 
 	/*
 	* 类型
@@ -1275,8 +1276,7 @@ fail_type		1 代表手机号已注册，2代表手机号已绑定，3代表邮�
 	*/
 	switch(settings.type){
 	  case 1://需要验证码		  
-		  	var captcha=new Captcha(),
-		  		loadCaptcha=function(){			
+		  	var loadCaptcha=function(){			
 				  var _o=allItems.currentItems.get("captcha"),
 					  _clickFn=arguments.callee;				  
 				  _o.showCaptchaLoading();
