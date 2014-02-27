@@ -156,3 +156,4 @@ java -jar  C:\Users\game-netease\Documents\GitHub\nie.jquery\\compiler.jar --js 
 
 nie.util.qUrs
 java -jar  C:\Users\game-netease\Documents\GitHub\nie.jquery\\compiler.jar --js  C:\Users\game-netease\Documents\GitHub\nie.jquery\\nie\util\qUrs_v2.source.js --js_output_file  C:\Users\game-netease\Documents\GitHub\nie.jquery\\nie\util\qUrs.js
+java -jar  C:\Users\game-netease\Documents\GitHub\nie.jquery\\compiler.jar --js  C:\Users\game-netease\Documents\GitHub\nie.jquery\\nie\util\qUrs_v3.source.js --js_output_file  C:\Users\game-netease\Documents\GitHub\nie.jquery\\nie\util\qUrs.js

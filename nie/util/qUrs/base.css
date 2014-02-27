@@ -98,11 +98,12 @@ a.NIE-quickReg-closeBtn:hover{background-position:-120px -62px;}
 .NIE-quickReg-msg .qr-con-reVer{padding:0 15px;}
 .NIE-quickReg-msg .qr-con-reVer p{padding:0;margin:0;text-align:center;}
 .NIE-quickReg-msg .qr-con-reVer p.reVer-l1{font-weight:bold;text-align:left;}
-.NIE-quickReg-msg .qr-con-reVer p.reVer-l2{line-height:24px;text-align:center;}
+.NIE-quickReg-msg .qr-con-reVer p.reVer-l2{}
 .NIE-quickReg-msg .qr-con-reVer p.reVer-l3{}
-.NIE-reVerInp{width:203px;height:22px;margin:5px 0;line-height:22px;font-size:16px;border:1px #333 solid;}
-.NIE-reVerImg{width:205px;height:30px;display:inline-block;}
-.NIE-reVerImg img{cursor:pointer;}
+.NIE-quickReg-msg .qr-con-reVer button{cursor:pointer;}
+.NIE-quickReg-msg .qr-con-reVer span{color:red;}
+.NIE-reVerMobileInp{width:140px;}
+.NIE-reVerInp{width:220px;margin:5px 0;}
 .NIE-reVerSubmit{}
 /* all mail */
 .NIE-quickReg-msg .qr-con-not163,.NIE-quickReg-msg .qr-con-mobile,.NIE-quickReg-msg .qr-con-uploadSMS{margin:0 auto;background-repeat:no-repeat;}
