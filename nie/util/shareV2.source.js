@@ -141,8 +141,8 @@ nie.util.share_css=nie.util.share_css||false;
                      大话2:
                      QQ空间 新浪微博 腾讯微博 网易微博 人人网
                      */
-                    defShow:[23,22,1,2,3],//(nie.config.site=="xy2")?[1,2,3,8]:[5,1,2,3],
-                    defShow2:[23,22,1,2,3,8,4],//(nie.config.site=="xy2")?[1,2,3,5,8]:[5,1,2,3,8,4],
+                    defShow:[23,22,5,2,1,4],//(nie.config.site=="xy2")?[1,2,3,8]:[5,1,2,3],
+                    defShow2:[23,22,5,2,1,4,3,8],//(nie.config.site=="xy2")?[1,2,3,5,8]:[5,1,2,3,8,4],
                     moreShow:[23,22,5,1,2,3,4,6,7,8,9,10,11,13],
                     searchTips:"输入网站名或拼音缩写",
                     sideBar_top:100,
@@ -161,17 +161,19 @@ nie.util.share_css=nie.util.share_css||false;
                         _html="",
                         aStyle="",
                         pos=0,
-                        _size=16;
+                        _size=20;
                     switch(chkDefault(type,o.args.type)){
                         case 1:
-                            pos=-(btnHeight-16+(id+1)*6+(id+1)*16);
+                            pos=-(btnHeight-20+(id-1)*5+(id-1)*20);
+                            id==22?pos=-325:'';
+                            id==23?pos=-350:'';
                             break;
                         case 2:
                             //pos=(id==22)?-160:-id*32;//pos=-id*32;
-                            pos=-id*32;
-                            id==22?pos=-160:'';
-                            id==23?pos=-192:'';
-                            _size=32;
+                            pos=-(id-1)*40-80;
+                            id==22?pos=-40:'';
+                            id==23?pos=-0:'';
+                            _size=36;
                             break;
                         case 3:
                             pos=-(btnHeight-16+(id+1)*6+(id+1)*16);
@@ -280,12 +282,12 @@ nie.util.share_css=nie.util.share_css||false;
                                 iconBtns.css("fontSize",type==2?"41px":"20px");
                             }
                             $.each(o.args.defShow,function(i){
-                                o.addBtn(this,16,0,iconBtns,false);
+                                o.addBtn(this,20,0,iconBtns,false);
                             });
                             var _over=true,
                                 _timer,
                                 more=$("<span>",{
-                                    html:"<em>更多</em>",
+                                    html:"<em></em>",
                                     "class":"NIE-share-more"
                                 }).mouseenter(function(){
                                         clearTimeout(_timer);
@@ -308,12 +310,20 @@ nie.util.share_css=nie.util.share_css||false;
                                     }).appendTo(shareObj),
                                 morePanel=$("<span>").appendTo(more);
                             $.each(o.args.moreShow,function(){
-                                o.addBtn(this,12,5,morePanel,true,1);
+                                o.addBtn(this,20,5,morePanel,true,1);
                             });
-                            o.addBtn(-1,12,5,morePanel,"更多...",1).click(function(){
+                            /*取消更多的分享，只留10个
+                            [多人会话]h|小马|网站|黄耀文|5790 -  说: (2014-03-06 11:28:33)
+                            你先保留10个以内，看看有哪些
+                            [多人会话]熊猫丨网站|黎芷然 - 你瞞我瞞 说: (2014-03-06 11:28:38)
+                            顺序可以调整下
+                            土豆|郭剑飞|网站 - 幸福就是一觉醒来,窗外的阳光依然灿烂。 说: (2014-03-06 11:29:15)
+                            按照新版来吧
+                            */
+                            /*o.addBtn(-1,12,5,morePanel,"更多...",1).click(function(){
                                 morePanel.fadeOut("fast");
                                 o.showPanel();
-                            });
+                            });*/
                             //fixPng(".NIE-share-iconBtn a i,.NIE-share-more em,.NIE-share-more a i");
                         }
                     }
@@ -351,11 +361,12 @@ nie.util.share_css=nie.util.share_css||false;
                                 sideBar.css("top",$(window).scrollTop()+o.args.sideBar_top);
                             };
                         $.each(o.args.moreShow,function(){
-                            o.addBtn(this,12,5,p,true,1);
+                            o.addBtn(this,20,5,p,true,1);
                         });
-                        o.addBtn(-1,12,5,p,"更多...").click(function(){
+                       /* o.addBtn(-1,12,5,p,"更多...").click(function(){
                             o.showPanel();
                         });
+                        */
                         sideBar.find("b").hover(function(){
                             if(!_showStatus){
                                 _showStatus=true;
@@ -489,7 +500,7 @@ nie.util.share_css=nie.util.share_css||false;
                     }
                     else if(type==6){
                         $.each(o.args.defShow,function(){
-                            o.addBtn(this,16,0,o.args.fat,true,1);
+                            o.addBtn(this,20,0,o.args.fat,true,1);
                         })
                     }
                 }
@@ -531,7 +542,7 @@ nie.util.share_css=nie.util.share_css||false;
 
             ];
             if(!nie.util.share_css){
-                $.include("http://res.nie.netease.com/comm/js/nie/util/share/share.v3.css");
+                $.include("share.v3.css");
                 nie.util.share_css=true;
             }
             //$.include("share.css");
