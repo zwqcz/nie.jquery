@@ -74,9 +74,9 @@ $.extend({
 			$.each(dataObj, function(){
 				$.each(this, function(j){
 					if (j != index) 
-						$(this).css("zIndex", 1).stop(true,true).fadeOut();
+						$(this).css("zIndex", 1).stop(true,true).animate({'opacity':'0'},_data.speed);
 					else{
-						$(this).css("zIndex", 2).stop(true,true).fadeIn();
+						$(this).css("zIndex", 2).stop(true,true).animate({'opacity':'1'},_data.speed);
 						_data.callBack(j);
 					}
 				});					
@@ -115,6 +115,7 @@ $.extend({
 			index: 0,
 			totalDom: 0,
 			btnTime:180,
+            speed:400,
 			callBack:function(){}
 		},
 		btnTimer,
