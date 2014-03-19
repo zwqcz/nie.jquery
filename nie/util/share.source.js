@@ -80,7 +80,7 @@ nie.util.share_css=nie.util.share_css||false;
 					    _title=chkDatas("title",id,document.title),
 					    _picUrl=chkDatas("img",id,""),
 					    _content=chkDatas("content",id,document.title),				    
-					    size=(id==22?[460,380]:[650,500]),
+					    size=(id==22?[500,480]:[650,500]),
 					    ustr=combind({	
 							'width':size[0],
 							'height':size[1],
