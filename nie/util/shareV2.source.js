@@ -83,7 +83,7 @@ nie.util.share_css=nie.util.share_css||false;
                     //size=(id==22?[460,380]:[650,500]),
                         size=(function(){
                             var __size=[650,500];
-                            id==22?__size=[460,380]:'';
+                            id==22?__size=[500,480]:'';
                             id==23?__size=[573,600]:'';
                             return __size;
                         }()),
