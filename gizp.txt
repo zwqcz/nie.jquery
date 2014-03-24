@@ -60,6 +60,8 @@ java -jar C:\Users\game-netease\Documents\GitHub\nie.jquery\compiler.jar --js  C
 java -jar C:\Users\game-netease\Documents\GitHub\nie.jquery\compiler.jar --js  C:\Users\game-netease\Documents\GitHub\nie.jquery\util\share.v2.source.js --js_output_file C:\Users\game-netease\Documents\GitHub\nie.jquery\util\share.js
 java -jar  C:\Users\game-netease\Documents\GitHub\nie.jquery\\compiler.jar --js   C:\Users\game-netease\Documents\GitHub\nie.jquery\\util\share.v2.source.js --js_output_file  C:\Users\game-netease\Documents\GitHub\nie.jquery\\util\share.js
 java -jar  C:\Users\game-netease\Documents\GitHub\nie.jquery\\compiler.jar --js   C:\Users\game-netease\Documents\GitHub\nie.jquery\\nie\util\share.source.js --js_output_file  C:\Users\game-netease\Documents\GitHub\nie.jquery\\nie\util\share.js
+
+java -jar  C:\Users\game-netease\Documents\GitHub\nie.jquery\\compiler.jar --js   C:\Users\game-netease\Documents\GitHub\nie.jquery\\nie\util\shareV2.source.js --js_output_file  C:\Users\game-netease\Documents\GitHub\nie.jquery\\nie\util\shareV2.js
 clipBoard
 java -jar C:\Users\game-netease\Documents\GitHub\nie.jquery\compiler.jar --js  C:\Users\game-netease\Documents\GitHub\nie.jquery\util\clipBoard.source.js --js_output_file C:\Users\game-netease\Documents\GitHub\nie.jquery\util\clipBoard.js
 
