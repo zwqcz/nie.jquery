@@ -68,7 +68,8 @@
 				_client.width=info.width;
 				_client.height=info.height;
 				_client.framerate=info.framerate;
-				_cc.main.txt_totalTime.text="/ "+num(Math.round(info.duration/60))+":"+num(Math.round(info.duration%60)); 
+				//之前用的round是四舍五入，碰到小数点大于5的就进位了。。。。
+				_cc.main.txt_totalTime.text="/ "+num(int(info.duration/60))+":"+num(Math.round(info.duration%60)); 
 			};			
 			if (ExternalInterface.available)
 			{
