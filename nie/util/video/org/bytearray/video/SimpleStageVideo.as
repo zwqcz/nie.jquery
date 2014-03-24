@@ -1,4 +1,4 @@
-﻿
+
 package org.bytearray.video
 {
 	import flash.display.BitmapData;
@@ -8,6 +8,7 @@ package org.bytearray.video
 	import flash.events.StageVideoAvailabilityEvent;
 	import flash.events.StageVideoEvent;
 	import flash.events.VideoEvent;
+	import flash.external.ExternalInterface;
 	import flash.geom.Matrix;
 	import flash.geom.Rectangle;
 	import flash.media.StageVideo;
@@ -83,6 +84,8 @@ package org.bytearray.video
 		private var _org_width:int,_org_height:int;
 		private var imgMC:nie.util.img;
 		private var _self:SimpleStageVideo;
+		private var widthTmp:int;
+		private var heightTmp:int;
 		/**
 		 * 
 		 * @param width The width of the screen, the video will fit this maximum width (while preserving ratio)
@@ -107,31 +110,32 @@ package org.bytearray.video
 		 */		
 		public function toggle(on:Boolean):void
 		{			
-			trace("toggle");
-			if (on && _available) 
-			{
-				_stageVideoInUse = true;
-				if ( _sv == null && stage.stageVideos.length > 0 )
-				{
-					_sv = stage.stageVideos[0];
-					_sv.addEventListener(StageVideoEvent.RENDER_STATE, onRenderState);
-				}
-				_sv.attachNetStream(_ns);
-				dispatchEvent( new SimpleStageVideoToggleEvent ( SimpleStageVideoToggleEvent.TOGGLE, SimpleStageVideoToggleEvent.STAGEVIDEO ));
-				if (_classicVideoInUse)
-				{
-					stage.removeChild ( _video );
-					_classicVideoInUse = false;
-				}
-			} else 
-			{
+			//trace("toggle");
+			//ExternalInterface.call('console.log', 'here'+on+'_'+_available);
+			//if (on && _available) 
+			//{
+				//_stageVideoInUse = true;
+				//if ( _sv == null && stage.stageVideos.length > 0 )
+				//{
+					//_sv = stage.stageVideos[0];
+					//_sv.addEventListener(StageVideoEvent.RENDER_STATE, onRenderState);
+				//}
+				//_sv.attachNetStream(_ns);
+				//dispatchEvent( new SimpleStageVideoToggleEvent ( SimpleStageVideoToggleEvent.TOGGLE, SimpleStageVideoToggleEvent.STAGEVIDEO ));
+				//if (_classicVideoInUse)
+				//{
+					//stage.removeChild ( _video );
+					//_classicVideoInUse = false;
+				//}
+			//} else 
+			//{
 				if (_stageVideoInUse)
 					_stageVideoInUse = false;
 				_classicVideoInUse = true;
 				_video.attachNetStream(_ns);
 				dispatchEvent( new SimpleStageVideoToggleEvent ( SimpleStageVideoToggleEvent.TOGGLE, SimpleStageVideoToggleEvent.VIDEO ));
 				stage.addChildAt(_video, 0);
-			}			
+			//}			
 			if ( !_played ) 
 			{
 				_played = true;
@@ -142,13 +146,18 @@ package org.bytearray.video
 		/**
 		 * Resizes the video surfaces while always preserving the image ratio.
 		 */		
-		public function resize (width:uint=0, height:uint=0):void
-		{	
-			_topLayer.width=_width = width, _topLayer.height=_height = height;
-			
-			if ( _stageVideoInUse )	
+		public function resize (w:uint=0, h:uint=0):void
+		{
+			widthTmp = w;
+			heightTmp = h;
+			addEventListener(Event.ENTER_FRAME, delayResize);
+		}
+		private function delayResize(e:Event):void {
+			removeEventListener(Event.ENTER_FRAME, delayResize);
+			_topLayer.width=_width = widthTmp, _topLayer.height=_height = heightTmp;
+			if ( _stageVideoInUse )	{
 				_sv.viewPort = getVideoRect(_sv.videoWidth, _sv.videoHeight);
-			else 
+			}else 
 			{
 				_rc = getVideoRect(_video.videoWidth, _video.videoHeight);
 				_video.width = _rc.width;
