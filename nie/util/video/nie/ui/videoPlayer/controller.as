@@ -113,7 +113,11 @@
 			}
 		}
 		private function fullBtn_click(evt:MouseEvent):void{				
-			stage.displayState = StageDisplayState.FULL_SCREEN;
+			if(stage.displayState==StageDisplayState.NORMAL) {
+				stage.displayState = StageDisplayState.FULL_SCREEN;
+			} else {
+				stage.displayState = StageDisplayState.NORMAL;
+			}
 			//this.visible=false;			
 			dispatchEvent(_fullBtn_clickEvent);
 		}
