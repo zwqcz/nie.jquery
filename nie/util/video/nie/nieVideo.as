@@ -97,7 +97,7 @@
 		{
 			//定义菜单项
 			var menuItem1:ContextMenuItem = new ContextMenuItem("NetEase GameDep.");
-			var menuItem2:ContextMenuItem = new ContextMenuItem("NIE Video Player v1.19.4");
+			var menuItem2:ContextMenuItem = new ContextMenuItem("NIE Video Player v1.20");
 			var menuItem3:ContextMenuItem = new ContextMenuItem("by Lam");
 			//添加菜单事件侦听
 			menuItem1.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT,reg);
