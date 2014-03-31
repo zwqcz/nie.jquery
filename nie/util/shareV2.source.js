@@ -85,8 +85,8 @@ nie.util.share_css=nie.util.share_css||false;
                             var __size=[650,500];
                             if(id==22) {
                                 __size=[500,480];
-                            } else if(id==23) [
-                                __size=[573,600]
+                            } else if(id==23)  {
+                                __size=[573,600];
                             }
                            // id==22?__size=[500,480]:'';
                             //id==23?__size=[573,600]:'';
