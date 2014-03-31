@@ -83,8 +83,13 @@ nie.util.share_css=nie.util.share_css||false;
                     //size=(id==22?[460,380]:[650,500]),
                         size=(function(){
                             var __size=[650,500];
-                            id==22?__size=[500,480]:'';
-                            id==23?__size=[573,600]:'';
+                            if(id==22) {
+                                __size=[500,480];
+                            } else if(id==23) [
+                                __size=[573,600]
+                            }
+                           // id==22?__size=[500,480]:'';
+                            //id==23?__size=[573,600]:'';
                             return __size;
                         }()),
                         ustr=combind({
@@ -165,14 +170,24 @@ nie.util.share_css=nie.util.share_css||false;
                     switch(chkDefault(type,o.args.type)){
                         case 1:
                             pos=-(btnHeight-20+(id-1)*5+(id-1)*20);
-                            id==22?pos=-325:'';
-                            id==23?pos=-350:'';
+                            if(id==22) {
+                                pos = -325;
+                            } else if(id==23) {
+                                pos = -350;
+                            }
+                            //id==22?pos=-325:'';
+                            //id==23?pos=-350:'';
                             break;
                         case 2:
                             //pos=(id==22)?-160:-id*32;//pos=-id*32;
                             pos=-(id-1)*40-80;
-                            id==22?pos=-40:'';
-                            id==23?pos=-0:'';
+                            if(id==22) {
+                                pos = -40;
+                            } else if(id==23) {
+                                pos = 0;
+                            }
+                            //id==22?pos=-40:'';
+                            //id==23?pos=-0:'';
                             _size=36;
                             break;
                         case 3:
