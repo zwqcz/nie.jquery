@@ -557,7 +557,7 @@ nie.util.share_css=nie.util.share_css||false;
 
             ];
             if(!nie.util.share_css){
-                $.include("share.v3.css");
+                $.include("http://res.nie.netease.com/comm/js/nie/util/share/share.v3.css");
                 nie.util.share_css=true;
             }
             //$.include("share.css");
