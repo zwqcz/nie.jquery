@@ -917,7 +917,8 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 				   "yzr":1,//雨血：影之刃
 				   "kxd":1,//开心岛
 				   "too":1,
-				"cake":1
+				   "cake":1,
+				   "zy":1
 		  		},
 		  		tmpID=null,
 		  		getID=function(key){
