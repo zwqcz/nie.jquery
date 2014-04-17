@@ -531,7 +531,7 @@ nie.util.share_css=nie.util.share_css||false;
             }
             var data=[
                 [23,"易信二维码",'YiXinQrCode','res.nie.netease.com/comm/js/nie/util/share/api/',{1:"url",2:"title"}],
-                [22,"易信","YiXin","open.yixin.im/share",{1:"url",2:"title",3:"pic",4:"desc"},{"appkey":"yx3ae08a776bf04178a583cb745fb6aa0c","type":"webpage"}],
+                [22,"易信","YiXin","open.yixin.im/share",{1:"url",2:"desc",3:"pic",4:"title"},{"appkey":"yx3ae08a776bf04178a583cb745fb6aa0c","type":"webpage"}],
                 [1,"QQ空间","QQKongJian","sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey",{1:"url",2:"title",3:"pics",4:"desc"/*,4:"summary"*/}],
                 [2,"新浪微博","XinLangWeiBo","v.t.sina.com.cn/share/share.php",{1:"url",2:"title",3:"pic"},{"c":"nie","content":"gb2312","source":"nie"}],
                 [3,"腾讯微博","TengXunWeiBo","v.t.qq.com/share/share.php",{1:"url",2:"title",3:"pic"}],
