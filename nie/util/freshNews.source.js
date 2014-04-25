@@ -17,7 +17,7 @@ nie.util.freshNews=nie.util.freshNews||function(obj){
 				tsName:"ts",
 				newsDom:"a[ts][ch]",
 				domain:location.hostname,
-				cookieName:"__NIE_freshNews_"+location.pathname				
+				cookieName:"__NIE_freshNews_"+location.pathname.replace(/\//g,"_")			
 			},
 			urls={};
 		for(var i in obj){
