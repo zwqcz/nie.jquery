@@ -36,7 +36,7 @@
 
 
 //加载lightbox所需的css文件
-$.include("lightBox/basev2.css");
+$.include("http://res.nie.netease.com/comm/js/ui/lightBox/basev2.css");
 
 //Jquery插件开始
 (function($) {
