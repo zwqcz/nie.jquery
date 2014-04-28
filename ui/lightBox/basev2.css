@@ -12,17 +12,26 @@
 #lightbox-nav-btnPrev.lightbox-nav-close,
 #lightbox-nav-btnNext.lightbox-nav-close{cursor:url(http://res.nie.netease.com/comm/js/ui/lightBox/cur-stop.cur),auto;}
 #lightbox-container-image-data-box{font:10px Verdana,Helvetica,sans-serif;background-color:#fff;margin:0 auto;line-height:1.4;overflow:auto;width:900px;padding:20px;}
-#lightbox-container-image-data{padding:0 10px;color:#666;*zoom:1}
+/*#lightbox-container-image-data{padding:0 10px;color:#666;*zoom:1}*/
 #lightbox-container-image-data:after{display:block;clear:both;height:0;content:"\0020"}
-#lightbox-container-image-data #lightbox-image-details{width:70%;float:left;text-align:left;}	
+/*#lightbox-container-image-data #lightbox-image-details{width:70%;float:left;text-align:left;}	*/
 #lightbox-image-details-caption{font-weight:bold;}
-#lightbox-image-details-currentNumber{display:block;clear:left;}
-#lightbox-secNav-btnClose{width:66px;height:22px;background:url(lightbox-btn-close.gif) no-repeat;float:right;}
+/*#lightbox-image-details-currentNumber{display:block;clear:left;}*/
+/*#lightbox-secNav-btnClose{width:66px;height:22px;background:url(lightbox-btn-close.gif) no-repeat;float:right;}*/
+
 /*added by Mr.F 2014-4-27*/
 #lightbox-image{display: block;margin:0 auto;max-width: 900px;_width: expression(this.width > 900 ? 900: true);}
 #lightbox-container-image-thumb-data{width: 100%;overflow-x:auto;overflow-y:hidden;}
-#lightbox-container-image-thumb-data ul{*zoom:1;padding: 0;margin: 0;width: 9999px}
+#lightbox-container-image-thumb-data ul{*zoom:1;padding: 0;margin: 0;width: 9999px;margin-right: -20px}
 #lightbox-container-image-thumb-data ul:after{display:block;clear:both;height:0;content:"\0020"}
-#lightbox-container-image-thumb-data li{float: left;list-style-type: none;height:120px;width: 120px;overflow: hidden}
-#lightbox-container-image-thumb-data li a{display: block;width: 120px;height: 120px}
+#lightbox-container-image-thumb-data li{float: left;list-style-type: none;height:90px;width:120px;overflow: hidden;padding-right: 20px}
+#lightbox-container-image-thumb-data li a{display: block;width: 120px;height: 90px}
 #lightbox-container-image-thumb-data li img{display: block;max-width: 120px;margin: 0 auto}
+em{font-style:normal}
+#lightbox-image-current-num{color: #fe0002;font-size: 36px}
+#lightbox-image-details-currentNumber{color: #333;font-size: 24px}
+#lightbox-image-details{*zoom:1}
+#lightbox-image-details:after{display:block;clear:both;height:0;content:"\0020"}
+#lightbox-image-details-caption{display:block;width:84%;float: right;line-height: 20px;color: #333;font-size: 12px;text-align: left}
+#lightbox-image-details-currentNumber{display: block;width: 16%;float: left;}
+#lightbox-secNav-btnClose{width: 37px;height: 37px;background: url(lightbox-btn-close.jpg) no-repeat;position: absolute;top: 0;right: -37px}
