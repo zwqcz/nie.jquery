@@ -921,7 +921,9 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 				   "zy":1,
 				   "rz":1,
 				   "em":1,
-				   "zgmh":1
+				   "zgmh":1,
+				   "wscs":1,
+				   "xxd":1
 		  		},
 		  		tmpID=null,
 		  		getID=function(key){
