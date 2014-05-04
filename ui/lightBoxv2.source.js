@@ -14,7 +14,9 @@
  * 4、能随视窗变化而变化位置
  * 5、预加载大图
  *
- * 2014.4优化记录 - 在大图底部添加了小图预览区域，去除了重复增加lightbox dom效果，获取相关尺寸进行了重新定义
+ * 2014.4优化记录 - 在大图底部添加了小图预览区域，去除了重复增加lightbox dom效果，获取相关尺寸进行了重新定义，重新修改lightBox的样式
+ *
+ * 注意：lightbox效果中的a标签的大图地址一定要每张都不一样
  *
  *
  * //例子1
@@ -102,6 +104,7 @@ $.include("http://res.nie.netease.com/comm/js/ui/lightBox/basev2.css");
          <div id="jquery-lightbox" >
 
          <div id="lightbox-container-image-box">
+         <a href="javascript:void(0)" id="lightbox-secNav-btnClose"></a>
          <div id="lightbox-container-image">
          <img id="lightbox-image" src="fenxiang.jpg" style="display: inline;">
          <div id="lightbox-nav">
@@ -118,7 +121,6 @@ $.include("http://res.nie.netease.com/comm/js/ui/lightBox/basev2.css");
          <span id="lightbox-image-details-caption" ></span>
          <span id="lightbox-image-details-currentNumber" >图片 2 共 7</span>
          </div>
-         <div id="lightbox-secNav"><a href="#" id="lightbox-secNav-btnClose"></a></div>
          </div>
          <div id="lightbox-container-image-thumb-data">
          <ul>
@@ -131,17 +133,17 @@ $.include("http://res.nie.netease.com/comm/js/ui/lightBox/basev2.css");
          *
          */
         function _set_interface() {
-            var appendDOM ='<div id="jquery-overlay"></div><div id="jquery-lightbox"><div id="lightbox-container-image-box"><div id="lightbox-container-image"><img id="lightbox-image"><div style="" id="lightbox-nav"><a href="#" id="lightbox-nav-btnPrev"></a><a href="#" id="lightbox-nav-btnNext"></a></div><div id="lightbox-loading"><a href="#" id="lightbox-loading-link"></a></div></div></div><div id="lightbox-container-image-data-box"><div id="lightbox-container-image-data"><div id="lightbox-image-details"><span id="lightbox-image-details-caption"></span><span id="lightbox-image-details-currentNumber"></span></div><div id="lightbox-secNav"><a href="#" id="lightbox-secNav-btnClose"></a></div></div><div id="lightbox-container-image-thumb-data"><ul></ul></div></div></div></div>';
+            var appendDOM ='<div id="jquery-overlay"></div><div id="jquery-lightbox"><div id="lightbox-container-image-box"><div id="lightbox-container-image"><a href="javascript:void(0)" id="lightbox-secNav-btnClose"></a><img id="lightbox-image"><div style="" id="lightbox-nav"><a href="#" id="lightbox-nav-btnPrev"></a><a href="#" id="lightbox-nav-btnNext"></a></div><div id="lightbox-loading"><a href="#" id="lightbox-loading-link"></a></div></div></div><div id="lightbox-container-image-data-box"><div id="lightbox-container-image-data"><div id="lightbox-image-details"><span id="lightbox-image-details-caption"></span><span id="lightbox-image-details-currentNumber"></span></div></div><div id="lightbox-container-image-thumb-data"><ul></ul></div></div></div></div>';
             if($('#jquery-lightbox').length == 0){
                 $('body').append(appendDOM);
                 // 将小图片添加到对应数组中
                 for ( var i = 0; i < imgMatchObject.length; i++ ) {
-                    opt.imageThumbArrary.push(new Array(imgMatchObject[i].getAttribute('href'),imgThumbMatchObject[i].getAttribute('src')));
+                    opt.imageThumbArrary.push(new Array(imgMatchObject[i].getAttribute('href'),imgMatchObject[i].getAttribute('title'),imgThumbMatchObject[i].getAttribute('src')));
                 }
                 for(var j = 0;j<opt.imageThumbArrary.length;j++){
-                    $('#lightbox-container-image-thumb-data').find('ul').append('<li><a href="'+opt.imageThumbArrary[j][0]+'"><img src="'+opt.imageThumbArrary[j][1]+'"/></a></li>')
+                    $('#lightbox-container-image-thumb-data').find('ul').append('<li><a href="'+opt.imageThumbArrary[j][0]+'" title="'+opt.imageThumbArrary[j][1]+'"><img src="'+opt.imageThumbArrary[j][2]+'"/></a></li>')
                 }
-                $('#lightbox-container-image-thumb-data').find('ul').css('width',opt.imageThumbArrary.length*120)
+                $('#lightbox-container-image-thumb-data').find('ul').css('width',opt.imageThumbArrary.length*140)
             }
             $('#lightbox-container-image-thumb-data').find('a').unbind('click').click(_initialize);
             // 得到相关尺寸
@@ -237,7 +239,7 @@ $.include("http://res.nie.netease.com/comm/js/ui/lightBox/basev2.css");
             }
             // 显示图片的数量信息
             if ( opt.imageArray.length > 1 ) {
-                $('#lightbox-image-details-currentNumber').html( ' ' + ( opt.activeImage + 1 ) + ' /'  + opt.imageArray.length).show();
+                $('#lightbox-image-details-currentNumber').html( ' <em id="lightbox-image-current-num">' + ( opt.activeImage + 1 ) + ' </em>/<em id="lightbox-image-amount-num">'  + opt.imageArray.length+'</em>').show();
             }
         }
         /**
