@@ -923,7 +923,11 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 				   "em":1,
 				   "zgmh":1,
 				   "wscs":1,
-				   "xxd":1
+				   "xxd":1,
+				   "zzz":1,//一起追追追
+				   "nc":1,//网易农场（海岛版）
+				   "txhd":1//包子|网站|余志恒 -  说: (2014-06-09 14:37:17)
+
 		  		},
 		  		tmpID=null,
 		  		getID=function(key){
@@ -1149,7 +1153,7 @@ h|小马|网站|黄耀文 -  说: (2013-08-08 10:08:17)
 			  else{
 				  centerCode='';
 			  }
-			  html+='<p id="NIE-copyRight-corp" style="'+(showMoreInfo?'width:'+(suggestion?800:730)+'px;text-align:left;':'width:100%;text-align:center;')+'margin:0 auto;padding:15px 0 0 0;line-height:20px;display:block;"><span style="position:relative;vertical-align:top;top:3px;display:inline-block;">'+get_pngImg(101,31,path+"netease.{s}.png","http://www.163.com")+''+get_pngImg(111,31,path+"nie.{s}.png","http://nie.163.com")+logo+'</span><span style="text-align:left;display:inline-block;padding-left:10px;"><span id="ncp-l1"><a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a> - <a href="http://help.163.com/" target="_blank">客户服务</a> - <a href="http://gb.corp.163.com/gb/legal.html" target="_blank">相关法律</a> - <a href="http://nie.163.com/about/about.html" target="_blank">网易游戏</a> - <a href="http://nie.163.com/about/contactus.html" target="_blank">联系我们</a> - <a href="http://nie.163.com/bs/business.html" target="_blank">商务合作</a> -'+(addInfo?infoStr:"")+' <a href="http://nie.163.com/job/" target="_blank">加入我们</a></span><br /><span id="ncp-l2">网易公司版权所有 &copy;1997-2014　'+bcode+'　'+wcode+'  '+centerCode+'</span></span>'+plusCode+'</p>';
+			  html+='<p id="NIE-copyRight-corp" style="'+(showMoreInfo?'width:'+(suggestion?800:730)+'px;text-align:left;':'width:100%;text-align:center;')+'margin:0 auto;padding:15px 0 0 0;line-height:20px;display:block;"><span style="position:relative;vertical-align:top;top:3px;display:inline-block;">'+get_pngImg(101,31,path+"netease.{s}.png","http://www.163.com")+''+get_pngImg(121,31,path+"nie.{s}.png","http://nie.163.com")+logo+'</span><span style="text-align:left;display:inline-block;padding-left:10px;"><span id="ncp-l1"><a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a> - <a href="http://help.163.com/" target="_blank">客户服务</a> - <a href="http://gb.corp.163.com/gb/legal.html" target="_blank">相关法律</a> - <a href="http://nie.163.com/about/about.html" target="_blank">网易游戏</a> - <a href="http://nie.163.com/about/contactus.html" target="_blank">联系我们</a> - <a href="http://nie.163.com/bs/business.html" target="_blank">商务合作</a> -'+(addInfo?infoStr:"")+' <a href="http://nie.163.com/job/" target="_blank">加入我们</a></span><br /><span id="ncp-l2">网易公司版权所有 &copy;1997-2014　'+bcode+'　'+wcode+'  '+centerCode+'</span></span>'+plusCode+'</p>';
 			  o.html(html.replace(/{s}/g,nie.config.copyRight.getStyle()));
 			}		
 		},
